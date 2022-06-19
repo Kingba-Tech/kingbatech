@@ -1,6 +1,5 @@
 import React from 'react';
 import {
-  Divider,
   Container,
   Grid,
   Typography,
@@ -8,10 +7,17 @@ import {
   Tabs,
   Tab,
   Box,
+  Paper,
 } from '@mui/material';
 import PropTypes from 'prop-types';
 import SwipeableViews from 'react-swipeable-views';
 import { useTheme } from '@mui/material/styles';
+import ProjectsCarousel from '../../components/Carousel/ProjectsCarousel';
+import {
+  DesignCards,
+  DigitalCards,
+  WebCards,
+} from '../../components/Cards/Cards';
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -26,7 +32,7 @@ function TabPanel(props) {
     >
       {value === index && (
         <Box sx={{ p: 3 }}>
-          <Typography>{children}</Typography>
+          <Grid spacing={{ xs: 2 }}>{children}</Grid>
         </Box>
       )}
     </div>
@@ -59,9 +65,10 @@ const Projects = () => {
   };
 
   return (
-    <Container maxWidth sx={{ backgroundColor: '#FBFBFD', minHeight: '500px' }}>
-      <Grid mt={2} py={2}>
+    <Container maxWidth sx={{ backgroundColor: '#F2F2F2', minHeight: '500px' }}>
+      <Grid py={2}>
         <Typography
+          pt={4}
           variant='h2'
           fontWeight={{ xs: '400', md: '500' }}
           color='#181818'
@@ -71,19 +78,30 @@ const Projects = () => {
         >
           Projects
         </Typography>
-        <hr height='5px' width='250px' textAlign= 'center' padding='20px 0px' color='#181818' />
+        <hr
+          height='5px'
+          width='160px'
+          textAlign='center'
+          padding='20px 0px'
+          color='#181818'
+        />
 
         <Grid
           sx={{
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'center',
-            marginTop: '2rem'
+            marginTop: '2rem',
           }}
         >
-          <Box sx={{ background: '#F5F5F7', width: 1200 }}>
+          <Grid width={1200}>
             <AppBar position='static'>
               <Tabs
+                sx={{
+                  backgroundColor: '#000000',
+                  opacity: '0.9',
+                  color: '#F5F5F7',
+                }}
                 value={value}
                 onChange={handleChange}
                 indicatorColor='secondary'
@@ -91,27 +109,56 @@ const Projects = () => {
                 variant='fullWidth'
                 aria-label='full width tabs example'
               >
-                <Tab label='Web Development' {...a11yProps(0)} />
-                <Tab label='Digital Marketing' {...a11yProps(1)} />
-                <Tab label='Design & Editing' {...a11yProps(2)} />
+                <Tab
+                  sx={{
+                    fontSize: { xs: 'small', md: 'medium' },
+                    lineHeight: '1.2rem',
+                  }}
+                  label='Web Development'
+                  {...a11yProps(0)}
+                />
+                <Tab
+                  sx={{
+                    fontSize: { xs: 'small', md: 'medium' },
+                    lineHeight: '1.2rem',
+                  }}
+                  label='Digital Marketing'
+                  {...a11yProps(1)}
+                />
+                <Tab
+                  sx={{
+                    fontSize: { xs: 'small', md: 'medium' },
+                    lineHeight: '1.2rem',
+                  }}
+                  label='Design & Editing'
+                  {...a11yProps(2)}
+                />
               </Tabs>
             </AppBar>
-            <SwipeableViews
-              axis={theme.direction === 'rtl' ? 'x-reverse' : 'x'}
-              index={value}
-              onChangeIndex={handleChangeIndex}
-            >
-              <TabPanel value={value} index={0} dir={theme.direction}>
-                Hello
-              </TabPanel>
-              <TabPanel value={value} index={1} dir={theme.direction}>
-                Item Two
-              </TabPanel>
-              <TabPanel value={value} index={2} dir={theme.direction}>
-                Item Three
-              </TabPanel>
-            </SwipeableViews>
-          </Box>
+            <Grid>
+              <SwipeableViews
+                axis={theme.direction === 'rtl' ? 'x-reverse' : 'x'}
+                index={value}
+                onChangeIndex={handleChangeIndex}
+              >
+                <Grid item>
+                  <TabPanel value={value} index={0} dir={theme.direction}>
+                    <WebCards />
+                  </TabPanel>
+                </Grid>
+                <Grid item>
+                  <TabPanel value={value} index={1} dir={theme.direction}>
+                    <DigitalCards />
+                  </TabPanel>
+                </Grid>
+                <Grid item>
+                  <TabPanel value={value} index={2} dir={theme.direction}>
+                    <DesignCards />
+                  </TabPanel>
+                </Grid>
+              </SwipeableViews>
+            </Grid>
+          </Grid>
         </Grid>
       </Grid>
     </Container>

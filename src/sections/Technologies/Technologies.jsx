@@ -6,9 +6,9 @@ import CampaignIcon from '@mui/icons-material/Campaign';
 
 const Technologies = () => {
   return (
-    <Container maxWidth sx={{ backgroundColor: '#FBFBFD', minHeight: '300px' }}>
+    <Container maxWidth sx={{ backgroundColor: '#F2F2F2', minHeight: '300' }}>
       <Typography
-        mt={2}
+        pt={4}
         variant='h2'
         fontWeight={{ xs: '400', md: '500' }}
         color='#181818'

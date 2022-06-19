@@ -5,6 +5,7 @@ import {
   MenuItem,
   AppBar,
   Box,
+  Grid,
   Toolbar,
   IconButton,
   Typography,
@@ -16,8 +17,6 @@ import MenuIcon from '@mui/icons-material/Menu';
 import Link from 'next/link';
 import logo from '../../assets/main_logo.png';
 import Image from 'next/image';
-
-const pages = ['Products', 'Pricing', 'Blog'];
 
 const Navbar = () => {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
@@ -45,7 +44,7 @@ const Navbar = () => {
       sx={{ backgroundColor: '#000000', opacity: '0.9' }}
     >
       <Container maxWidth='xl'>
-        <Toolbar disableGutters>
+        <Toolbar sx={{ minWidth: { xs: 250, md: '100%' } }} disableGutters>
           <Typography
             variant='h6'
             noWrap
@@ -61,14 +60,14 @@ const Navbar = () => {
               textDecoration: 'none',
             }}
           >
-            <Image src={logo} alt='site_logo' height={40} width={210} />
+            <Image src={logo} alt='site_logo' layout='intrinsic' />
           </Typography>
 
           <Box
+            py={1}
             sx={{
               flexGrow: 1,
               display: { xs: 'flex', md: 'none' },
-              left: '0',
             }}
           >
             <IconButton
@@ -81,26 +80,24 @@ const Navbar = () => {
             >
               <MenuIcon />
             </IconButton>
+
             <Menu
               id='menu-appbar'
               anchorEl={anchorElNav}
-              anchorOrigin={{
-                vertical: 'bottom',
-                horizontal: 'left',
-              }}
+              // anchorOrigin={{
+              //   vertical: 'bottom',
+              //   horizontal: 'left',
+              // }}
               keepMounted
-              transformOrigin={{
-                vertical: 'top',
-                horizontal: 'left',
-              }}
+              // transformOrigin={{
+              //   vertical: 'top',
+              //   horizontal: 'left',
+              // }}
               open={Boolean(anchorElNav)}
               onClose={handleCloseNavMenu}
               sx={{
-                display: {
-                  xs: 'flex',
-                  md: 'none',
-                  minHeight: 'calc(100vh - 100px)',
-                },
+                display: { xs: 'block', md: 'none' },
+                width: {xs: 250, md: '100%'}
               }}
             >
               <MenuItem onClick={handleCloseNavMenu}>
@@ -109,7 +106,8 @@ const Navbar = () => {
 
               <Typography
                 onClick={handleClick}
-                onMouseOver={handleClick}
+                onMouseEnter={handleClick}
+                onMouseLeave={handleClick}
                 textAlign='center'
               >
                 Services
@@ -146,7 +144,13 @@ const Navbar = () => {
               textDecoration: 'none',
             }}
           >
-            <Image src={logo} alt='site_logo' height={40} width={200} />
+            <Image
+              src={logo}
+              alt='site_logo'
+              layout='intrinsic'
+              heigh={30}
+              width={200}
+            />
           </Typography>
           <Box
             sx={{
@@ -257,9 +261,9 @@ const Navbar = () => {
             </Button>
           </Box>
           <Button
-            fontSize='small'
+            fontSize='1rem'
             variant='outlined'
-            sx={{ textTransform: 'capitalize', fontSize: '1rem' }}
+            sx={{ textTransform: 'capitalize', padding: '0.5rem' }}
           >
             Contact us
           </Button>

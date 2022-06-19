@@ -8,10 +8,13 @@ const theme = createTheme({
       main: '#FFFFFF',
     },
     secondary: {
-      main: '#f5f5f7',
+      main: '#F5F5F7',
     },
     navBg: {
       main: '#000000',
+    },
+    textColor: {
+      main: '#141414',
     },
     bgColor: {
       main: 'linear-gradient(rgb(2, 13, 31) 16%, black 35%)',

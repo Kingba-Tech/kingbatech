@@ -1,11 +1,14 @@
 import { Container, Stack, Grid, Avatar, Typography, Box } from '@mui/material';
 import Link from 'next/link';
 import Image from 'next/image';
-import logo from '../../assets/main_logo.png';
+import logo from '../../assets/kingba_small.png';
 import FacebookRoundedIcon from '@mui/icons-material/FacebookRounded';
 import TwitterIcon from '@mui/icons-material/Twitter';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
-import theme from '../../theme/theme';
+
+const footerItem =[
+  'Our Story', 'The Team', 'Our Difference', 'Careers', 'Privacy Policy'
+]
 
 const Footer = () => {
   return (
@@ -15,7 +18,7 @@ const Footer = () => {
         minHeight: '300px',
         backgroundColor: '#000000',
         opacity: '0.9',
-        padding: '1.5rem 1rem'
+        padding: '1.5rem 1rem',
       }}
     >
       <Stack
@@ -35,16 +38,15 @@ const Footer = () => {
               flexDirection: 'column',
               justifyContent: 'center',
               alignItems: 'center',
-            }
+            },
           }}
         >
           <Link href='#'>
             <Image
               style={{ cursor: 'pointer' }}
               src={logo}
-              alt='site  logo'
-              height='45'
-              width='210'
+              alt='site_logo'
+              layout='intrinsic'
             />
           </Link>
           <Typography
@@ -60,7 +62,7 @@ const Footer = () => {
             alias! Voluptatibus, quam?
           </Typography>
         </Grid>
-        <Grid direction='row' flex={1} >
+        <Grid direction='row' flex={1}>
           <Typography
             color='#f5f5f7'
             variant='h2'
@@ -74,56 +76,17 @@ const Footer = () => {
             direction='column'
             spacing={1}
           >
-            <Typography
-              color='#f5f5f7'
-              
-              variant='h6'
-              fontWeight={{ xs: '300', md: '400' }}
-              fontSize='1.1rem'
-              component='a'
-            >
-              Our Story
-            </Typography>
-            <Typography
-              color='#f5f5f7'
-              
-              fontWeight={{ xs: '300', md: '400' }}
-              variant='h6'
-              fontSize='1.1rem'
-              component='a'
-            >
-              The Team
-            </Typography>
-            <Typography
-              color='#f5f5f7'
-              
-              variant='h6'
-              fontWeight={{ xs: '300', md: '400' }}
-              fontSize='1.1rem'
-              component='a'
-            >
-              Our Difference
-            </Typography>
-            <Typography
-              color='#f5f5f7'
-            
-              variant='h6'
-              fontWeight={{ xs: '300', md: '400' }}
-              fontSize='1.1rem'
-              component='a'
-            >
-              Careers
-            </Typography>
-            <Typography
-              color='#f5f5f7'
-              
-              variant='h6'
-              fontWeight={{ xs: '300', md: '400' }}
-              fontSize='1.1rem'
-              component='a'
-            >
-              Privacy Policy
-            </Typography>
+            {footerItem.map((item, index) => (
+              <Typography key={index}
+                color='#f5f5f7'
+                variant='h6'
+                fontWeight={{ xs: '300', md: '400' }}
+                fontSize='1.1rem'
+                component='a'
+              >
+                {item}
+              </Typography>
+            ))}
           </Stack>
         </Grid>
         <Grid direction='row' flex={1}>
@@ -132,7 +95,7 @@ const Footer = () => {
             variant='h2'
             fontWeight={{ xs: '500', md: '700' }}
             fontSize={{ xs: '1.3rem', md: '1.5rem' }}
-            sx={{marginLeft:{xs: '18px'}}}
+            sx={{ marginLeft: { xs: '18px' } }}
           >
             Follow us
           </Typography>
