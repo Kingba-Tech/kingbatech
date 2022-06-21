@@ -83,7 +83,7 @@ const Navbar = () => {
             aria-label='open drawer'
             edge='start'
             onClick={handleDrawerToggle}
-            sx={{ mr: 2, display: { sm: 'none' } }}
+            sx={{ display: { sm: 'none' } }}
           >
             <MenuIcon />
           </IconButton>
@@ -91,7 +91,11 @@ const Navbar = () => {
             textAlign='center'
             variant='h6'
             component='a'
-            sx={{ flex: '2', display: { xs: 'block', sm: 'none' } }}
+            sx={{
+              flex: '2',
+              display: { xs: 'block', sm: 'none' },
+              marginLeft: '-9px',
+            }}
           >
             <Image src={logo} alt='Site Logo' layout='intrinsic' />
           </Typography>
@@ -122,6 +126,7 @@ const Navbar = () => {
                 Home
               </Button>
               <Button
+                component='div'
                 sx={{
                   fontWeight: '400',
                   color: 'secondary',
