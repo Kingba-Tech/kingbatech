@@ -7,12 +7,10 @@ import {
   Tabs,
   Tab,
   Box,
-  Paper,
 } from '@mui/material';
 import PropTypes from 'prop-types';
 import SwipeableViews from 'react-swipeable-views';
 import { useTheme } from '@mui/material/styles';
-import ProjectsCarousel from '../../components/Carousel/ProjectsCarousel';
 import {
   DesignCards,
   DigitalCards,

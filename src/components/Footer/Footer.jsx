@@ -90,15 +90,7 @@ const Footer = () => {
           </Stack>
         </Grid>
         <Grid direction='row' flex={1}>
-          <Typography
-            color='#f5f5f7'
-            variant='h2'
-            fontWeight={{ xs: '500', md: '700' }}
-            fontSize={{ xs: '1.3rem', md: '1.5rem' }}
-            sx={{ marginLeft: { xs: '18px' } }}
-          >
-            Follow us
-          </Typography>
+          
           <Stack
             sx={{ marginTop: '10px', '&:hover': { cursor: 'pointer' } }}
             direction='row'
@@ -109,7 +101,7 @@ const Footer = () => {
                 backgroundColor: '#6F7378',
                 '&:hover': {
                   backgroundColor: '#43464b',
-                  transition: '0.3s ease-in-out',
+                  transition: '0.3s ease-out',
                 },
               }}
             >

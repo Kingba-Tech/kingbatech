@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { styled, alpha } from '@mui/material/styles';
 import Button from '@mui/material/Button';
-import Menu, { MenuProps } from '@mui/material/Menu';
+import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
 import Divider from '@mui/material/Divider';
 import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
@@ -9,6 +9,7 @@ import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 
 const StyledMenu = styled((props) => (
   <Menu
+    sx={{ backgroundColor: '#00000' }}
     elevation={0}
     anchorOrigin={{
       vertical: 'bottom',
@@ -52,7 +53,7 @@ const StyledMenu = styled((props) => (
 }));
 
 const Dropdown = () => {
-  const [anchorEl, setAnchorEl] = React.useState(null)
+  const [anchorEl, setAnchorEl] = React.useState(null);
   const open = Boolean(anchorEl);
   const handleClick = (e) => {
     setAnchorEl(e.currentTarget);
@@ -69,6 +70,13 @@ const Dropdown = () => {
         aria-haspopup='true'
         aria-expanded={open ? 'true' : undefined}
         disableElevation
+        sx={{
+          textTransform: 'capitalize',
+          fontWeight: '500',
+          color: 'secondary',
+          fontSize: '1rem',
+          padding: '0 1rem',
+        }}
         onClick={handleClick}
         endIcon={open ? <KeyboardArrowUpIcon /> : <KeyboardArrowDownIcon />}
       >

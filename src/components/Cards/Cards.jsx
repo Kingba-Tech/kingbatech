@@ -4,8 +4,12 @@ import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Button from '@mui/material/Button';
+import { Avatar, CardHeader, IconButton } from '@mui/material';
 import Typography from '@mui/material/Typography';
 import { Grid } from '@mui/material';
+import MoreVertIcon from '@mui/icons-material/MoreVert';
+import Image from 'next/image';
+import img from '../../assets/1.jpg';
 
 const webcontent = [
   {
@@ -181,4 +185,42 @@ export const DesignCards = () => {
       </Grid>
     </Grid>
   );
+};
+
+export const SingleCard = () => {
+  <Card sx={{ maxWidth: 345 }}>
+    <CardHeader
+      avatar={<Avatar sx={{ backgroundColor: 'red' }}>Image</Avatar>}
+      action={
+        <IconButton>
+          <MoreVertIcon />
+        </IconButton>
+      }
+      title='Shrimp and Chorizo Paella'
+      subheader='September 14, 2016'
+    />
+    <CardMedia
+      component='img'
+      width='340'
+      objectFit='cover'
+      height='194'
+      image={img}
+      alt='Paella dish'
+    />
+    <CardContent>
+      <Typography variant='h6' color='#141414'>
+        This impressive paella is a perfect party dish and a fun meal to cook
+        together with your guests. Add 1 cup of frozen peas along with the
+        mussels, if you like.
+      </Typography>
+    </CardContent>
+    <CardActions>
+      <Button color='#141414' outlined>
+        Visit Site
+      </Button>
+      <Button color='#141414' outlined>
+        Share
+      </Button>
+    </CardActions>
+  </Card>;
 };

@@ -10,6 +10,9 @@ const Hero = () => {
       sx={{
         minHeight: 'calc(100vh - 64px)',
         background: 'linear-gradient(rgb(2, 13, 31) 16%, black 35%)',
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
       }}
     >
       <Grid
@@ -21,7 +24,7 @@ const Hero = () => {
           flexDirection: 'column',
         }}
       >
-        <Box mt={4}>
+        <Box my={4}>
           <Image
             src={banner}
             height={725}
@@ -36,6 +39,7 @@ const Hero = () => {
           fontWeight={{ sx: '300', md: '500' }}
           color='#f5f5f7'
           marginBottom='1rem'
+          textAlign='center'
         >
           We are best because we are different!
         </Typography>

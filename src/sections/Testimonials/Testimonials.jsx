@@ -1,7 +1,7 @@
 import React from 'react';
 import { Grid, Container, Typography } from '@mui/material';
-import Carousels from '../../components/Carousel/ProjectsCarousel';
-import Carousel from 'react-multi-carousel';
+import { SingleCard, WebCards } from '../../components/Cards/Cards';
+import Slider from '../../components/Slider/Slider';
 
 const Testimonials = () => {
   return (
@@ -16,7 +16,7 @@ const Testimonials = () => {
         flexDirection: { xs: 'column', md: 'row' },
       }}
     >
-      <Grid py={2} sx={{ maxWidth: 1200 }}>
+      <Grid py={2}>
         <Typography
           pt={4}
           variant='h2'
@@ -35,7 +35,18 @@ const Testimonials = () => {
           padding='20px 0px'
           color='#181818'
         />
-       
+        <Grid
+          sx={{
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            marginTop: '2rem',
+          }}
+        >
+          <Grid width='100vw'>
+            <Slider />
+          </Grid>
+        </Grid>
       </Grid>
     </Container>
   );

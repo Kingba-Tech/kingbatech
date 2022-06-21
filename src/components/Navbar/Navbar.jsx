@@ -53,7 +53,7 @@ const Navbar = () => {
               color: '#F5F5F7',
               display: 'flex',
               flexDirection: 'column',
-              textTransform: 'capitalize',
+              
             }}
           >
             <ListItemText sx={{ padding: '8px 0' }} primary='Home' />
@@ -117,10 +117,11 @@ const Navbar = () => {
             <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
               <Button
                 sx={{
-                  fontWeight: '400',
+                  fontWeight: '500',
                   color: 'secondary',
                   fontSize: '1rem',
                   padding: '0 1rem',
+                  textTransform: 'capitalize',
                 }}
               >
                 Home
@@ -128,50 +129,55 @@ const Navbar = () => {
               <Button
                 component='div'
                 sx={{
-                  fontWeight: '400',
+                  fontWeight: '500',
                   color: 'secondary',
                   fontSize: '1rem',
                   padding: '0 1rem',
+                  textTransform: 'capitalize',
                 }}
               >
                 <Dropdown />
               </Button>
               <Button
                 sx={{
-                  fontWeight: '400',
+                  fontWeight: '500',
                   color: 'secondary',
                   fontSize: '1rem',
                   padding: '0 1rem',
+                  textTransform: 'capitalize',
                 }}
               >
                 Projects
               </Button>
               <Button
                 sx={{
-                  fontWeight: '400',
+                  fontWeight: '500',
                   color: 'secondary',
                   fontSize: '1rem',
                   padding: '0 1rem',
+                  textTransform: 'capitalize',
                 }}
               >
                 Career
               </Button>
               <Button
                 sx={{
-                  fontWeight: '400',
+                  fontWeight: '500',
                   color: 'secondary',
                   fontSize: '1rem',
                   padding: '0 1rem',
+                  textTransform: 'capitalize',
                 }}
               >
                 Blog
               </Button>
               <Button
                 sx={{
-                  fontWeight: '400',
+                  fontWeight: '500',
                   color: 'secondary',
                   fontSize: '1rem',
                   padding: '0 1rem',
+                  textTransform: 'capitalize',
                 }}
               >
                 About Us
