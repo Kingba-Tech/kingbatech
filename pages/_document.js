@@ -3,8 +3,24 @@ import Document, { Html, Head, Main, NextScript } from 'next/document';
 import createEmotionServer from '@emotion/server/create-instance';
 import theme from '../src/theme/theme';
 import createEmotionCache from '../src/createEmotionCache';
+import { ServerStyleSheet } from 'styled-components';
 
 export default class MyDocument extends Document {
+  static getInitialProps({ renderPage }) {
+    // Step 1: Create an instance of ServerStyleSheet
+    const sheet = new ServerStyleSheet();
+
+    // Step 2: Retrieve styles from components in the page
+    const page = renderPage(
+      (App) => (props) => sheet.collectStyles(<App {...props} />)
+    );
+
+    // Step 3: Extract the styles as <style> tags
+    const styleTags = sheet.getStyleElement();
+
+    // Step 4: Pass styleTags as a prop
+    return { ...page, styleTags };
+  }
   render() {
     return (
       <Html lang='en'>
@@ -12,6 +28,7 @@ export default class MyDocument extends Document {
           {/* PWA primary color */}
           <meta name='theme-color' content={theme.palette.primary.main} />
           <link rel='shortcut icon' href='/static/favicon.ico' />
+
           <link
             rel='stylesheet'
             href='https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap'
@@ -31,6 +48,7 @@ export default class MyDocument extends Document {
           />
           {/* Inject MUI styles first to match with the prepend: true configuration. */}
           {this.props.emotionStyleTags}
+          {this.props.styleTags}
         </Head>
         <body>
           <Main />

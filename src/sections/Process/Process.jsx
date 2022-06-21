@@ -5,7 +5,7 @@ const Process = () => {
   return (
     <Container
       maxWidth
-      minHeight='600px'
+      minHeight={800}
       sx={{
         backgroundColor: '#F2F2F2',
         justifyContent: 'center',
@@ -34,17 +34,15 @@ const Process = () => {
       />
       <Grid
         sx={{
-          width: '1200px',
-          minHeight: '800',
           alignItems: 'center',
           display: 'flex',
-          justifyContent: 'space-around',
+          justifyContent: 'center',
           alignItems: 'center',
         }}
       >
         <Grid
-          p={3}
           container
+          p={4}
           rowSpacing={1}
           columnSpacing={{ xs: 1, sm: 2, md: 3 }}
           sx={{
@@ -52,21 +50,25 @@ const Process = () => {
             alignItems: 'center',
             display: 'flex',
             flexDirection: { xs: 'column', md: 'row' },
-            overflow: 'hidden',
           }}
         >
           <Grid item xs={12} md={6}>
             <Typography
+              color='#181818'
               variant='h2'
               fontWeight={{ xs: '400', md: '500' }}
-              color='#181818'
-              opacity='0.9'
-              fontSize={{ xs: '1.8rem', md: '2.5rem' }}
+              fontSize={{ xs: '1.3rem', md: '1.5rem' }}
             >
               Web Development
             </Typography>
           </Grid>
-          <Grid item xs={12} md={6} sx={{ maxWidth: { xs: 300, md: '100%' } }}>
+          <Grid
+            mb={2}
+            item
+            xs={12}
+            md={6}
+            sx={{ maxWidth: { xs: 300, md: '100%' } }}
+          >
             <Typography
               textAlign={{ xs: 'center', md: 'start' }}
               variant='h6'
@@ -80,16 +82,21 @@ const Process = () => {
           </Grid>
           <Grid item xs={12} md={6}>
             <Typography
+              color='#181818'
               variant='h2'
               fontWeight={{ xs: '400', md: '500' }}
-              color='#181818'
-              opacity='0.9'
-              fontSize={{ xs: '1.8rem', md: '2.5rem' }}
+              fontSize={{ xs: '1.3rem', md: '1.5rem' }}
             >
               Digital Marketing
             </Typography>
           </Grid>
-          <Grid sx={{ maxWidth: { xs: 300, md: '100%' } }} item xs={12} md={6}>
+          <Grid
+            mb={2}
+            sx={{ maxWidth: { xs: 300, md: '100%' } }}
+            item
+            xs={12}
+            md={6}
+          >
             <Typography
               textAlign={{ xs: 'center', md: 'start' }}
               variant='h6'
@@ -103,11 +110,11 @@ const Process = () => {
           </Grid>
           <Grid item xs={12} md={6}>
             <Typography
+              color='#181818'
               variant='h2'
               fontWeight={{ xs: '400', md: '500' }}
-              color='#181818'
-              opacity='0.9'
-              fontSize={{ xs: '1.8rem', md: '2.5rem' }}
+              fontSize={{ xs: '1.3rem', md: '1.5rem' }}
+              mb={1}
             >
               Design & Editing
             </Typography>
