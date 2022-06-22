@@ -190,7 +190,7 @@ export const DesignCards = () => {
 export const SingleCard = () => {
   <Card sx={{ maxWidth: 345 }}>
     <CardHeader
-      avatar={<Avatar sx={{ backgroundColor: 'red' }}>Image</Avatar>}
+      avatar={<Avatar src={img} />}
       action={
         <IconButton>
           <MoreVertIcon />
@@ -217,9 +217,6 @@ export const SingleCard = () => {
     <CardActions>
       <Button color='#141414' outlined>
         Visit Site
-      </Button>
-      <Button color='#141414' outlined>
-        Share
       </Button>
     </CardActions>
   </Card>;
