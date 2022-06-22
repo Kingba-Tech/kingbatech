@@ -106,6 +106,36 @@ const OurStory = () => {
             flexDirection: { xs: 'column', md: 'row' },
           }}
         >
+          <Grid
+            sx={{
+              display: 'flex',
+              flexDirection: 'column',
+              justifyContent: 'center',
+              alignItems: 'center',
+            }}
+          >
+            <Typography
+              color='#181818'
+              variant='h2'
+              fontWeight='500'
+              fontSize={{ xs: '1.5rem', md: '2rem' }}
+              mb={2}
+            >
+              Our Story
+            </Typography>
+            <Typography
+              textAlign='center'
+              color='#141414'
+              variant='h6'
+              fontWeight={{ xs: '300', md: '400' }}
+              fontSize='1.1rem'
+            >
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime
+              aliquid, quibusdam nulla laboriosam obcaecati architecto possimus
+              molestiae voluptate laudantium non eveniet libero vel optio
+              voluptatem, harum illo accusantium nihil totam?
+            </Typography>
+          </Grid>
           <Grid>
             <Typography
               color='#181818'
@@ -137,7 +167,7 @@ const OurStory = () => {
                     justifyContent: 'space-evenly',
                     background: '#DEDEDE',
                   }}
-                  height={350}
+                  height={360}
                   width={300}
                 >
                   <Avatar src={team.img} sx={{ height: 100, width: 100 }} />
@@ -230,36 +260,6 @@ const OurStory = () => {
                 </Box>
               ))}
             </Grid>
-          </Grid>
-          <Grid
-            sx={{
-              display: 'flex',
-              flexDirection: 'column',
-              justifyContent: 'center',
-              alignItems: 'center',
-            }}
-          >
-            <Typography
-              color='#181818'
-              variant='h2'
-              fontWeight='500'
-              fontSize={{ xs: '1.5rem', md: '2rem' }}
-              mb={2}
-            >
-              Our Story
-            </Typography>
-            <Typography
-              textAlign='center'
-              color='#141414'
-              variant='h6'
-              fontWeight={{ xs: '300', md: '400' }}
-              fontSize='1.1rem'
-            >
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime
-              aliquid, quibusdam nulla laboriosam obcaecati architecto possimus
-              molestiae voluptate laudantium non eveniet libero vel optio
-              voluptatem, harum illo accusantium nihil totam?
-            </Typography>
           </Grid>
         </Grid>
       </Grid>
