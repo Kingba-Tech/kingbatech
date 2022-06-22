@@ -1,7 +1,6 @@
 import React from 'react';
 import { Grid, Container, Typography } from '@mui/material';
-import { SingleCard, WebCards } from '../../components/Cards/Cards';
-import Slider from '../../components/Slider/Slider';
+import Slider from '../components/Slider/Slider';
 
 const Testimonials = () => {
   return (

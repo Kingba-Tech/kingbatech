@@ -1,7 +1,7 @@
 import { Container, Box, Grid, Typography } from '@mui/material';
 import Image from 'next/image';
 import Link from 'next/link';
-import banner from '../../assets/hero_banner.png';
+import banner from '../assets/hero_banner.png';
 
 const Hero = () => {
   return (

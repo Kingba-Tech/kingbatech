@@ -15,7 +15,7 @@ import {
   DesignCards,
   DigitalCards,
   WebCards,
-} from '../../components/Cards/Cards';
+} from '../components/Cards/Cards';
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
