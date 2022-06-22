@@ -6,6 +6,7 @@ import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import GithubIcon from '@mui/icons-material/GitHub';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import EmailIcon from '@mui/icons-material/Email';
+import { Rotate90DegreesCcw } from '@mui/icons-material';
 
 const teams = [
   {
@@ -166,6 +167,10 @@ const OurStory = () => {
                     alignItems: 'center',
                     justifyContent: 'space-evenly',
                     background: '#DEDEDE',
+                    '&:hover': {
+                      boxShadow: '0px 0px 10px 0px rgba(0,0,0,0.75)',
+                      transition: '.4s all ease-in-out',
+                    },
                   }}
                   height={360}
                   width={300}

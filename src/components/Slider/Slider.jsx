@@ -24,7 +24,7 @@ import { Pagination, Autoplay, FreeMode } from 'swiper';
 
 const Slider = () => {
   return (
-    <Grid marginLeft={{ xs: '2.35rem', md: 'none' }}>
+    <Grid marginLeft={{ xs: '1rem', sm: '2.5rem', md: 'none' }}>
       <Swiper
         centeredSlides={true}
         autoplay={{
@@ -41,8 +41,8 @@ const Slider = () => {
         className='mySwiper'
         breakpoints={{
           // when window width is >= 640px
-          400: {
-            width: 400,
+          359: {
+            width: 359,
             slidesPerView: 1,
           },
           // when window width is >= 768px

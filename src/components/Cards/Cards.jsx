@@ -84,7 +84,7 @@ export const WebCards = () => {
         }}
       >
         {webcontent.map((web, index) => (
-          <Card key={index} item sx={{ maxWidth: 340, margin: '1rem 0' }}>
+          <Card key={index} item sx={{ maxWidth: 340, margin: '1rem .5rem' }}>
             <CardMedia
               component='img'
               height='140'
