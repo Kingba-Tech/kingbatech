@@ -137,8 +137,8 @@ const OurStory = () => {
                     justifyContent: 'space-evenly',
                     background: '#DEDEDE',
                   }}
-                  height={300}
-                  width={250}
+                  height={350}
+                  width={300}
                 >
                   <Avatar src={team.img} sx={{ height: 100, width: 100 }} />
                   <Typography
