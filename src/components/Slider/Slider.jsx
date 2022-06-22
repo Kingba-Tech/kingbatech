@@ -24,7 +24,7 @@ import { Pagination, Autoplay, FreeMode } from 'swiper';
 
 const Slider = () => {
   return (
-    <Grid marginLeft={{ xs: '1rem', sm: '2.5rem', md: 'none' }}>
+    <Grid marginLeft={{ xs: '1.6rem', sm: '2.5rem', md: 'none' }}>
       <Swiper
         centeredSlides={true}
         autoplay={{
@@ -65,9 +65,8 @@ const Slider = () => {
             />
             <CardMedia
               component='img'
-              width='320'
               objectFit='cover'
-              height='150'
+              height='140'
               image={img}
               alt='Page_View'
             />
@@ -77,7 +76,14 @@ const Slider = () => {
               </Typography>
             </CardContent>
             <CardActions>
-              <Button sx={{ color: '#141414' }} outlined>
+              <Button
+                component='a'
+                sx={{
+                  color: '#141414',
+                  border: '1px solid #141414',
+                  padding: '2px 6px',
+                }}
+              >
                 Visit Site
               </Button>
             </CardActions>
@@ -92,9 +98,8 @@ const Slider = () => {
             />
             <CardMedia
               component='img'
-              width='320'
               objectFit='cover'
-              height='150'
+              height='140'
               image={img}
               alt='Page_View'
             />
@@ -104,7 +109,14 @@ const Slider = () => {
               </Typography>
             </CardContent>
             <CardActions>
-              <Button sx={{ color: '#141414' }} outlined>
+              <Button
+                component='a'
+                sx={{
+                  color: '#141414',
+                  border: '1px solid #141414',
+                  padding: '2px 6px',
+                }}
+              >
                 Visit Site
               </Button>
             </CardActions>
@@ -119,9 +131,8 @@ const Slider = () => {
             />
             <CardMedia
               component='img'
-              width='320'
               objectFit='cover'
-              height='150'
+              height='140'
               image={img}
               alt='Page_View'
             />
@@ -131,7 +142,14 @@ const Slider = () => {
               </Typography>
             </CardContent>
             <CardActions>
-              <Button sx={{ color: '#141414' }} outlined>
+              <Button
+                component='a'
+                sx={{
+                  color: '#141414',
+                  border: '1px solid #141414',
+                  padding: '2px 6px',
+                }}
+              >
                 Visit Site
               </Button>
             </CardActions>
@@ -146,9 +164,8 @@ const Slider = () => {
             />
             <CardMedia
               component='img'
-              width='320'
               objectFit='cover'
-              height='150'
+              height='140'
               image={img}
               alt='Page_View'
             />
@@ -158,7 +175,14 @@ const Slider = () => {
               </Typography>
             </CardContent>
             <CardActions>
-              <Button sx={{ color: '#141414' }} outlined>
+              <Button
+                component='a'
+                sx={{
+                  color: '#141414',
+                  border: '1px solid #141414',
+                  padding: '2px 6px',
+                }}
+              >
                 Visit Site
               </Button>
             </CardActions>

@@ -19,8 +19,8 @@ const teams = [
     github: 'https://github.com/alienkawsar',
   },
   {
-    name: 'Kawsar Alam',
-    title: 'Developer',
+    name: 'Al-Amin',
+    title: 'Manager',
     img: 'https://i.imgur.com/VQ7Icmx.jpg',
     fb: 'https://facebook.com/alienkawsar',
     twitter: 'https://twitter.com/alienkawsar',
@@ -28,8 +28,8 @@ const teams = [
     github: 'https://github.com/alienkawsar',
   },
   {
-    name: 'Kawsar Alam',
-    title: 'Developer',
+    name: 'Hasan Mahmud',
+    title: 'Designer',
     img: 'https://i.imgur.com/VQ7Icmx.jpg',
     fb: 'https://facebook.com/alienkawsar',
     twitter: 'https://twitter.com/alienkawsar',
@@ -130,6 +130,7 @@ const OurStory = () => {
               variant='h6'
               fontWeight={{ xs: '300', md: '400' }}
               fontSize='1.1rem'
+              mb={{xs: 2, sm:'none'}}
             >
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime
               aliquid, quibusdam nulla laboriosam obcaecati architecto possimus
