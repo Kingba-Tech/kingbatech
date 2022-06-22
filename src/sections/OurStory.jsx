@@ -110,7 +110,7 @@ const OurStory = () => {
             <Typography
               color='#181818'
               variant='h2'
-              fontWeight='500' 
+              fontWeight='500'
               fontSize={{ xs: '1.5rem', md: '2rem' }}
               textAlign='center'
             >
@@ -124,9 +124,8 @@ const OurStory = () => {
                 justifyContent: 'center',
                 gap: '2',
                 flexWrap: 'wrap',
-                gap: '2em'
+                gap: '2em',
               }}
-              
             >
               {teams.map((team, index) => (
                 <Box
@@ -175,7 +174,7 @@ const OurStory = () => {
                       <FacebookRoundedIcon
                         style={{
                           fill: '#f5f5f7',
-                          '&:hover': { fill: '#ffffff' },
+                          '&:hover': { fill: '#ffffff', cursor: 'pointer' },
                         }}
                       />
                     </Avatar>
@@ -191,7 +190,7 @@ const OurStory = () => {
                       <TwitterIcon
                         style={{
                           fill: '#f5f5f7',
-                          '&:hover': { fill: '#ffffff' },
+                          '&:hover': { fill: '#ffffff', cursor: 'pointer' },
                         }}
                       />
                     </Avatar>
@@ -207,7 +206,7 @@ const OurStory = () => {
                       <LinkedInIcon
                         style={{
                           fill: '#f5f5f7',
-                          '&:hover': { fill: '#ffffff' },
+                          '&:hover': { fill: '#ffffff', cursor: 'pointer' },
                         }}
                       />
                     </Avatar>
@@ -223,7 +222,7 @@ const OurStory = () => {
                       <EmailIcon
                         style={{
                           fill: '#f5f5f7',
-                          '&:hover': { fill: '#ffffff' },
+                          '&:hover': { fill: '#ffffff', cursor: 'pointer' },
                         }}
                       />
                     </Avatar>
@@ -232,7 +231,14 @@ const OurStory = () => {
               ))}
             </Grid>
           </Grid>
-          <Grid sx={ {display: 'flex', flexDirection:'column', justifyContent: 'center', alignItems: 'center'}}>
+          <Grid
+            sx={{
+              display: 'flex',
+              flexDirection: 'column',
+              justifyContent: 'center',
+              alignItems: 'center',
+            }}
+          >
             <Typography
               color='#181818'
               variant='h2'
@@ -243,7 +249,7 @@ const OurStory = () => {
               Our Story
             </Typography>
             <Typography
-            textAlign='center'
+              textAlign='center'
               color='#141414'
               variant='h6'
               fontWeight={{ xs: '300', md: '400' }}
