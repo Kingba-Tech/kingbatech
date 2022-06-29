@@ -35,7 +35,7 @@ const Hero = () => {
             flexDirection: 'column',
           }}
         >
-          <Box sx={{ margin: { xs: '1rem 0 1rem', md: '2rem 0 3rem' } }}>
+          <Box sx={{ margin: '2rem 0 3rem' }}>
             <Image
               src={banner}
               height={500}
