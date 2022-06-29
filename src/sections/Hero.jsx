@@ -8,7 +8,7 @@ const Hero = () => {
     <Container
       maxWidth
       sx={{
-        minHeight: { xs: '80vh', md: '100vh' },
+        minHeight: { md: '100vh' },
         background: 'linear-gradient(rgb(2, 13, 31) 16%, black 35%)',
         display: 'flex',
         justifyContent: 'center',
