@@ -32,10 +32,10 @@ const Hero = () => {
             display: 'flex',
             justifyContent: 'center',
             alignItems: 'center',
-            flexDirection: { xs: 'column-reverse', md: 'column' },
+            flexDirection: 'column',
           }}
         >
-          <Box sx={{ margin: {xs: '1rem 0 1rem', md: '2rem 0 3rem' } }}>
+          <Box sx={{ margin: { xs: '1rem 0 1rem', md: '2rem 0 3rem' } }}>
             <Image
               src={banner}
               height={500}
@@ -52,7 +52,7 @@ const Hero = () => {
               justifyContent: 'center',
               alignItems: 'center',
               flexDirection: 'column',
-              padding: '1rem',
+              padding: '.6rem',
             }}
           >
             <Typography
