@@ -1,53 +1,22 @@
 import React from 'react';
-import {
-  Container,
-  Grid,
-  Typography,
-  AppBar,
-  Tabs,
-  Tab,
-  Box,
-} from '@mui/material';
-import PropTypes from 'prop-types';
+import { Container, Grid, Typography, AppBar, Tabs, Tab } from '@mui/material';
+
 import SwipeableViews from 'react-swipeable-views';
 import { useTheme } from '@mui/material/styles';
-import {
-  DesignCards,
-  DigitalCards,
-  WebCards,
-} from '../components/Cards/Cards';
+import { DesignCards, DigitalCards, WebCards } from '../components/Cards/Cards';
 
 function TabPanel(props) {
-  const { children, value, index, ...other } = props;
+  const { children, value, index } = props;
 
   return (
-    <div
-      role='tabpanel'
-      hidden={value !== index}
-      id={`full-width-tabpanel-${index}`}
-      aria-labelledby={`full-width-tab-${index}`}
-      {...other}
-    >
+    <div role='tabpanel' hidden={value !== index}>
       {value === index && (
-        <Box sx={{ p: 3 }}>
+        <Grid>
           <Grid spacing={{ xs: 2 }}>{children}</Grid>
-        </Box>
+        </Grid>
       )}
     </div>
   );
-}
-
-TabPanel.propTypes = {
-  children: PropTypes.node,
-  index: PropTypes.number.isRequired,
-  value: PropTypes.number.isRequired,
-};
-
-function a11yProps(index) {
-  return {
-    id: `full-width-tab-${index}`,
-    'aria-controls': `full-width-tabpanel-${index}`,
-  };
 }
 
 const Projects = () => {
@@ -63,77 +32,102 @@ const Projects = () => {
   };
 
   return (
-    <Container maxWidth sx={{ backgroundColor: '#F2F2F2', minHeight: '500px' }}>
-      <Grid py={2}>
+    <Container
+      maxWidth
+      sx={{
+        backgroundColor: '#FFFFFF',
+        minHeight: '500px',
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+        flexDirection: 'column',
+      }}
+    >
+      <Grid sx={{ width: '100%', maxWidth: 1080 }} py={2} mt={{ xs: 3, md: 6 }}>
         <Typography
-          pt={4}
+          pt={{ xs: 2, md: 4 }}
           variant='h2'
           fontWeight={{ xs: '400', md: '500' }}
           color='#181818'
-          opacity='0.9'
           textAlign='center'
           fontSize={{ xs: '1.8rem', md: '2.5rem' }}
         >
-          Projects
+          Some of our hand-picked work
         </Typography>
-        <hr
-          height='5px'
-          width='160px'
-          textAlign='center'
-          padding='20px 0px'
-          color='#181818'
-        />
 
         <Grid
+          mt={{ xs: 3, md: 6 }}
           sx={{
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'center',
-            marginTop: '2rem',
+            flexDirection: 'column',
+            width: '100%',
           }}
         >
-          <Grid width={1200}>
-            <AppBar position='static'>
+          <Grid mt={2}>
+            <AppBar
+              position='static'
+              sx={{
+                boxShadow: 'none',
+              }}
+            >
               <Tabs
                 sx={{
-                  backgroundColor: '#000000',
-                  opacity: '0.9',
-                  color: '#F5F5F7',
+                  backgroundColor: '#F3F3F4',
+                  opacity: '1',
+                  '& .MuiTabs-indicator': {
+                    backgroundColor: '#004581',
+                  },
                 }}
                 value={value}
                 onChange={handleChange}
-                indicatorColor='secondary'
-                textColor='inherit'
+                textColor='primary'
                 variant='fullWidth'
                 aria-label='full width tabs example'
               >
                 <Tab
                   sx={{
-                    fontSize: { xs: 'small', md: 'medium' },
-                    lineHeight: '1.2rem',
+                    fontSize: { xs: '1rem', md: '1.2rem' },
+                    lineHeight: { xs: 1.4, md: 1 },
+                    fontWeight: { xs: 400, md: '600' },
+                    color: '#000000',
+                    '&:active, &:focus': {
+                      color: '#004581',
+                    },
+                    opacity: '1',
                   }}
                   label='Web Development'
-                  {...a11yProps(0)}
                 />
                 <Tab
                   sx={{
-                    fontSize: { xs: 'small', md: 'medium' },
-                    lineHeight: '1.2rem',
+                    fontSize: { xs: '1rem', md: '1.2rem' },
+                    lineHeight: { xs: 1.4, md: 1 },
+                    fontWeight: { xs: 400, md: '600' },
+                    color: '#000000',
+                    opacity: '1',
+                    '&:active, &:focus': {
+                      color: '#004581',
+                    },
                   }}
                   label='Digital Marketing'
-                  {...a11yProps(1)}
                 />
                 <Tab
                   sx={{
-                    fontSize: { xs: 'small', md: 'medium' },
-                    lineHeight: '1.2rem',
+                    fontSize: { xs: '1rem', md: '1.2rem' },
+                    lineHeight: { xs: 1.4, md: 1 },
+                    fontWeight: { xs: 400, md: '600' },
+                    color: '#000000',
+                    opacity: '1',
+                    '&:active, &:focus': {
+                      color: '#004581',
+                    },
                   }}
                   label='Design & Editing'
-                  {...a11yProps(2)}
                 />
               </Tabs>
             </AppBar>
-            <Grid>
+            <Grid mt={3}>
               <SwipeableViews
                 axis={theme.direction === 'rtl' ? 'x-reverse' : 'x'}
                 index={value}
@@ -157,6 +151,26 @@ const Projects = () => {
               </SwipeableViews>
             </Grid>
           </Grid>
+          <Typography
+            component='a'
+            variant='h6'
+            fontSize={{ xs: '1.2rem', md: '1.4rem' }}
+            fontWeight={{ xs: 400, md: 500 }}
+            textAlign='center'
+            color='primary'
+            sx={{
+              border: '2px solid #004581',
+              padding: '.6rem 3.5rem',
+              marginTop: { xs: '1.5rem', md: '4rem' },
+              borderRadius: '.3rem',
+              '&:hover': {
+                color: '#F5F5F7',
+                backgroundColor: '#004581',
+              },
+            }}
+          >
+            See more work
+          </Typography>
         </Grid>
       </Grid>
     </Container>

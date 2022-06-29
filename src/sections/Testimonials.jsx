@@ -7,44 +7,32 @@ const Testimonials = () => {
     <Container
       maxWidth
       sx={{
-        backgroundColor: '#F2F2F2',
-        minHeight: '500px',
+        backgroundColor: '#F0F6FF',
+        minHeight: '60vh',
         display: 'flex',
         alignItems: 'center',
-        justifyContent: 'center',
-        flexDirection: { xs: 'column', md: 'row' },
+        justifyContent: 'flex-start',
+        flexDirection: 'column',
       }}
     >
-      <Grid py={2}>
-        <Typography
-          pt={4}
-          variant='h2'
-          fontWeight={{ xs: '400', md: '500' }}
-          color='#181818'
-          opacity='0.9'
-          textAlign='center'
-          fontSize={{ xs: '1.8rem', md: '2.5rem' }}
-        >
-          Testimonials
-        </Typography>
-        <hr
-          height='5px'
-          width='250px'
-          textAlign='center'
-          padding='20px 0px'
-          color='#181818'
-        />
+      <Grid
+        sx={{
+          display: 'flex',
+          flexDirection: 'column',
+          width: '100%',
+          maxWidth: 1080,
+        }}
+        py={2}
+      >
         <Grid
+          width='100%'
           sx={{
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'center',
-            marginTop: '2rem',
           }}
         >
-          <Grid width='100vw'>
-            <Slider />
-          </Grid>
+          <Slider />
         </Grid>
       </Grid>
     </Container>

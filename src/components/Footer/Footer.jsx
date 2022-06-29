@@ -1,153 +1,235 @@
-import { Container, Stack, Grid, Avatar, Typography, Box } from '@mui/material';
-import Link from 'next/link';
+import { Container, Stack, Grid, Typography } from '@mui/material';
+
 import Image from 'next/image';
 import logo from '../../assets/kingba_small.png';
-import FacebookRoundedIcon from '@mui/icons-material/FacebookRounded';
-import TwitterIcon from '@mui/icons-material/Twitter';
-import LinkedInIcon from '@mui/icons-material/LinkedIn';
-
-const footerItem =[
-  'Our Story', 'The Team', 'Our Difference', 'Careers', 'Privacy Policy'
-]
 
 const Footer = () => {
   return (
     <Container
       maxWidth
       sx={{
-        minHeight: '300px',
-        backgroundColor: '#000000',
-        opacity: '0.9',
+        minHeight: '500px',
+        background: '#000000',
         padding: '1.5rem 1rem',
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'center',
+        justifyContent: 'center',
       }}
     >
-      <Stack
-        direction={{ md: 'row', xs: 'column' }}
-        spacing={4}
-        alignItems={{ xs: 'center', md: 'flex-start' }}
-        justifyContent={{ md: 'space-between', xs: 'center' }}
-        py='1.5rem'
+      <Grid
+        sx={{
+          width: '100%',
+          maxWidth: 1080,
+        }}
       >
         <Grid
-          direction='row'
-          flex={1}
           sx={{
-            display: {
-              xs: 'flex',
-              md: 'block',
-              flexDirection: 'column',
-              justifyContent: 'center',
-              alignItems: 'center',
-            },
+            display: 'flex',
+            flexDirection: 'column',
+            gap: '7.5rem',
           }}
         >
-          <Link href='#'>
-            <Image
-              style={{ cursor: 'pointer' }}
-              src={logo}
-              alt='site_logo'
-              layout='intrinsic'
-            />
-          </Link>
-          <Typography
-            marginTop={{ xs: '1.5rem', md: '0.8rem' }}
-            color='white'
-            variant='h6'
-            fontWeight='400'
-            fontSize='1.2rem'
-            textAlign={{ xs: 'center', sm: 'start' }}
+          <Grid
+            container
+            sx={{
+              display: 'flex',
+              justifyContent: 'space-between',
+              alignContent: 'space-between',
+            }}
           >
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Adipisci
-            repellendus eum perferendis reiciendis autem dolor placeat molestiae
-            alias! Voluptatibus, quam?
-          </Typography>
-        </Grid>
-        <Grid direction='row' flex={1}>
-          <Typography
-            color='#f5f5f7'
-            variant='h2'
-            fontWeight={{ xs: '500', md: '700' }}
-            fontSize={{ xs: '1.3rem', md: '1.5rem' }}
-          >
-            About us
-          </Typography>
-          <Stack
-            sx={{ marginTop: '10px', '&:hover': { cursor: 'pointer' } }}
-            direction='column'
-            spacing={1}
-          >
-            {footerItem.map((item, index) => (
-              <Typography key={index}
+            <Grid item xs={12} md={6} mb={{xs:'1.5rem', md: 'none'}}>
+              <Image
+                src={logo}
+                alt='logo'
+                layout='intrinsic'
+                width={160}
+                height={32}
+              />
+              <Typography
+                mt={3}
                 color='#f5f5f7'
-                variant='h6'
-                fontWeight={{ xs: '300', md: '400' }}
-                fontSize='1.1rem'
-                component='a'
+                variant='h2'
+                fontWeight={{ xs: '300' }}
+                fontSize={{ xs: '1.2rem', md: '1.3rem' }}
+                fontFamily='DM Sans, sans serif;'
+                display={{ xs: 'none', md: 'block' }}
               >
-                {item}
+                Where strategy meets creativity
               </Typography>
-            ))}
-          </Stack>
-        </Grid>
-        <Grid direction='row' flex={1}>
-          
-          <Stack
-            sx={{ marginTop: '10px', '&:hover': { cursor: 'pointer' } }}
-            direction='row'
-            spacing={2}
+            </Grid>
+            <Grid
+              item
+              xs={12}
+              md={6}
+              sx={{
+                display: 'flex',
+                flexWrap: 'wrap',
+                gap: { xs: '2.5rem', md: 'none' },
+              }}
+            >
+              <Typography
+                mx
+                color='#f5f5f7'
+                variant='h2'
+                fontWeight={{ xs: '300', md: '400' }}
+                fontSize={{ xs: '1.2rem', md: '1.3rem' }}
+                fontFamily='DM Sans, sans serif;'
+                component='a'
+                sx={{
+                  '&:hover': {
+                    color: '#2997ff',
+                  },
+                }}
+              >
+                Facebook
+              </Typography>
+              <Typography
+                mx
+                color='#f5f5f7'
+                variant='h2'
+                fontWeight={{ xs: '300', md: '400' }}
+                fontSize={{ xs: '1.2rem', md: '1.3rem' }}
+                fontFamily='DM Sans, sans serif;'
+                component='a'
+                sx={{
+                  '&:hover': {
+                    color: '#2997ff',
+                  },
+                }}
+              >
+                Behance
+              </Typography>
+              <Typography
+                mx
+                color='#f5f5f7'
+                variant='h2'
+                fontWeight={{ xs: '300', md: '400' }}
+                fontSize={{ xs: '1.2rem', md: '1.3rem' }}
+                fontFamily='DM Sans, sans serif;'
+                component='a'
+                sx={{
+                  '&:hover': {
+                    color: '#2997ff',
+                  },
+                }}
+              >
+                LinkedIn
+              </Typography>
+              <Typography
+                mx
+                color='#f5f5f7'
+                variant='h2'
+                fontWeight={{ xs: '300', md: '400' }}
+                fontSize={{ xs: '1.2rem', md: '1.3rem' }}
+                fontFamily='DM Sans, sans serif;'
+                component='a'
+                sx={{
+                  '&:hover': {
+                    color: '#2997ff',
+                  },
+                }}
+              >
+                Twitter
+              </Typography>
+              <Typography
+                mx
+                color='#f5f5f7'
+                variant='h2'
+                fontWeight={{ xs: '300', md: '400' }}
+                fontSize={{ xs: '1.2rem', md: '1.3rem' }}
+                fontFamily='DM Sans, sans serif;'
+                component='a'
+                sx={{
+                  '&:hover': {
+                    color: '#2997ff',
+                  },
+                }}
+              >
+                Instagram
+              </Typography>
+              <Typography
+                mx
+                color='#f5f5f7'
+                variant='h2'
+                fontWeight={{ xs: '300', md: '400' }}
+                fontSize={{ xs: '1.2rem', md: '1.3rem' }}
+                fontFamily='DM Sans, sans serif;'
+                component='a'
+                sx={{
+                  '&:hover': {
+                    color: '#2997ff',
+                  },
+                }}
+              >
+                YouTube
+              </Typography>
+              <Typography
+                mx
+                color='#f5f5f7'
+                variant='h2'
+                fontWeight={{ xs: '300', md: '400' }}
+                fontSize={{ xs: '1.2rem', md: '1.3rem' }}
+                fontFamily='DM Sans, sans serif;'
+                component='a'
+                sx={{
+                  '&:hover': {
+                    color: '#2997ff',
+                  },
+                }}
+              >
+                Dribbble
+              </Typography>
+            </Grid>
+          </Grid>
+          <Grid
+            sx={{
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'space-between',
+              flexDirection: { xs: 'column', md: 'row' },
+            }}
           >
-            <Avatar
-              sx={{
-                backgroundColor: '#6F7378',
-                '&:hover': {
-                  backgroundColor: '#43464b',
-                  transition: '0.3s ease-out',
-                },
-              }}
-            >
-              <FacebookRoundedIcon
-                style={{ fill: '#f5f5f7', '&:hover': { fill: '#ffffff' } }}
-              />
-            </Avatar>
-            <Avatar
-              sx={{
-                backgroundColor: '#6F7378',
-                '&:hover': {
-                  backgroundColor: '#43464b',
-                  transition: '0.3s ease-in-out',
-                },
-              }}
-            >
-              <TwitterIcon
-                style={{ fill: '#f5f5f7', '&:hover': { fill: '#ffffff' } }}
-              />
-            </Avatar>
-            <Avatar
-              sx={{
-                backgroundColor: '#6F7378',
-                '&:hover': {
-                  backgroundColor: '#43464b',
-                  transition: '0.3s ease-in-out',
-                },
-              }}
-            >
-              <LinkedInIcon
-                style={{ fill: '#f5f5f7', '&:hover': { fill: '#ffffff' } }}
-              />
-            </Avatar>
-          </Stack>
+            <Grid alignSelf={{ xs: 'flex-start' }}>
+              <Typography
+                fontSize={{ md: '1.2', xs: '1.1rem' }}
+                py={2}
+                variant='h6'
+                fontWeight='300'
+                color='#f5f5f7'
+                fontFamily='DM Sans, sans serif;'
+                justifySelf='flex-start'
+              >
+                &copy; Kingba Tech
+              </Typography>
+            </Grid>
+            <Stack direction='row' spacing={4} alignSelf={{ xs: 'flex-start' }}>
+              <Typography
+                sx={{
+                  fontWeight: '400',
+                  color: '#f5f5f7',
+                  fontSize: '1.1rem',
+                  textTransform: 'capitalize',
+                  fontFamily: 'DM Sans, sans-serif;',
+                }}
+              >
+                Terms of use
+              </Typography>
+              <Typography
+                sx={{
+                  fontWeight: '400',
+                  color: '#f5f5f7',
+                  fontSize: '1.1rem',
+                  textTransform: 'capitalize',
+                  fontFamily: 'DM Sans, sans-serif;',
+                }}
+              >
+                Privacy Policy
+              </Typography>
+            </Stack>
+          </Grid>
         </Grid>
-      </Stack>
-      <Typography
-        fontSize={{ md: '1.2', xs: '1.1rem' }}
-        py={2}
-        textAlign='center'
-        variant='h6'
-        fontWeight='300'
-        color='#f5f5f7'
-      >
-        All right reserved by Kingba Tech &copy; 2022
-      </Typography>
+      </Grid>
     </Container>
   );
 };

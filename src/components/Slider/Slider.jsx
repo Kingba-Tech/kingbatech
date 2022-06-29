@@ -1,193 +1,173 @@
 import React from 'react';
 import './Slider.module.css';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import Image from 'next/image';
-import { SingleCard } from '../Cards/Cards';
-import { Grid } from '@mui/material';
-import Card from '@mui/material/Card';
-import CardActions from '@mui/material/CardActions';
-import CardContent from '@mui/material/CardContent';
-import CardMedia from '@mui/material/CardMedia';
-import Button from '@mui/material/Button';
-import { Avatar, CardHeader, IconButton } from '@mui/material';
-import Typography from '@mui/material/Typography';
-import MoreVertIcon from '@mui/icons-material/MoreVert';
-const img =
-  'https://images.unsplash.com/photo-1549989476-69a92fa57c36?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60';
+import { Typography, Grid, Avatar, Stack } from '@mui/material';
+import FormatQuoteIcon from '@mui/icons-material/FormatQuote';
+
+const testimonials = [
+  {
+    caption:
+      'Kingba Tech was a great partner as we rebuilt our website. They understood our vision, provided useful counsel, and executed our needs quickly and professionally. We are thrilled with the result and look forward to working with the team on future projects.”',
+    img: 'https://i.imgur.com/kMkvLNC.png',
+    name: 'Steve Jobs',
+    designation: 'Co-founder',
+    company: 'Apple',
+  },
+  {
+    caption:
+      '“Kingba Tech was a great partner as we rebuilt our website. They understood our vision, provided useful counsel, and executed our needs quickly and professionally. We are thrilled with the result and look forward to working with the team on future projects.”',
+    img: 'https://i.imgur.com/2GVbF8D.jpg',
+    name: 'Vladimir Putin',
+    designation: 'President',
+    company: 'Russia',
+  },
+  {
+    caption:
+      '“Kingba Tech was a great partner as we rebuilt our website. They understood our vision, provided useful counsel, and executed our needs quickly and professionally. We are thrilled with the result and look forward to working with the team on future projects.”',
+    img: 'https://i.imgur.com/8w0MAC9.jpg',
+    name: 'Elon Musk',
+    designation: 'CEO',
+    company: 'Tesla',
+  },
+  {
+    caption:
+      '“Kingba Tech was a great partner as we rebuilt our website. They understood our vision, provided useful counsel, and executed our needs quickly and professionally. We are thrilled with the result and look forward to working with the team on future projects.”',
+    img: 'https://i.imgur.com/9cJImhp.jpg',
+    name: 'Bill Gates',
+    designation: 'Founder & CEO',
+    company: 'Microsoft',
+  },
+  {
+    caption:
+      '“Kingba Tech was a great partner as we rebuilt our website. They understood our vision, provided useful counsel, and executed our needs quickly and professionally. We are thrilled with the result and look forward to working with the team on future projects.”',
+    img: 'https://i.imgur.com/XvA6rQB.jpg',
+    name: 'Jeff Bezos',
+    designation: 'CEO',
+    company: 'Amazon',
+  },
+];
 
 // Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/free-mode';
 import 'swiper/css/pagination';
+import 'swiper/css/navigation';
 
-import { Pagination, Autoplay, FreeMode } from 'swiper';
+import { Navigation, Pagination } from 'swiper';
 
 const Slider = () => {
   return (
-    <Grid marginLeft={{ xs: '1.6rem', sm: '2.5rem', md: 'none' }}>
+    <Grid sx={{ width: '100%', maxWidth: '1080px' }}>
       <Swiper
         centeredSlides={true}
-        autoplay={{
-          delay: 2500,
-          disableOnInteraction: false,
-        }}
-        slidesPerView={3}
-        spaceBetween={10}
-        freeMode={true}
+        navigation={true}
         pagination={{
           clickable: true,
         }}
-        modules={[FreeMode, Autoplay, Pagination]}
+        spaceBetween={10}
+        slidesPerView={1}
+        modules={[Navigation, Pagination]}
         className='mySwiper'
         breakpoints={{
           // when window width is >= 640px
           359: {
-            width: 359,
             slidesPerView: 1,
           },
           // when window width is >= 768px
-          768: {
-            width: 768,
-            slidesPerView: 2,
+          640: {
+            slidesPerView: 1,
           },
           1024: {
-            slidesPerView: 4,
-            spaceBetween: 50,
+            slidesPerView: 1,
+          },
+          1440: {
+            slidesPerView: 1,
+          },
+          2160: {
+            slidesPerView: 1,
           },
         }}
       >
-        <SwiperSlide className='slider'>
-          <Card sx={{ maxWidth: 340, borderRadius: '.5em' }}>
-            <CardHeader
-              avatar={<Avatar src={img} />}
-              title='Shrimp and Chorizo Paella'
-              subheader='September 14, 2016'
-            />
-            <CardMedia
-              component='img'
-              objectFit='cover'
-              height='140'
-              image={img}
-              alt='Page_View'
-            />
-            <CardContent>
-              <Typography variant='body' color='#141414'>
-                This impressive paella is a perfect party dish and a fun meal to
-              </Typography>
-            </CardContent>
-            <CardActions>
-              <Button
-                component='a'
+        {testimonials.map((testimonial, index) => (
+          <SwiperSlide key={index} className='slider'>
+            <Grid
+              sx={{
+                width: '100%',
+                height: '100%',
+                display: 'flex',
+                flexDirection: 'column',
+                justifyContent: 'center',
+                alignItems: 'center',
+                gap: { xs: '1rem', md: '2rem' },
+                padding: '2rem',
+              }}
+            >
+              <FormatQuoteIcon
                 sx={{
-                  color: '#141414',
-                  border: '1px solid #141414',
-                  padding: '2px 6px',
+                  width: { xs: 100, md: 120 },
+                  height: { xs: 110, md: 130 },
+                  color: '#004581',
+                }}
+              />
+              <Typography
+                color='#141414'
+                variant='h2'
+                fontWeight='500'
+                fontSize={{ xs: '1.4rem', md: '2rem' }}
+                fontFamily='DM Sans, sans-serif;'
+                lineHeight='50px'
+                letterSpacing='-.03em'
+                textAlign='center'
+              >
+                {testimonial.caption}
+              </Typography>
+              <Grid
+                mb={{ xs: 2, md: 3 }}
+                sx={{
+                  display: 'flex',
+                  justifyContent: 'space-between',
+                  alignItems: 'center',
+                  gap: '1.5rem',
                 }}
               >
-                Visit Site
-              </Button>
-            </CardActions>
-          </Card>
-        </SwiperSlide>
-        <SwiperSlide className='slider'>
-          <Card sx={{ maxWidth: 340, borderRadius: '.5em' }}>
-            <CardHeader
-              avatar={<Avatar src={img} />}
-              title='Shrimp and Chorizo Paella'
-              subheader='September 14, 2016'
-            />
-            <CardMedia
-              component='img'
-              objectFit='cover'
-              height='140'
-              image={img}
-              alt='Page_View'
-            />
-            <CardContent>
-              <Typography variant='body' color='#141414'>
-                This impressive paella is a perfect party dish and a fun meal to
-              </Typography>
-            </CardContent>
-            <CardActions>
-              <Button
-                component='a'
-                sx={{
-                  color: '#141414',
-                  border: '1px solid #141414',
-                  padding: '2px 6px',
-                }}
-              >
-                Visit Site
-              </Button>
-            </CardActions>
-          </Card>
-        </SwiperSlide>
-        <SwiperSlide className='slider'>
-          <Card sx={{ maxWidth: 340, borderRadius: '.5em' }}>
-            <CardHeader
-              avatar={<Avatar src={img} />}
-              title='Shrimp and Chorizo Paella'
-              subheader='September 14, 2016'
-            />
-            <CardMedia
-              component='img'
-              objectFit='cover'
-              height='140'
-              image={img}
-              alt='Page_View'
-            />
-            <CardContent>
-              <Typography variant='body' color='#141414'>
-                This impressive paella is a perfect party dish and a fun meal to
-              </Typography>
-            </CardContent>
-            <CardActions>
-              <Button
-                component='a'
-                sx={{
-                  color: '#141414',
-                  border: '1px solid #141414',
-                  padding: '2px 6px',
-                }}
-              >
-                Visit Site
-              </Button>
-            </CardActions>
-          </Card>
-        </SwiperSlide>
-        <SwiperSlide className='slider'>
-          <Card sx={{ maxWidth: 340, borderRadius: '.5em' }}>
-            <CardHeader
-              avatar={<Avatar src={img} />}
-              title='Shrimp and Chorizo Paella'
-              subheader='September 14, 2016'
-            />
-            <CardMedia
-              component='img'
-              objectFit='cover'
-              height='140'
-              image={img}
-              alt='Page_View'
-            />
-            <CardContent>
-              <Typography variant='body' color='#141414'>
-                This impressive paella is a perfect party dish and a fun meal to
-              </Typography>
-            </CardContent>
-            <CardActions>
-              <Button
-                component='a'
-                sx={{
-                  color: '#141414',
-                  border: '1px solid #141414',
-                  padding: '2px 6px',
-                }}
-              >
-                Visit Site
-              </Button>
-            </CardActions>
-          </Card>
-        </SwiperSlide>
+                <Avatar src={testimonial.img} sx={{ width: 80, height: 80 }} />
+                <Stack direction='column'>
+                  <Typography
+                    color='#141414'
+                    variant='h2'
+                    fontWeight={{ xs: '400', md: '500' }}
+                    fontSize={{ xs: '1.3rem', md: '1.5rem' }}
+                    fontFamily='DM Sans, sans-serif;'
+                  >
+                    {testimonial.name}
+                  </Typography>
+                  <Typography
+                    sx={{
+                      fontWeight: '400',
+                      color: '#141414',
+                      fontSize: '1.1rem',
+                      textTransform: 'capitalize',
+                      fontFamily: 'DM Sans, sans-serif;',
+                    }}
+                  >
+                    {testimonial.designation}
+                  </Typography>
+                  <Typography
+                    sx={{
+                      fontWeight: '400',
+                      color: '#141414',
+                      fontSize: '1.1rem',
+                      textTransform: 'capitalize',
+                      fontFamily: 'DM Sans, sans-serif;',
+                    }}
+                  >
+                    {testimonial.company}
+                  </Typography>
+                </Stack>
+              </Grid>
+            </Grid>
+          </SwiperSlide>
+        ))}
       </Swiper>
     </Grid>
   );

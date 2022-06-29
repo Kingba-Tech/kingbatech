@@ -30,3 +30,8 @@ yarn-error.log*
 
 # vercel
 .vercel
+
+#local files
+/src/sections/OurStory.jsx
+/src/sections/Process.jsx
+/src/sections/Technologies.jsx

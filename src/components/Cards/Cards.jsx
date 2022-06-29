@@ -1,6 +1,7 @@
 import * as React from 'react';
 import Card from '@mui/material/Card';
 import CardActions from '@mui/material/CardActions';
+import CardActionArea from '@mui/material/CardActionArea';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Button from '@mui/material/Button';
@@ -10,22 +11,29 @@ import { Grid } from '@mui/material';
 import MoreVertIcon from '@mui/icons-material/MoreVert';
 import Image from 'next/image';
 import img from '../../assets/1.jpg';
+import Link from 'next/link';
 
 const webcontent = [
   {
-    img: 'https://images.unsplash.com/photo-1549989476-69a92fa57c36?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60',
-    title: 'LapCart BD',
+    img: 'https://i.imgur.com/Crhh5FO.png',
+    title: 'LapCart',
     description:
       'TED BD is a online based mango store in Bangladesh. Which provides seasonal and pure foods.',
   },
   {
-    img: 'https://images.unsplash.com/photo-1549989476-69a92fa57c36?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60',
+    img: 'https://i.imgur.com/Xr7QFRR.png',
     title: 'TED BD',
     description:
       'TED BD is a online based mango store in Bangladesh. Which provides seasonal and pure foods.',
   },
   {
-    img: 'https://images.unsplash.com/photo-1549989476-69a92fa57c36?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60',
+    img: 'https://i.imgur.com/wV1kaUW.png',
+    title: 'Management Hub',
+    description:
+      'TED BD is a online based mango store in Bangladesh. Which provides seasonal and pure foods.',
+  },
+  {
+    img: 'https://i.imgur.com/ZX2WvdT.png',
     title: 'MangoCart',
     description:
       'TED BD is a online based mango store in Bangladesh. Which provides seasonal and pure foods.',
@@ -33,19 +41,25 @@ const webcontent = [
 ];
 const digitalcontent = [
   {
-    img: 'https://images.unsplash.com/photo-1549989476-69a92fa57c36?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60',
-    title: 'LapCart BD',
+    img: 'https://i.imgur.com/AeKImO4.png',
+    title: 'LapCart',
     description:
       'TED BD is a online based mango store in Bangladesh. Which provides seasonal and pure foods.',
   },
   {
-    img: 'https://images.unsplash.com/photo-1549989476-69a92fa57c36?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60',
+    img: 'https://i.imgur.com/6uz4niQ.jpg',
     title: 'TED BD',
     description:
       'TED BD is a online based mango store in Bangladesh. Which provides seasonal and pure foods.',
   },
   {
-    img: 'https://images.unsplash.com/photo-1549989476-69a92fa57c36?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60',
+    img: 'https://i.imgur.com/h4vKkDS.jpg',
+    title: 'Management Hub',
+    description:
+      'TED BD is a online based mango store in Bangladesh. Which provides seasonal and pure foods.',
+  },
+  {
+    img: 'https://i.imgur.com/10aMHVS.jpg',
     title: 'MangoCart',
     description:
       'TED BD is a online based mango store in Bangladesh. Which provides seasonal and pure foods.',
@@ -53,19 +67,25 @@ const digitalcontent = [
 ];
 const designcontent = [
   {
-    img: 'https://images.unsplash.com/photo-1549989476-69a92fa57c36?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60',
-    title: 'LapCart BD',
+    img: 'https://i.imgur.com/6jl9R8k.jpg',
+    title: 'LapCart',
     description:
       'TED BD is a online based mango store in Bangladesh. Which provides seasonal and pure foods.',
   },
   {
-    img: 'https://images.unsplash.com/photo-1549989476-69a92fa57c36?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60',
+    img: 'https://i.imgur.com/4E4QBii.png',
     title: 'TED BD',
     description:
       'TED BD is a online based mango store in Bangladesh. Which provides seasonal and pure foods.',
   },
   {
-    img: 'https://images.unsplash.com/photo-1549989476-69a92fa57c36?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60',
+    img: 'https://i.imgur.com/C2v26JL.png',
+    title: 'Management Hub',
+    description:
+      'TED BD is a online based mango store in Bangladesh. Which provides seasonal and pure foods.',
+  },
+  {
+    img: 'https://i.imgur.com/OSa49QI.png',
     title: 'MangoCart',
     description:
       'TED BD is a online based mango store in Bangladesh. Which provides seasonal and pure foods.',
@@ -74,34 +94,80 @@ const designcontent = [
 
 export const WebCards = () => {
   return (
-    <Grid gap={2} maxWidth spacing={{ xs: 1, md: 3 }}>
+    <Grid maxWidth spacing>
       <Grid
+        container
         sx={{
           display: 'flex',
           flexDirection: { xs: 'column', md: 'row' },
           justifyContent: 'space-between',
           alignItems: 'center',
+          gap: { xs: '.5rem', md: '2rem' },
         }}
       >
         {webcontent.map((web, index) => (
-          <Card key={index} item sx={{ maxWidth: 340, margin: '1rem .5rem' }}>
+          <Card
+            md={6}
+            xs={12}
+            key={index}
+            item
+            sx={{
+              maxWidth: 510,
+              maxHeight: 560,
+              margin: '1rem 0',
+              borderRadius: '.5rem',
+            }}
+          >
             <CardMedia
               component='img'
-              height='140'
+              height='360'
               image={web.img}
               alt='LapCart_BD'
+              sx={{
+                borderRadius: '.8rem',
+                transform: 'scale(.98)',
+                '&:hover': {
+                  transform: 'scale(1)',
+                  transition: 'all .5s',
+                  borderRadius: '.8rem',
+                },
+              }}
             />
             <CardContent>
-              <Typography gutterBottom variant='h5' component='div'>
+              <Typography
+                fontFamily='DM Sans, sans serif;'
+                fontSize={{ xs: '1.3rem', md: '1.5rem' }}
+                gutterBottom
+                variant='h5'
+                component='div'
+                fontWeight={{ xs: '500', md: '600' }}
+              >
                 {web.title}
               </Typography>
-              <Typography variant='body2' color='text.secondary'>
+              <Typography
+                fontFamily='DM Sans, sans serif;'
+                variant='h6'
+                fontSize='1.1rem'
+                color='#000000'
+                fontWeight={{ xs: '400', md: '500' }}
+              >
                 {web.description}
               </Typography>
             </CardContent>
             <CardActions>
-              <Button variant='outlined' color='textColor' size='small'>
-                Visit Site
+              <Button
+                variant='outlined'
+                color='btnColor'
+                sx={{
+                  fontSize: { xs: '.9rem', md: '1rem' },
+                  fontWeight: { xs: '400', md: '500' },
+                  marginTop: { xs: '-.5rem', md: 'none' },
+                  marginBottom: { xs: '.5rem' },
+                  marginLeft: { xs: '.5rem' },
+                }}
+                size='small'
+              >
+                Read More
               </Button>
             </CardActions>
           </Card>
@@ -112,34 +178,80 @@ export const WebCards = () => {
 };
 export const DigitalCards = () => {
   return (
-    <Grid gap={2} maxWidth spacing={{ xs: 1, md: 3 }}>
+    <Grid maxWidth spacing>
       <Grid
+        container
         sx={{
           display: 'flex',
           flexDirection: { xs: 'column', md: 'row' },
           justifyContent: 'space-between',
           alignItems: 'center',
+          gap: { xs: '.5rem', md: '2rem' },
         }}
       >
-        {digitalcontent.map((digital, index) => (
-          <Card key={index} item sx={{ maxWidth: 340, margin: '1rem 0' }}>
+        {digitalcontent.map((content, index) => (
+          <Card
+            md={6}
+            xs={12}
+            key={index}
+            item
+            sx={{
+              maxWidth: 510,
+              maxHeight: 560,
+              margin: '1rem 0',
+              borderRadius: '.5rem',
+            }}
+          >
             <CardMedia
               component='img'
-              height='140'
-              image={digital.img}
+              height='360'
+              image={content.img}
               alt='LapCart_BD'
+              sx={{
+                borderRadius: '.8rem',
+                transform: 'scale(.98)',
+                '&:hover': {
+                  transform: 'scale(1)',
+                  transition: 'all .5s',
+                  borderRadius: '.8rem',
+                },
+              }}
             />
             <CardContent>
-              <Typography gutterBottom variant='h5' component='div'>
-                {digital.title}
+              <Typography
+                fontFamily='DM Sans, sans serif;'
+                fontSize={{ xs: '1.3rem', md: '1.5rem' }}
+                gutterBottom
+                variant='h5'
+                component='div'
+                fontWeight={{ xs: '500', md: '600' }}
+              >
+                {content.title}
               </Typography>
-              <Typography variant='body2' color='text.secondary'>
-                {digital.description}
+              <Typography
+                fontFamily='DM Sans, sans serif;'
+                variant='h6'
+                fontSize='1.1rem'
+                color='#000000'
+                fontWeight={{ xs: '400', md: '500' }}
+              >
+                {content.description}
               </Typography>
             </CardContent>
             <CardActions>
-              <Button variant='outlined' color='textColor' size='small'>
-                Content
+              <Button
+                variant='outlined'
+                color='btnColor'
+                sx={{
+                  fontSize: { xs: '.9rem', md: '1rem' },
+                  fontWeight: { xs: '400', md: '500' },
+                  marginTop: { xs: '-.5rem', md: 'none' },
+                  marginBottom: { xs: '.5rem' },
+                  marginLeft: { xs: '.5rem' },
+                }}
+                size='small'
+              >
+                Read More
               </Button>
             </CardActions>
           </Card>
@@ -150,34 +262,80 @@ export const DigitalCards = () => {
 };
 export const DesignCards = () => {
   return (
-    <Grid gap={2} maxWidth spacing={{ xs: 1, md: 3 }}>
+    <Grid maxWidth spacing>
       <Grid
+        container
         sx={{
           display: 'flex',
           flexDirection: { xs: 'column', md: 'row' },
           justifyContent: 'space-between',
           alignItems: 'center',
+          gap: { xs: '.5rem', md: '2rem' },
         }}
       >
         {designcontent.map((design, index) => (
-          <Card key={index} item sx={{ maxWidth: 340, margin: '1rem 0' }}>
+          <Card
+            md={6}
+            xs={12}
+            key={index}
+            item
+            sx={{
+              maxWidth: 510,
+              maxHeight: 560,
+              margin: '1rem 0',
+              borderRadius: '.8rem',
+            }}
+          >
             <CardMedia
               component='img'
-              height='140'
+              height='360'
               image={design.img}
               alt='LapCart_BD'
+              sx={{
+                borderRadius: '.8rem',
+                transform: 'scale(.98)',
+                '&:hover': {
+                  transform: 'scale(1)',
+                  transition: 'all .5s',
+                  borderRadius: '.8rem',
+                },
+              }}
             />
             <CardContent>
-              <Typography gutterBottom variant='h5' component='div'>
+              <Typography
+                fontFamily='DM Sans, sans serif;'
+                fontSize={{ xs: '1.3rem', md: '1.5rem' }}
+                gutterBottom
+                variant='h5'
+                component='div'
+                fontWeight={{ xs: '500', md: '600' }}
+              >
                 {design.title}
               </Typography>
-              <Typography variant='body2' color='text.secondary'>
+              <Typography
+                fontFamily='DM Sans, sans serif;'
+                variant='h6'
+                fontSize='1.1rem'
+                color='#000000'
+                fontWeight={{ xs: '400', md: '500' }}
+              >
                 {design.description}
               </Typography>
             </CardContent>
             <CardActions>
-              <Button variant='outlined' color='textColor' size='small'>
-                View Content
+              <Button
+                variant='outlined'
+                color='btnColor'
+                sx={{
+                  fontSize: { xs: '.9rem', md: '1rem' },
+                  fontWeight: { xs: '400', md: '500' },
+                  marginTop: { xs: '-.5rem', md: 'none' },
+                  marginBottom: { xs: '.5rem' },
+                  marginLeft: { xs: '.5rem' },
+                }}
+                size='small'
+              >
+                Read More
               </Button>
             </CardActions>
           </Card>

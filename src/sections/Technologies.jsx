@@ -6,7 +6,17 @@ import CampaignIcon from '@mui/icons-material/Campaign';
 
 const Technologies = () => {
   return (
-    <Container maxWidth sx={{ backgroundColor: '#F2F2F2', minHeight: '300' }}>
+    <Container
+      maxWidth
+      sx={{
+        backgroundColor: '#FFFFFF',
+        minHeight: '300',
+        display: 'flex',
+        flexDirection: 'column',
+        justifyContent: 'center',
+        alignItems: 'center',
+      }}
+    >
       <Typography
         pt={4}
         variant='h2'
@@ -33,9 +43,10 @@ const Technologies = () => {
         alignItems='center'
         sx={{
           display: 'flex',
-          width: '1200',
-          justifyContent: 'space-around',
+          justifyContent: 'space-between',
           flexWrap: 'wrap',
+          width: '100%',
+          maxWidth: 1080,
         }}
       >
         <Grid textAlign='center' mx={2} item xs={12} sm={6} md={4} mb={2}>

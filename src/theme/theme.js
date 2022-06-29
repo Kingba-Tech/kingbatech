@@ -1,11 +1,11 @@
 import { createTheme } from '@mui/material/styles';
-import { red } from '@mui/material/colors';
+
 
 // Create a theme instance.
 const theme = createTheme({
   palette: {
     primary: {
-      main: '#FFFFFF',
+      main: '#004581',
     },
     secondary: {
       main: '#F5F5F7',
@@ -15,6 +15,9 @@ const theme = createTheme({
     },
     textColor: {
       main: '#141414',
+    },
+    btnColor: {
+      main: '#004581',
     },
     bgColor: {
       main: 'linear-gradient(rgb(2, 13, 31) 16%, black 35%)',

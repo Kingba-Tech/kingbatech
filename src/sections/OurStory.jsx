@@ -76,8 +76,8 @@ const teams = [
 
 const OurStory = () => {
   return (
-    <Container maxWidth sx={{ backgroundColor: '#F2F2F2', minHeight: '500px' }}>
-      <Grid py={2}>
+    <Container maxWidth sx={{ backgroundColor: '#F2F2F2', minHeight: '500px', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+      <Grid sx={{display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', width:'100%', maxWidth: 1080}} py={2}>
         <Typography
           pt={4}
           variant='h2'
@@ -98,7 +98,6 @@ const OurStory = () => {
         />
         <Grid
           mt={3}
-          maxWidth='100vw'
           sx={{
             display: 'flex',
             alignItems: 'center',
@@ -113,6 +112,7 @@ const OurStory = () => {
               flexDirection: 'column',
               justifyContent: 'center',
               alignItems: 'center',
+              alignSelf: 'flex-start'
             }}
           >
             <Typography

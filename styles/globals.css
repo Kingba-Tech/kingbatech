@@ -2,7 +2,7 @@ html,
 body {
   padding: 0;
   margin: 0;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'DM Sans', sans-serif;
   position: relative;
   height: 100%;
 }
@@ -15,5 +15,3 @@ a {
 * {
   box-sizing: border-box;
 }
-
-

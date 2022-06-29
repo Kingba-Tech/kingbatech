@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import {
   AppBar,
+  Container,
   Box,
   Divider,
   Grid,
@@ -33,7 +34,6 @@ const Navbar = () => {
       onClick={handleDrawerToggle}
       sx={{
         background: '#000000',
-        opacity: '0.9',
         height: '100%',
         display: 'flex',
         alignItems: 'center',
@@ -41,7 +41,7 @@ const Navbar = () => {
         justifyContent: 'center',
       }}
     >
-      <Typography component='a' variant='h6' sx={{ my: 2 }}>
+      <Typography mt={2} component='a' variant='h6' sx={{ my: 2 }}>
         <Image src={logo} alt='Site Logo' layout='intrinsic' />
       </Typography>
       <Divider />
@@ -53,15 +53,120 @@ const Navbar = () => {
               color: '#F5F5F7',
               display: 'flex',
               flexDirection: 'column',
-              
+              fontFamily: 'DM Sans, sans serif;',
             }}
           >
-            <ListItemText sx={{ padding: '8px 0' }} primary='Home' />
-            <ListItemText sx={{ padding: '8px 0' }} primary='Services' />
-            <ListItemText sx={{ padding: '8px 0' }} primary='Projects' />
-            <ListItemText sx={{ padding: '8px 0' }} primary='Career' />
-            <ListItemText sx={{ padding: '8px 0' }} primary='Blog' />
-            <ListItemText sx={{ padding: '8px 0' }} primary='About Us' />
+            <Typography
+              color='#f5f5f7'
+              variant='h6'
+              fontWeight='400'
+              fontSize='1.1rem'
+              fontFamily='DM Sans, sans serif;'
+              component='a'
+              sx={{
+                '&:hover': {
+                  color: '#2997ff',
+                },
+              }}
+            >
+              Home
+            </Typography>
+            <Typography
+              mt={2}
+              color='#f5f5f7'
+              variant='h6'
+              fontWeight='400'
+              fontSize='1.1rem'
+              fontFamily='DM Sans, sans serif;'
+              component='a'
+              sx={{
+                '&:hover': {
+                  color: '#2997ff',
+                },
+              }}
+            >
+              Projects
+            </Typography>
+            <Typography
+              mt={2}
+              color='#f5f5f7'
+              variant='h6'
+              fontWeight='400'
+              fontSize='1.1rem'
+              fontFamily='DM Sans, sans serif;'
+              component='a'
+              sx={{
+                '&:hover': {
+                  color: '#2997ff',
+                },
+              }}
+            >
+              Services
+            </Typography>
+            <Typography
+              mt={2}
+              color='#f5f5f7'
+              variant='h6'
+              fontWeight='400'
+              fontSize='1.1rem'
+              fontFamily='DM Sans, sans serif;'
+              component='a'
+              sx={{
+                '&:hover': {
+                  color: '#2997ff',
+                },
+              }}
+            >
+              Career
+            </Typography>
+            <Typography
+              mt={2}
+              color='#f5f5f7'
+              variant='h6'
+              fontWeight='400'
+              fontSize='1.1rem'
+              fontFamily='DM Sans, sans serif;'
+              component='a'
+              sx={{
+                '&:hover': {
+                  color: '#2997ff',
+                },
+              }}
+            >
+              Blog
+            </Typography>
+            <Typography
+              mt={2}
+              color='#f5f5f7'
+              variant='h6'
+              fontWeight='400'
+              fontSize='1.1rem'
+              fontFamily='DM Sans, sans serif;'
+              component='a'
+              sx={{
+                '&:hover': {
+                  color: '#2997ff',
+                },
+              }}
+            >
+              About Us
+            </Typography>
+            <Typography
+              mt={2}
+              color='#f5f5f7'
+              variant='h6'
+              fontWeight='400'
+              fontSize='1.1rem'
+              fontFamily='DM Sans, sans serif;'
+              component='a'
+              sx={{
+                '&:hover': {
+                  color: '#2997ff',
+                },
+              }}
+            >
+              Contact Us
+            </Typography>
           </ListItemButton>
         </ListItem>
       </List>
@@ -69,144 +174,218 @@ const Navbar = () => {
   );
 
   return (
-    <Box position='sticky' sx={{ display: 'flex' }} zIndex={10}>
-      <AppBar component='nav' sx={{ background: '#000000', opacity: '0.9' }}>
-        <Toolbar
-          sx={{
-            display: 'flex',
-            justifyContent: 'center',
-            alignItems: 'center',
-          }}
+    <Container maxWidth>
+      <Grid
+        position='sticky'
+        sx={{ display: 'flex', width: '100%', maxWidth: '1080px' }}
+        zIndex={10}
+      >
+        <AppBar
+          width='100%'
+          component='nav'
+          sx={{ background: '#000000', opacity: '0.9', maxHeight: '44px' }}
         >
-          <IconButton
-            color='secondary'
-            aria-label='open drawer'
-            edge='start'
-            onClick={handleDrawerToggle}
-            sx={{ display: { sm: 'none' } }}
-          >
-            <MenuIcon />
-          </IconButton>
-          <Typography
-            textAlign='center'
-            variant='h6'
-            component='a'
-            sx={{
-              flex: '2',
-              display: { xs: 'block', sm: 'none' },
-              marginLeft: '-9px',
-            }}
-          >
-            <Image src={logo} alt='Site Logo' layout='intrinsic' />
-          </Typography>
-          <Grid
+          <Toolbar
             sx={{
               display: 'flex',
-              alignItems: 'center',
               justifyContent: 'center',
+              alignItems: 'center',
+              height: '100%',
+              flexWrap: 'wrap',
             }}
           >
+            <IconButton
+              color='secondary'
+              aria-label='open drawer'
+              edge='start'
+              onClick={handleDrawerToggle}
+              sx={{ display: { md: 'none' }, marginTop: '-.4rem' }}
+            >
+              <MenuIcon />
+            </IconButton>
             <Typography
-              mr={2}
+              textAlign='center'
               variant='h6'
               component='a'
-              sx={{ display: { xs: 'none', sm: 'block' }, cursor: 'pointer' }}
+              sx={{
+                flex: '2',
+                display: { sm: 'block', md: 'none' },
+                marginLeft: '-9px',
+              }}
             >
-              <Image src={logo} alt='Site Logo' layout='intrinsic' />
+              <Image
+                height={25}
+                width={120}
+                src={logo}
+                alt='Site Logo'
+                layout='intrinsic'
+              />
             </Typography>
-            <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
-              <Button
+            <Grid
+              sx={{
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+              }}
+            >
+              <Typography
+                mr={2}
+                variant='h6'
+                component='a'
                 sx={{
-                  fontWeight: '500',
-                  color: 'secondary',
-                  fontSize: '1rem',
-                  padding: '0 1rem',
-                  textTransform: 'capitalize',
+                  display: { xs: 'none', md: 'block' },
+                  cursor: 'pointer',
+                  marginTop: '-.8rem ',
+                  padding: { md: '0 .5rem', xl: '0 1.5rem' },
                 }}
               >
-                Home
-              </Button>
-              <Button
-                component='div'
+                <Image
+                  height={25}
+                  width={120}
+                  src={logo}
+                  alt='Site Logo'
+                  layout='intrinsic'
+                />
+              </Typography>
+              <Box
                 sx={{
-                  fontWeight: '500',
-                  color: 'secondary',
-                  fontSize: '1rem',
-                  padding: '0 1rem',
-                  textTransform: 'capitalize',
+                  display: { xs: 'none', md: 'block', marginTop: '-1.3rem' },
                 }}
               >
-                <Dropdown />
-              </Button>
-              <Button
-                sx={{
-                  fontWeight: '500',
-                  color: 'secondary',
-                  fontSize: '1rem',
-                  padding: '0 1rem',
-                  textTransform: 'capitalize',
-                }}
-              >
-                Projects
-              </Button>
-              <Button
-                sx={{
-                  fontWeight: '500',
-                  color: 'secondary',
-                  fontSize: '1rem',
-                  padding: '0 1rem',
-                  textTransform: 'capitalize',
-                }}
-              >
-                Career
-              </Button>
-              <Button
-                sx={{
-                  fontWeight: '500',
-                  color: 'secondary',
-                  fontSize: '1rem',
-                  padding: '0 1rem',
-                  textTransform: 'capitalize',
-                }}
-              >
-                Blog
-              </Button>
-              <Button
-                sx={{
-                  fontWeight: '500',
-                  color: 'secondary',
-                  fontSize: '1rem',
-                  padding: '0 1rem',
-                  textTransform: 'capitalize',
-                }}
-              >
-                About Us
-              </Button>
-            </Box>
-          </Grid>
-        </Toolbar>
-      </AppBar>
-      <Box component='nav'>
-        <Drawer
-          anchor='bottom'
-          variant='temporary'
-          open={mobileOpen}
-          onClose={handleDrawerToggle}
-          ModalProps={{
-            keepMounted: true, // Better open performance on mobile.
-          }}
-          sx={{
-            display: { xs: 'block', sm: 'none' },
-            '& .MuiDrawer-paper': {
-              boxSizing: 'border-box',
-              width: drawerWidth,
-            },
-          }}
-        >
-          {drawer}
-        </Drawer>
-      </Box>
-    </Box>
+                <Button
+                  sx={{
+                    fontWeight: '300',
+                    color: '#f5f5f7',
+                    fontSize: '.9rem',
+                    textTransform: 'capitalize',
+                    padding: { md: '0 1rem', xl: '0 2.5rem' },
+                    fontFamily: 'DM Sans, sans-serif;',
+                    '&:hover': {
+                      color: '#2297FF',
+                    },
+                  }}
+                >
+                  Home
+                </Button>
+                <Button
+                  sx={{
+                    fontWeight: '300',
+                    color: '#f5f5f7',
+                    fontSize: '.9rem',
+
+                    textTransform: 'capitalize',
+                    padding: { md: '0 1rem', xl: '0 2.5rem' },
+                    fontFamily: 'DM Sans, sans-serif;',
+                    '&:hover': {
+                      color: '#2297FF',
+                    },
+                  }}
+                >
+                  Projects
+                </Button>
+                <Button
+                  component='div'
+                  sx={{
+                    fontWeight: '300',
+                    color: '#f5f5f7',
+                    fontSize: '.9rem',
+
+                    textTransform: 'capitalize',
+                    padding: { md: '0 .5rem', xl: '0 1.5rem' },
+                    fontFamily: 'DM Sans, sans-serif;',
+                  }}
+                >
+                  <Dropdown />
+                </Button>
+
+                <Button
+                  sx={{
+                    fontWeight: '300',
+                    color: '#f5f5f7',
+                    fontSize: '.9rem',
+
+                    textTransform: 'capitalize',
+                    padding: { md: '0 1rem', xl: '0 2.5rem' },
+                    fontFamily: 'DM Sans, sans-serif;',
+                    '&:hover': {
+                      color: '#2297FF',
+                    },
+                  }}
+                >
+                  Career
+                </Button>
+                <Button
+                  sx={{
+                    fontWeight: '300',
+                    color: '#f5f5f7',
+                    fontSize: '.9rem',
+
+                    textTransform: 'capitalize',
+                    padding: { md: '0 1rem', xl: '0 2.5rem' },
+                    fontFamily: 'DM Sans, sans-serif;',
+                    '&:hover': {
+                      color: '#2297FF',
+                    },
+                  }}
+                >
+                  Blog
+                </Button>
+                <Button
+                  sx={{
+                    fontWeight: '300',
+                    color: '#f5f5f7',
+                    fontSize: '.9rem',
+                    textTransform: 'capitalize',
+                    padding: { md: '0 1rem', xl: '0 2.5rem' },
+                    fontFamily: 'DM Sans, sans-serif;',
+                    '&:hover': {
+                      color: '#2297FF',
+                    },
+                  }}
+                >
+                  About Us
+                </Button>
+                <Button
+                  sx={{
+                    fontWeight: '500',
+                    color: 'secondary',
+                    fontSize: '.9rem',
+                    textTransform: 'capitalize',
+                    marginLeft: '1.8rem',
+                    padding: { md: '0 1rem', xl: '0 2.5rem' },
+                    fontFamily: 'DM Sans, sans-serif;',
+                    border: '1px solid #2997FF',
+                    color: '#2997FF',
+                  }}
+                >
+                  Contact Us
+                </Button>
+              </Box>
+            </Grid>
+          </Toolbar>
+        </AppBar>
+        <Box component='nav'>
+          <Drawer
+            anchor='bottom'
+            variant='temporary'
+            open={mobileOpen}
+            onClose={handleDrawerToggle}
+            ModalProps={{
+              keepMounted: true, // Better open performance on mobile.
+            }}
+            sx={{
+              display: { dm: 'block', md: 'none' },
+              '& .MuiDrawer-paper': {
+                boxSizing: 'border-box',
+                width: drawerWidth,
+              },
+            }}
+          >
+            {drawer}
+          </Drawer>
+        </Box>
+      </Grid>
+    </Container>
   );
 };
 
