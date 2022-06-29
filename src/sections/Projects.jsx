@@ -88,7 +88,7 @@ const Projects = () => {
               >
                 <Tab
                   sx={{
-                    fontSize: { xs: '1rem', md: '1.2rem' },
+                    fontSize: { xs: '.9rem', md: '1.2rem' },
                     lineHeight: { xs: 1.4, md: 1 },
                     fontWeight: { xs: 400, md: '600' },
                     color: '#000000',
@@ -101,7 +101,7 @@ const Projects = () => {
                 />
                 <Tab
                   sx={{
-                    fontSize: { xs: '1rem', md: '1.2rem' },
+                    fontSize: { xs: '.9rem', md: '1.2rem' },
                     lineHeight: { xs: 1.4, md: 1 },
                     fontWeight: { xs: 400, md: '600' },
                     color: '#000000',
@@ -114,7 +114,7 @@ const Projects = () => {
                 />
                 <Tab
                   sx={{
-                    fontSize: { xs: '1rem', md: '1.2rem' },
+                    fontSize: { xs: '.9rem', md: '1.2rem' },
                     lineHeight: { xs: 1.4, md: 1 },
                     fontWeight: { xs: 400, md: '600' },
                     color: '#000000',
