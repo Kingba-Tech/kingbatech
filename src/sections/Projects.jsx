@@ -43,14 +43,14 @@ const Projects = () => {
         flexDirection: 'column',
       }}
     >
-      <Grid sx={{ width: '100%', maxWidth: 1080 }} py={2} mt={{ xs: 3, md: 6 }}>
+      <Grid sx={{ width: '100%', maxWidth: 1080 }} py={2} mt={{ xs: 0, md: 6 }}>
         <Typography
           pt={{ xs: 2, md: 4 }}
           variant='h2'
-          fontWeight={{ xs: '500', md: '500' }}
+          fontWeight='500'
           color='#181818'
+          fontSize={{ xs: '1.5rem', md: '2.8rem' }}
           textAlign='center'
-          fontSize={{ xs: '1.7rem', md: '2.5rem' }}
         >
           Some of our hand-picked work
         </Typography>
@@ -65,7 +65,7 @@ const Projects = () => {
             width: '100%',
           }}
         >
-          <Grid mt={2}>
+          <Grid mt>
             <AppBar
               position='static'
               sx={{
@@ -88,9 +88,9 @@ const Projects = () => {
               >
                 <Tab
                   sx={{
-                    fontSize: { xs: '.9rem', md: '1.2rem' },
+                    fontSize: { xs: '.8rem', md: '1.2rem' },
                     lineHeight: { xs: 1.4, md: 1 },
-                    fontWeight: { xs: 400, md: '600' },
+                    fontWeight: { xs: 500, md: '600' },
                     color: '#000000',
                     '&:active, &:focus': {
                       color: '#004581',
@@ -101,9 +101,9 @@ const Projects = () => {
                 />
                 <Tab
                   sx={{
-                    fontSize: { xs: '.9rem', md: '1.2rem' },
+                    fontSize: { xs: '.8rem', md: '1.2rem' },
                     lineHeight: { xs: 1.4, md: 1 },
-                    fontWeight: { xs: 400, md: '600' },
+                    fontWeight: { xs: 500, md: 600 },
                     color: '#000000',
                     opacity: '1',
                     '&:active, &:focus': {
@@ -114,9 +114,9 @@ const Projects = () => {
                 />
                 <Tab
                   sx={{
-                    fontSize: { xs: '.9rem', md: '1.2rem' },
+                    fontSize: { xs: '.8rem', md: '1.2rem' },
                     lineHeight: { xs: 1.4, md: 1 },
-                    fontWeight: { xs: 400, md: '600' },
+                    fontWeight: { xs: 500, md: '600' },
                     color: '#000000',
                     opacity: '1',
                     '&:active, &:focus': {
