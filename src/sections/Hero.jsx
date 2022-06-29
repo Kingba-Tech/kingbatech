@@ -68,7 +68,7 @@ const Hero = () => {
             <Typography
               fontFamily='DM Sans, sans serif;'
               variant='body2'
-              fontSize='1.5rem'
+              fontSize={{ xs: '1.2', md: '1.5rem' }}
               fontWeight='300'
               lineHeight='2.5rem'
               color='#f5f5f7'
@@ -80,7 +80,7 @@ const Hero = () => {
             </Typography>
             <Typography
               variant='h6'
-              fontSize='1.4rem'
+              fontSize='1.3rem'
               fontWeight='500'
               color='#2997FF '
               marginTop='2rem'

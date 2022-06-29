@@ -38,7 +38,7 @@ const Footer = () => {
               alignContent: 'space-between',
             }}
           >
-            <Grid item xs={12} md={6} mb={{xs:'1.5rem', md: 'none'}}>
+            <Grid item xs={12} md={6} mb={{ xs: '1.5rem', md: 'none' }}>
               <Image
                 src={logo}
                 alt='logo'
@@ -80,6 +80,7 @@ const Footer = () => {
                   '&:hover': {
                     color: '#2997ff',
                   },
+                  cursor: 'pointer',
                 }}
               >
                 Facebook
@@ -96,6 +97,7 @@ const Footer = () => {
                   '&:hover': {
                     color: '#2997ff',
                   },
+                  cursor: 'pointer',
                 }}
               >
                 Behance
@@ -112,6 +114,7 @@ const Footer = () => {
                   '&:hover': {
                     color: '#2997ff',
                   },
+                  cursor: 'pointer',
                 }}
               >
                 LinkedIn
@@ -128,6 +131,7 @@ const Footer = () => {
                   '&:hover': {
                     color: '#2997ff',
                   },
+                  cursor: 'pointer',
                 }}
               >
                 Twitter
@@ -144,6 +148,7 @@ const Footer = () => {
                   '&:hover': {
                     color: '#2997ff',
                   },
+                  cursor: 'pointer',
                 }}
               >
                 Instagram
@@ -160,6 +165,7 @@ const Footer = () => {
                   '&:hover': {
                     color: '#2997ff',
                   },
+                  cursor: 'pointer',
                 }}
               >
                 YouTube
@@ -176,6 +182,7 @@ const Footer = () => {
                   '&:hover': {
                     color: '#2997ff',
                   },
+                  cursor: 'pointer',
                 }}
               >
                 Dribbble

@@ -67,6 +67,7 @@ const Navbar = () => {
                 '&:hover': {
                   color: '#2997ff',
                 },
+                cursor: 'pointer',
               }}
             >
               Home
@@ -83,6 +84,7 @@ const Navbar = () => {
                 '&:hover': {
                   color: '#2997ff',
                 },
+                cursor: 'pointer',
               }}
             >
               Projects
@@ -99,6 +101,7 @@ const Navbar = () => {
                 '&:hover': {
                   color: '#2997ff',
                 },
+                cursor: 'pointer',
               }}
             >
               Services
@@ -115,6 +118,7 @@ const Navbar = () => {
                 '&:hover': {
                   color: '#2997ff',
                 },
+                cursor: 'pointer',
               }}
             >
               Career
@@ -131,6 +135,7 @@ const Navbar = () => {
                 '&:hover': {
                   color: '#2997ff',
                 },
+                cursor: 'pointer',
               }}
             >
               Blog
@@ -147,6 +152,7 @@ const Navbar = () => {
                 '&:hover': {
                   color: '#2997ff',
                 },
+                cursor: 'pointer',
               }}
             >
               About Us
@@ -163,6 +169,7 @@ const Navbar = () => {
                 '&:hover': {
                   color: '#2997ff',
                 },
+                cursor: 'pointer',
               }}
             >
               Contact Us
@@ -199,7 +206,7 @@ const Navbar = () => {
               aria-label='open drawer'
               edge='start'
               onClick={handleDrawerToggle}
-              sx={{ display: { md: 'none' }, marginTop: '-.4rem' }}
+              sx={{ display: { md: 'none' }, marginTop: '-.7rem' }}
             >
               <MenuIcon />
             </IconButton>
