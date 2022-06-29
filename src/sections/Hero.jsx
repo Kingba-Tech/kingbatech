@@ -8,7 +8,7 @@ const Hero = () => {
     <Container
       maxWidth
       sx={{
-        minHeight: '100vh',
+        minHeight: { xs: '80vh', md: '100vh' },
         background: 'linear-gradient(rgb(2, 13, 31) 16%, black 35%)',
         display: 'flex',
         justifyContent: 'center',
@@ -85,7 +85,8 @@ const Hero = () => {
               variant='h6'
               fontSize={{ xs: '1rem', md: '1.5rem' }}
               fontWeight='500'
-              color='#2997FF 's
+              color='#2997FF '
+              s
               component='a'
               sx={{
                 fontFamily: 'DM Sans, sans-serif;',

@@ -47,10 +47,10 @@ const Projects = () => {
         <Typography
           pt={{ xs: 2, md: 4 }}
           variant='h2'
-          fontWeight={{ xs: '400', md: '500' }}
+          fontWeight={{ xs: '500', md: '500' }}
           color='#181818'
           textAlign='center'
-          fontSize={{ xs: '1.8rem', md: '2.5rem' }}
+          fontSize={{ xs: '1.7rem', md: '2.5rem' }}
         >
           Some of our hand-picked work
         </Typography>
