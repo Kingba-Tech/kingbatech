@@ -36,7 +36,7 @@ const Hero = () => {
             flexDirection: 'column',
           }}
         >
-          <Box sx={{ margin: { xs: '1rem 0', md: '1.5rem 0 2rem' } }}>
+          <Box sx={{ marginTop: { xs: '-20px', md: '2rem' } }}>
             <Image
               src={banner}
               height={500}
@@ -46,8 +46,7 @@ const Hero = () => {
             ></Image>
           </Box>
           <Box
-            mb={{ xs: '1rem' }}
-            mt={{ xs: '1rem', md: 'none' }}
+            my={{ xs: 'none', md: '1rem' }}
             sx={{
               display: 'flex',
               justifyContent: 'center',
