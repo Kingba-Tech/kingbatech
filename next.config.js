@@ -4,6 +4,7 @@ const nextConfig = {
   images: {
     domains: ['images.unsplash.com', 'i.imgur.com'],
   },
+  future: { webpack5: true },
 };
 
 module.exports = nextConfig;
