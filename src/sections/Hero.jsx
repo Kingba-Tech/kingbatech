@@ -46,7 +46,7 @@ const Hero = () => {
             ></Image>
           </Box>
           <Box
-            mb={{ xs: '1.5rem' }}
+            mb={{ xs: '1rem' }}
             mt={{ xs: '1.5rem', md: 'none' }}
             sx={{
               display: 'flex',
@@ -62,7 +62,7 @@ const Hero = () => {
               fontSize={{ xs: '1.5rem', md: '2.8rem' }}
               fontWeight='500'
               color='#f5f5f7'
-              marginBottom='2rem'
+              marginBottom='1.5rem'
               lineHeight={{ xs: '2rem', md: '3.5rem' }}
               sx={{ alignSelf: 'flex-start' }}
             >
@@ -83,10 +83,10 @@ const Hero = () => {
             </Typography>
             <Typography
               variant='h6'
-              fontSize='1.3rem'
+              fontSize={{ xs: '1rem', md: '1.5rem' }}
               fontWeight='500'
               color='#2997FF '
-              marginTop='1.5rem'
+              marginTop='1rem'
               component='a'
               sx={{
                 fontFamily: 'DM Sans, sans-serif;',
@@ -98,7 +98,7 @@ const Hero = () => {
               <hr
                 height='5px'
                 width='170px'
-                padding='20px 0px'
+                padding='15px 0px'
                 color='#2997FF '
               />
             </Typography>
