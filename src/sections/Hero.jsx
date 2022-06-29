@@ -85,8 +85,7 @@ const Hero = () => {
               variant='h6'
               fontSize={{ xs: '1rem', md: '1.5rem' }}
               fontWeight='500'
-              color='#2997FF '
-              marginTop='1rem'
+              color='#2997FF 's
               component='a'
               sx={{
                 fontFamily: 'DM Sans, sans-serif;',
@@ -97,7 +96,7 @@ const Hero = () => {
               See our projects
               <hr
                 height='5px'
-                width='170px'
+                width='125px'
                 padding='15px 0px'
                 color='#2997FF '
               />
