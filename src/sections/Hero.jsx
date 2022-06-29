@@ -35,7 +35,7 @@ const Hero = () => {
             flexDirection: { xs: 'column-reverse', md: 'column' },
           }}
         >
-          <Box sx={{ margin: '2rem 0 3rem' }}>
+          <Box sx={{ margin: {xs: '1rem 0 1rem', md: '2rem 0 3rem' } }}>
             <Image
               src={banner}
               height={500}
@@ -46,12 +46,13 @@ const Hero = () => {
           </Box>
           <Box
             mb={{ xs: '1.5rem' }}
-            mt={{ xs: '6rem', md: 'none' }}
+            mt={{ xs: '4.5rem', md: 'none' }}
             sx={{
               display: 'flex',
               justifyContent: 'center',
               alignItems: 'center',
               flexDirection: 'column',
+              padding: '1rem',
             }}
           >
             <Typography
@@ -69,7 +70,7 @@ const Hero = () => {
             <Typography
               fontFamily='DM Sans, sans serif;'
               variant='p'
-              fontSize={{ xs: '1.3rem', md: '1.5rem' }}
+              fontSize={{ xs: '1.2rem', md: '1.5rem' }}
               fontWeight='300'
               lineHeight='2.5rem'
               color='#f5f5f7'
@@ -95,7 +96,7 @@ const Hero = () => {
               See our projects
               <hr
                 height='5px'
-                width='180px'
+                width='170px'
                 padding='20px 0px'
                 color='#2997FF '
               />
