@@ -47,7 +47,7 @@ const Hero = () => {
           </Box>
           <Box
             mb={{ xs: '1.5rem' }}
-            mt={{ xs: '2rem', md: 'none' }}
+            mt={{ xs: '1.5rem', md: 'none' }}
             sx={{
               display: 'flex',
               justifyContent: 'center',
@@ -59,11 +59,11 @@ const Hero = () => {
             <Typography
               variant='h2'
               fontFamily='DM Sans, sans serif;'
-              fontSize={{ xs: '1.8rem', md: '2.8rem' }}
+              fontSize={{ xs: '1.5rem', md: '2.8rem' }}
               fontWeight='500'
               color='#f5f5f7'
               marginBottom='2rem'
-              lineHeight={{ xs: '2.9rem', md: '3.5rem' }}
+              lineHeight={{ xs: '2rem', md: '3.5rem' }}
               sx={{ alignSelf: 'flex-start' }}
             >
               Stay ahead of the curve with strategic, creative solutions
