@@ -57,18 +57,19 @@ const Hero = () => {
             <Typography
               variant='h2'
               fontFamily='DM Sans, sans serif;'
-              fontSize={{ xs: '2rem', md: '2.8rem' }}
+              fontSize={{ xs: '1.8rem', md: '2.8rem' }}
               fontWeight='500'
               color='#f5f5f7'
               marginBottom='2rem'
+              lineHeight={{ xs: '2.9rem', md: '3.5rem' }}
               sx={{ alignSelf: 'flex-start' }}
             >
               Stay ahead of the curve with strategic, creative solutions
             </Typography>
             <Typography
               fontFamily='DM Sans, sans serif;'
-              variant='body2'
-              fontSize={{ xs: '1.2', md: '1.5rem' }}
+              variant='p'
+              fontSize={{ xs: '1.3rem', md: '1.5rem' }}
               fontWeight='300'
               lineHeight='2.5rem'
               color='#f5f5f7'

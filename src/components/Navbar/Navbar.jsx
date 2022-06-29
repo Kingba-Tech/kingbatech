@@ -10,7 +10,7 @@ import {
   List,
   ListItem,
   ListItemButton,
-  ListItemText,
+ 
   Button,
   Typography,
   Toolbar,
@@ -206,7 +206,7 @@ const Navbar = () => {
               aria-label='open drawer'
               edge='start'
               onClick={handleDrawerToggle}
-              sx={{ display: { md: 'none' }, marginTop: '-.7rem' }}
+              sx={{ display: { md: 'none' }, marginTop: '-.8rem' }}
             >
               <MenuIcon />
             </IconButton>
