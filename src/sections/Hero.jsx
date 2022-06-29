@@ -71,9 +71,9 @@ const Hero = () => {
             <Typography
               fontFamily='DM Sans, sans serif;'
               variant='p'
-              fontSize={{ xs: '1.2rem', md: '1.5rem' }}
+              fontSize={{ xs: '1rem', md: '1.5rem' }}
               fontWeight='300'
-              lineHeight='2.5rem'
+              lineHeight='2rem'
               color='#f5f5f7'
               marginBottom='1rem'
               sx={{ alignSelf: 'flex-start' }}
@@ -86,7 +86,7 @@ const Hero = () => {
               fontSize='1.3rem'
               fontWeight='500'
               color='#2997FF '
-              marginTop='2rem'
+              marginTop='1.5rem'
               component='a'
               sx={{
                 fontFamily: 'DM Sans, sans-serif;',
