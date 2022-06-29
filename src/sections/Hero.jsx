@@ -28,7 +28,7 @@ const Hero = () => {
       >
         <Grid
           width='100%'
-          mt={8}
+          mt={6}
           sx={{
             display: 'flex',
             justifyContent: 'center',
@@ -36,7 +36,7 @@ const Hero = () => {
             flexDirection: 'column',
           }}
         >
-          <Box sx={{ margin: { xs: '1rem 0', md: '2rem 0 3rem' } }}>
+          <Box sx={{ margin: { xs: '1rem 0', md: '1.5rem 0 2rem' } }}>
             <Image
               src={banner}
               height={500}
@@ -47,7 +47,7 @@ const Hero = () => {
           </Box>
           <Box
             mb={{ xs: '1rem' }}
-            mt={{ xs: '1.5rem', md: 'none' }}
+            mt={{ xs: '1rem', md: 'none' }}
             sx={{
               display: 'flex',
               justifyContent: 'center',
@@ -86,7 +86,6 @@ const Hero = () => {
               fontSize={{ xs: '1rem', md: '1.5rem' }}
               fontWeight='500'
               color='#2997FF '
-              s
               component='a'
               sx={{
                 fontFamily: 'DM Sans, sans-serif;',
