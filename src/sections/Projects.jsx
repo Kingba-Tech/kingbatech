@@ -55,6 +55,7 @@ const Projects = () => {
           color='#181818'
           fontSize={{ xs: '1.5rem', md: '2.8rem' }}
           textAlign='center'
+          fontFamily='DM Sans, sans serif;'
         >
           Some of our hand-picked work
         </Typography>
@@ -95,6 +96,7 @@ const Projects = () => {
                     fontSize: { xs: '.8rem', md: '1.2rem' },
                     lineHeight: { xs: 1.4, md: 1 },
                     fontWeight: { xs: 500, md: '600' },
+                    fontFamily: 'DM Sans, sans serif;',
                     color: '#000000',
                     '&:active, &:focus': {
                       color: '#004581',
@@ -108,6 +110,7 @@ const Projects = () => {
                     fontSize: { xs: '.8rem', md: '1.2rem' },
                     lineHeight: { xs: 1.4, md: 1 },
                     fontWeight: { xs: 500, md: 600 },
+                    fontFamily: 'DM Sans, sans serif;',
                     color: '#000000',
                     opacity: '1',
                     '&:active, &:focus': {
@@ -121,6 +124,7 @@ const Projects = () => {
                     fontSize: { xs: '.8rem', md: '1.2rem' },
                     lineHeight: { xs: 1.4, md: 1 },
                     fontWeight: { xs: 500, md: '600' },
+                    fontFamily: 'DM Sans, sans serif;',
                     color: '#000000',
                     opacity: '1',
                     '&:active, &:focus': {
@@ -164,7 +168,7 @@ const Projects = () => {
             color='primary'
             sx={{
               border: '2px solid #004581',
-              padding: {xs:'.3rem 1.75rem' , md:'.6rem 3.5rem'},
+              padding: { xs: '.3rem 1.75rem', md: '.6rem 3.5rem' },
               marginTop: { xs: '1.5rem', md: '4rem' },
               borderRadius: '.3rem',
               '&:hover': {
