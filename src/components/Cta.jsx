@@ -4,11 +4,13 @@ import { Container, Grid, Typography, Button } from '@mui/material';
 const Cta = () => {
   return (
     <Container
+     
       maxWidth
       sx={{
         minHeight: '250px',
         backgroundColor: '#004581',
         display: { sm: 'flex', md: 'none' },
+        
       }}
     >
       <Grid

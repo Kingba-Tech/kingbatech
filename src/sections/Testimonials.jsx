@@ -24,6 +24,7 @@ const Testimonials = () => {
         }}
       >
         <Grid
+        mb={{xs: 3, md: 0}}
           mt={{ xs: '-4rem', md: '-4.5rem' }}
           width='100%'
           sx={{
