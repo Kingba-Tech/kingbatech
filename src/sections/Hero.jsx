@@ -2,7 +2,7 @@ import { Container, Box, Grid, Typography } from '@mui/material';
 import Image from 'next/image';
 import Link from 'next/link';
 import banner from '../assets/kingba.png';
-import styles from './Home.module.css';
+
 
 const Hero = () => {
   return (

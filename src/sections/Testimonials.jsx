@@ -22,9 +22,9 @@ const Testimonials = () => {
           width: '100%',
           maxWidth: 1080,
         }}
-        py={2}
       >
         <Grid
+          mt={{ xs: '-3.5rem', md: '-4rem' }}
           width='100%'
           sx={{
             display: 'flex',

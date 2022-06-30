@@ -89,7 +89,7 @@ const Slider = () => {
         }}
       >
         {testimonials.map((testimonial, index) => (
-          <SwiperSlide key={index} className='slider'>
+          <SwiperSlide key={index} className='styles.slider'>
             <Grid
               sx={{
                 width: '100%',
@@ -99,7 +99,8 @@ const Slider = () => {
                 justifyContent: 'center',
                 alignItems: 'center',
                 gap: { xs: '.5rem', md: '2rem' },
-                padding: { xs: '0 1rem', md: '2rem' },
+                padding: { xs: '0 1rem', md: '0 2rem' },
+                
               }}
             >
               <FormatQuoteIcon
@@ -107,7 +108,6 @@ const Slider = () => {
                   width: { xs: 100, md: 120 },
                   height: { xs: 110, md: 130 },
                   color: '#004581',
-                  marginTop: {xs: ''}
                 }}
               />
               <Typography
@@ -119,11 +119,12 @@ const Slider = () => {
                 fontFamily='DM Sans, sans-serif;'
                 letterSpacing='-.03em'
                 textAlign='center'
+                mt={{xs: 'none', md: 3}}
               >
                 {testimonial.caption}
               </Typography>
               <Grid
-                mb={{ xs: 5, md: 3 }}
+                mb={5}
                 sx={{
                   display: 'flex',
                   flexDirection: { xs: 'column', md: 'row' },
