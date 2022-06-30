@@ -208,7 +208,7 @@ const Footer = () => {
             }}
           />
           <Grid
-            mb={4}
+            mb={3}
             sx={{
               display: 'flex',
               alignItems: 'center',
