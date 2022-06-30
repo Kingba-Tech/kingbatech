@@ -15,13 +15,13 @@ import Link from 'next/link';
 
 const webcontent = [
   {
-    img: 'https://i.imgur.com/Crhh5FO.png',
+    img: 'https://i.imgur.com/a0T9e32.jpg',
     title: 'LapCart',
     description:
       'TED BD is a online based mango store in Bangladesh. Which provides seasonal and pure foods.',
   },
   {
-    img: 'https://i.imgur.com/Xr7QFRR.png',
+    img: 'https://i.imgur.com/clDL4C4.png',
     title: 'TED BD',
     description:
       'TED BD is a online based mango store in Bangladesh. Which provides seasonal and pure foods.',

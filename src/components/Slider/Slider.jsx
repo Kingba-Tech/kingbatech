@@ -107,7 +107,7 @@ const Slider = () => {
                   width: { xs: 100, md: 120 },
                   height: { xs: 110, md: 130 },
                   color: '#004581',
-                  marginTop: {xs: '',}
+                  marginTop: {xs: ''}
                 }}
               />
               <Typography
