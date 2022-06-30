@@ -74,8 +74,8 @@ const Footer = () => {
                 display: 'flex',
                 flexWrap: 'wrap',
                 gap: { xs: '2.5rem', md: 'none' },
-                padding: { xs: '0 2rem', md: '0' },
-                marginLeft: { xs: '-1.8rem', md: '0' },
+                padding: { xs: '0 2.5rem', md: '0' },
+                marginLeft: { xs: '-2.8rem', md: '0' },
               }}
             >
               <Typography
@@ -142,6 +142,7 @@ const Footer = () => {
                     color: '#2997ff',
                   },
                   cursor: 'pointer',
+                  marginLeft:{xs: '1.2rem', md: '0'}
                 }}
               >
                 Twitter
