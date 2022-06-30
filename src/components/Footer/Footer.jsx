@@ -1,4 +1,12 @@
-import { Container, Stack, Grid, Typography } from '@mui/material';
+import {
+  Container,
+  Stack,
+  Grid,
+  Typography,
+  Divider,
+  Menu,
+  MenuItem,
+} from '@mui/material';
 
 import Image from 'next/image';
 import logo from '../../assets/kingba_small.png';
@@ -27,7 +35,7 @@ const Footer = () => {
           sx={{
             display: 'flex',
             flexDirection: 'column',
-            gap: '7.5rem',
+            gap: '5rem',
           }}
         >
           <Grid
@@ -51,7 +59,7 @@ const Footer = () => {
                 color='#f5f5f7'
                 variant='h2'
                 fontWeight={{ xs: '300' }}
-                fontSize={{ xs: '1.2rem', md: '1.3rem' }}
+                fontSize='1.1rem'
                 fontFamily='DM Sans, sans serif;'
                 display={{ xs: 'none', md: 'block' }}
               >
@@ -66,6 +74,8 @@ const Footer = () => {
                 display: 'flex',
                 flexWrap: 'wrap',
                 gap: { xs: '2.5rem', md: 'none' },
+                padding: { xs: '0 2rem', md: '0' },
+                marginLeft: { xs: '-1.8rem', md: '0' },
               }}
             >
               <Typography
@@ -73,7 +83,7 @@ const Footer = () => {
                 color='#f5f5f7'
                 variant='h2'
                 fontWeight={{ xs: '300', md: '400' }}
-                fontSize={{ xs: '1.2rem', md: '1.3rem' }}
+                fontSize={{ xs: '1rem', md: '1.1rem' }}
                 fontFamily='DM Sans, sans serif;'
                 component='a'
                 sx={{
@@ -90,7 +100,7 @@ const Footer = () => {
                 color='#f5f5f7'
                 variant='h2'
                 fontWeight={{ xs: '300', md: '400' }}
-                fontSize={{ xs: '1.2rem', md: '1.3rem' }}
+                fontSize={{ xs: '1rem', md: '1.1rem' }}
                 fontFamily='DM Sans, sans serif;'
                 component='a'
                 sx={{
@@ -107,7 +117,7 @@ const Footer = () => {
                 color='#f5f5f7'
                 variant='h2'
                 fontWeight={{ xs: '300', md: '400' }}
-                fontSize={{ xs: '1.2rem', md: '1.3rem' }}
+                fontSize={{ xs: '1rem', md: '1.1rem' }}
                 fontFamily='DM Sans, sans serif;'
                 component='a'
                 sx={{
@@ -124,7 +134,7 @@ const Footer = () => {
                 color='#f5f5f7'
                 variant='h2'
                 fontWeight={{ xs: '300', md: '400' }}
-                fontSize={{ xs: '1.2rem', md: '1.3rem' }}
+                fontSize={{ xs: '1rem', md: '1.1rem' }}
                 fontFamily='DM Sans, sans serif;'
                 component='a'
                 sx={{
@@ -141,7 +151,7 @@ const Footer = () => {
                 color='#f5f5f7'
                 variant='h2'
                 fontWeight={{ xs: '300', md: '400' }}
-                fontSize={{ xs: '1.2rem', md: '1.3rem' }}
+                fontSize={{ xs: '1rem', md: '1.1rem' }}
                 fontFamily='DM Sans, sans serif;'
                 component='a'
                 sx={{
@@ -158,7 +168,7 @@ const Footer = () => {
                 color='#f5f5f7'
                 variant='h2'
                 fontWeight={{ xs: '300', md: '400' }}
-                fontSize={{ xs: '1.2rem', md: '1.3rem' }}
+                fontSize={{ xs: '1rem', md: '1.1rem' }}
                 fontFamily='DM Sans, sans serif;'
                 component='a'
                 sx={{
@@ -175,7 +185,7 @@ const Footer = () => {
                 color='#f5f5f7'
                 variant='h2'
                 fontWeight={{ xs: '300', md: '400' }}
-                fontSize={{ xs: '1.2rem', md: '1.3rem' }}
+                fontSize={{ xs: '1rem', md: '1.1rem' }}
                 fontFamily='DM Sans, sans serif;'
                 component='a'
                 sx={{
@@ -189,6 +199,7 @@ const Footer = () => {
               </Typography>
             </Grid>
           </Grid>
+          <Divider variant='middle' sx={{ backgroundColor: '#565656' }} />
           <Grid
             sx={{
               display: 'flex',
@@ -199,7 +210,7 @@ const Footer = () => {
           >
             <Grid alignSelf={{ xs: 'flex-start' }}>
               <Typography
-                fontSize={{ md: '1.2', xs: '1.1rem' }}
+                fontSize={{ xs: '1rem', md: '1.1rem' }}
                 py={2}
                 variant='h6'
                 fontWeight='300'
@@ -215,8 +226,8 @@ const Footer = () => {
                 sx={{
                   fontWeight: '400',
                   color: '#f5f5f7',
-                  fontSize: '1.1rem',
-                  textTransform: 'capitalize',
+                  fontSize: { xs: '1rem', md: '1.1rem' },
+
                   fontFamily: 'DM Sans, sans-serif;',
                 }}
               >
@@ -227,7 +238,7 @@ const Footer = () => {
                   fontWeight: '400',
                   color: '#f5f5f7',
                   fontSize: '1.1rem',
-                  textTransform: 'capitalize',
+
                   fontFamily: 'DM Sans, sans-serif;',
                 }}
               >

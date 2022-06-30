@@ -100,7 +100,6 @@ const Slider = () => {
                 alignItems: 'center',
                 gap: { xs: '.5rem', md: '2rem' },
                 padding: { xs: '0 1rem', md: '0 2rem' },
-                
               }}
             >
               <FormatQuoteIcon
@@ -119,12 +118,12 @@ const Slider = () => {
                 fontFamily='DM Sans, sans-serif;'
                 letterSpacing='-.03em'
                 textAlign='center'
-                mt={{xs: 'none', md: 3}}
+                mt={{ xs: 'none', md: 3 }}
               >
                 {testimonial.caption}
               </Typography>
               <Grid
-                mb={5}
+                mb={8}
                 sx={{
                   display: 'flex',
                   flexDirection: { xs: 'column', md: 'row' },
@@ -133,8 +132,15 @@ const Slider = () => {
                   gap: '1.5rem',
                 }}
               >
-                <Avatar src={testimonial.img} sx={{ width: 80, height: 80 }} />
-                <Stack direction='column' >
+                <Avatar
+                  src={testimonial.img}
+                  sx={{
+                    width: 80,
+                    height: 80,
+                    marginTop: { xs: '1.5rem', md: '0' },
+                  }}
+                />
+                <Stack direction='column'>
                   <Typography
                     color='#141414'
                     variant='h2'
