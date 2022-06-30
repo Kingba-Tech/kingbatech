@@ -120,7 +120,6 @@ export const WebCards = () => {
           >
             <CardMedia
               component='img'
-              height='360'
               image={web.img}
               alt='LapCart_BD'
               sx={{
@@ -131,6 +130,7 @@ export const WebCards = () => {
                   transition: 'all .5s',
                   borderRadius: '.8rem',
                 },
+                height: { xs: 250, md: 360 },
               }}
             />
             <CardContent>
@@ -150,6 +150,7 @@ export const WebCards = () => {
                 fontSize='1.1rem'
                 color='#000000'
                 fontWeight={{ xs: '400', md: '500' }}
+                sx={{ display: { xs: 'none', md: 'block' } }}
               >
                 {web.description}
               </Typography>
@@ -160,8 +161,8 @@ export const WebCards = () => {
                 color='btnColor'
                 sx={{
                   fontSize: { xs: '.9rem', md: '1rem' },
-                  fontWeight: { xs: '400', md: '500' },
-                  marginTop: { xs: '-.5rem', md: 'none' },
+                  fontWeight: 500,
+                  marginTop: { xs: '-.8rem', md: 'none' },
                   marginBottom: { xs: '.5rem' },
                   marginLeft: { xs: '.5rem' },
                 }}
@@ -204,7 +205,6 @@ export const DigitalCards = () => {
           >
             <CardMedia
               component='img'
-              height='360'
               image={content.img}
               alt='LapCart_BD'
               sx={{
@@ -215,6 +215,7 @@ export const DigitalCards = () => {
                   transition: 'all .5s',
                   borderRadius: '.8rem',
                 },
+                height: { xs: 250, md: 360 },
               }}
             />
             <CardContent>
@@ -234,6 +235,7 @@ export const DigitalCards = () => {
                 fontSize='1.1rem'
                 color='#000000'
                 fontWeight={{ xs: '400', md: '500' }}
+                sx={{ display: { xs: 'none', md: 'block' } }}
               >
                 {content.description}
               </Typography>
@@ -244,8 +246,8 @@ export const DigitalCards = () => {
                 color='btnColor'
                 sx={{
                   fontSize: { xs: '.9rem', md: '1rem' },
-                  fontWeight: { xs: '400', md: '500' },
-                  marginTop: { xs: '-.5rem', md: 'none' },
+                  fontWeight: 500,
+                  marginTop: { xs: '-.8rem', md: 'none' },
                   marginBottom: { xs: '.5rem' },
                   marginLeft: { xs: '.5rem' },
                 }}
@@ -288,7 +290,6 @@ export const DesignCards = () => {
           >
             <CardMedia
               component='img'
-              height='360'
               image={design.img}
               alt='LapCart_BD'
               sx={{
@@ -299,6 +300,7 @@ export const DesignCards = () => {
                   transition: 'all .5s',
                   borderRadius: '.8rem',
                 },
+                height: { xs: 250, md: 360 },
               }}
             />
             <CardContent>
@@ -318,6 +320,7 @@ export const DesignCards = () => {
                 fontSize='1.1rem'
                 color='#000000'
                 fontWeight={{ xs: '400', md: '500' }}
+                sx={{ display: { xs: 'none', md: 'block' } }}
               >
                 {design.description}
               </Typography>
@@ -328,8 +331,8 @@ export const DesignCards = () => {
                 color='btnColor'
                 sx={{
                   fontSize: { xs: '.9rem', md: '1rem' },
-                  fontWeight: { xs: '400', md: '500' },
-                  marginTop: { xs: '-.5rem', md: 'none' },
+                  fontWeight: 500,
+                  marginTop: { xs: '-.8rem', md: 'none' },
                   marginBottom: { xs: '.5rem' },
                   marginLeft: { xs: '.5rem' },
                 }}

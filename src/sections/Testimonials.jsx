@@ -8,7 +8,7 @@ const Testimonials = () => {
       maxWidth
       sx={{
         backgroundColor: '#F0F6FF',
-        minHeight: '60vh',
+        minHeight: '50vh',
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'flex-start',

@@ -34,7 +34,7 @@ const Solutions = () => {
 
       <Grid
         mb={{ xs: 8, md: 12 }}
-        mt={6}
+        mt={{xs:3, md:6}}
         sx={{
           display: 'flex',
           justifyContent: 'space-between',
@@ -83,13 +83,20 @@ const Solutions = () => {
               },
             }}
           >
-            <DevicesIcon sx={{ fontSize: '2.5rem', color: '#004581' }} />
+            <DevicesIcon
+              sx={{
+                fontSize: '2.5rem',
+                color: '#004581',
+                alignSelf: { xs: 'center', md: 'flex-start' },
+              }}
+            />
             <Typography
               color='#181818'
               variant='h2'
               fontWeight='500'
               fontSize={{ xs: '1.3rem', md: '1.4rem' }}
               mb={1}
+              sx={{ alignSelf: { xs: 'center', md: 'flex-start' } }}
             >
               Web & App Development
             </Typography>
@@ -98,7 +105,10 @@ const Solutions = () => {
               variant='h6'
               fontWeight={{ xs: '300', md: '400' }}
               fontSize={{ xs: '1.1rem', md: '1.2rem' }}
-              sx={{ marginTop: '-1rem' }}
+              sx={{
+                marginTop: '-1rem',
+                alignSelf: { xs: 'center', md: 'flex-start' },
+              }}
             >
               Custom design and development solutions for crafting the perfect
               website or app for your business.
@@ -138,13 +148,20 @@ const Solutions = () => {
               },
             }}
           >
-            <CampaignIcon sx={{ fontSize: '2.5rem', color: '#004581' }} />
+            <CampaignIcon
+              sx={{
+                fontSize: '2.5rem',
+                color: '#004581',
+                alignSelf: { xs: 'center', md: 'flex-start' },
+              }}
+            />
             <Typography
               color='#181818'
               variant='h2'
               fontWeight='500'
               fontSize={{ xs: '1.2rem', md: '1.4rem' }}
               mb={1}
+              sx={{ alignSelf: { xs: 'center', md: 'flex-start' } }}
             >
               Digital Marketing
             </Typography>
@@ -153,7 +170,10 @@ const Solutions = () => {
               variant='h6'
               fontWeight={{ xs: '300', md: '400' }}
               fontSize={{ xs: '1.1rem', md: '1.2rem' }}
-              sx={{ marginTop: '-1rem' }}
+              sx={{
+                marginTop: '-1rem',
+                alignSelf: { xs: 'center', md: 'flex-start' },
+              }}
             >
               Custom design and development solutions for crafting the perfect
               website or app for your business.
@@ -192,13 +212,20 @@ const Solutions = () => {
               },
             }}
           >
-            <BrushIcon sx={{ fontSize: '2.5rem', color: '#004581' }} />
+            <BrushIcon
+              sx={{
+                fontSize: '2.5rem',
+                color: '#004581',
+                alignSelf: { xs: 'center', md: 'flex-start' },
+              }}
+            />
             <Typography
               color='#181818'
               variant='h2'
               fontWeight='500'
               fontSize={{ xs: '1.2rem', md: '1.4rem' }}
               mb={1}
+              sx={{ alignSelf: { xs: 'center', md: 'flex-start' } }}
             >
               Design & Editing
             </Typography>
@@ -207,7 +234,10 @@ const Solutions = () => {
               variant='h6'
               fontWeight={{ xs: '300', md: '400' }}
               fontSize={{ xs: '1.1rem', md: '1.2rem' }}
-              sx={{ marginTop: '-1rem' }}
+              sx={{
+                marginTop: '-1rem',
+                alignSelf: { xs: 'center', md: 'flex-start' },
+              }}
             >
               Custom design and development solutions for crafting the perfect
               website or app for your business.

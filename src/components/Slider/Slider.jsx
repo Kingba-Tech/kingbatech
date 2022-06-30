@@ -1,5 +1,5 @@
 import React from 'react';
-import './Slider.module.css';
+import styles from '../../../styles/Slider.module.css';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Typography, Grid, Avatar, Stack } from '@mui/material';
 import FormatQuoteIcon from '@mui/icons-material/FormatQuote';
@@ -67,7 +67,7 @@ const Slider = () => {
         spaceBetween={10}
         slidesPerView={1}
         modules={[Navigation, Pagination]}
-        className='mySwiper'
+        className={styles.mySwiper}
         breakpoints={{
           // when window width is >= 640px
           359: {
@@ -98,8 +98,8 @@ const Slider = () => {
                 flexDirection: 'column',
                 justifyContent: 'center',
                 alignItems: 'center',
-                gap: { xs: '1rem', md: '2rem' },
-                padding: '2rem',
+                gap: { xs: '.5rem', md: '2rem' },
+                padding: { xs: '0 1rem', md: '2rem' },
               }}
             >
               <FormatQuoteIcon
@@ -107,36 +107,38 @@ const Slider = () => {
                   width: { xs: 100, md: 120 },
                   height: { xs: 110, md: 130 },
                   color: '#004581',
+                  marginTop: {xs: '',}
                 }}
               />
               <Typography
                 color='#141414'
                 variant='h2'
-                fontWeight='500'
-                fontSize={{ xs: '1.4rem', md: '2rem' }}
+                fontSize={{ xs: '1.2rem', md: '1.5rem' }}
+                fontWeight='300'
+                lineHeight='2rem'
                 fontFamily='DM Sans, sans-serif;'
-                lineHeight='50px'
                 letterSpacing='-.03em'
                 textAlign='center'
               >
                 {testimonial.caption}
               </Typography>
               <Grid
-                mb={{ xs: 2, md: 3 }}
+                mb={{ xs: 5, md: 3 }}
                 sx={{
                   display: 'flex',
+                  flexDirection: { xs: 'column', md: 'row' },
                   justifyContent: 'space-between',
                   alignItems: 'center',
                   gap: '1.5rem',
                 }}
               >
                 <Avatar src={testimonial.img} sx={{ width: 80, height: 80 }} />
-                <Stack direction='column'>
+                <Stack direction='column' >
                   <Typography
                     color='#141414'
                     variant='h2'
-                    fontWeight={{ xs: '400', md: '500' }}
-                    fontSize={{ xs: '1.3rem', md: '1.5rem' }}
+                    fontWeight='500'
+                    fontSize={{ xs: '1.2rem', md: '1.5rem' }}
                     fontFamily='DM Sans, sans-serif;'
                   >
                     {testimonial.name}
@@ -145,7 +147,7 @@ const Slider = () => {
                     sx={{
                       fontWeight: '400',
                       color: '#141414',
-                      fontSize: '1.1rem',
+                      fontSize: { xs: '1rem', md: '1.1rem' },
                       textTransform: 'capitalize',
                       fontFamily: 'DM Sans, sans-serif;',
                     }}
@@ -156,7 +158,7 @@ const Slider = () => {
                     sx={{
                       fontWeight: '400',
                       color: '#141414',
-                      fontSize: '1.1rem',
+                      fontSize: { xs: '1rem', md: '1.1rem' },
                       textTransform: 'capitalize',
                       fontFamily: 'DM Sans, sans-serif;',
                     }}

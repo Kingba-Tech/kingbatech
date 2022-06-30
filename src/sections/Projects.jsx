@@ -43,7 +43,11 @@ const Projects = () => {
         flexDirection: 'column',
       }}
     >
-      <Grid sx={{ width: '100%', maxWidth: 1080 }} py={2} mt={{ xs: 0, md: 6 }}>
+      <Grid
+        sx={{ width: '100%', maxWidth: 1080 }}
+        py={2}
+        mt={{ xs: '1.5rem', md: 6 }}
+      >
         <Typography
           pt={{ xs: 2, md: 4 }}
           variant='h2'
@@ -65,7 +69,7 @@ const Projects = () => {
             width: '100%',
           }}
         >
-          <Grid mt>
+          <Grid>
             <AppBar
               position='static'
               sx={{
@@ -160,7 +164,7 @@ const Projects = () => {
             color='primary'
             sx={{
               border: '2px solid #004581',
-              padding: '.6rem 3.5rem',
+              padding: {xs:'.3rem 1.75rem' , md:'.6rem 3.5rem'},
               marginTop: { xs: '1.5rem', md: '4rem' },
               borderRadius: '.3rem',
               '&:hover': {
