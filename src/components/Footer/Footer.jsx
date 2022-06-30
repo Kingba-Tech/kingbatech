@@ -35,7 +35,7 @@ const Footer = () => {
           sx={{
             display: 'flex',
             flexDirection: 'column',
-            gap: '5rem',
+            gap: { xs: '2.8rem', md: '5rem' },
           }}
         >
           <Grid
@@ -142,7 +142,7 @@ const Footer = () => {
                     color: '#2997ff',
                   },
                   cursor: 'pointer',
-                  marginLeft:{xs: '1.2rem', md: '0'}
+                  marginLeft: { xs: '1.2rem', md: '0' },
                 }}
               >
                 Twitter
@@ -200,7 +200,13 @@ const Footer = () => {
               </Typography>
             </Grid>
           </Grid>
-          <Divider variant='middle' sx={{ backgroundColor: '#565656' }} />
+          <Divider
+            variant='middle'
+            sx={{
+              backgroundColor: '#565656',
+              marginTop: { xs: '1rem', md: '0' },
+            }}
+          />
           <Grid
             sx={{
               display: 'flex',
