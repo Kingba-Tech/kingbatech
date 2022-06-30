@@ -201,13 +201,14 @@ const Footer = () => {
             </Grid>
           </Grid>
           <Divider
-            variant='middle'
             sx={{
               backgroundColor: '#565656',
-              marginTop: { xs: '1rem', md: '0' },
+              marginTop: '2rem',
+              width: '100%',
             }}
           />
           <Grid
+            mb={4}
             sx={{
               display: 'flex',
               alignItems: 'center',
