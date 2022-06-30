@@ -5,6 +5,7 @@ import Hero from '../src/sections/Hero';
 import Projects from '../src/sections/Projects';
 import Testimonials from '../src/sections/Testimonials';
 import Solutions from '../src/sections/Solutions';
+import Cta from '../src/components/Cta';
 
 export default function Home() {
   return (
@@ -21,6 +22,7 @@ export default function Home() {
       <Projects />
       <Solutions />
       <Testimonials />
+      <Cta />
     </Layout>
   );
 }

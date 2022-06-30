@@ -1,0 +1,71 @@
+import React from 'react';
+import { Container, Grid, Typography, Button } from '@mui/material';
+
+const Cta = () => {
+  return (
+    <Container
+      maxWidth
+      sx={{
+        minHeight: '250px',
+        backgroundColor: '#004581',
+        display: { sm: 'flex', md: 'none' },
+      }}
+    >
+      <Grid
+        sx={{
+          width: '100%',
+          maxWidth: 1080,
+          display: 'flex',
+          flexDirection: 'column',
+          justifyContent: 'center',
+          alignItems: 'center',
+          padding: '3.5rem 0',
+          gap: '1.3rem',
+        }}
+      >
+        <Typography
+          fontSize='2rem'
+          color='#ffffff'
+          fontWeight='700'
+          fontFamily='DM Sans, sans serif;'
+          lineHeight='42px'
+        >
+          Ready to partner?
+        </Typography>
+        <Typography
+          fontSize='1.3rem'
+          color='#ffffff'
+          fontWeight='400'
+          lineHeight='30px'
+          fontFamily='DM Sans, sans serif;'
+          textAlign='center'
+        >
+          We'd love to to collaborate & create a magic together
+        </Typography>
+        <Button
+          outlined
+          sx={{
+            color: '#ffffff',
+            border: '2px solid #ffffff',
+            borderRadius: '.2em',
+            fontSize: '1rem',
+            lineHeight: '23px',
+            padding:'.5rem 1rem',
+            marginTop: '.8rem',
+            '&:hover':{
+                backgroundColor:'#fff',
+                color: '#004581',
+                transition:  'all .2s'
+            }
+          }}
+          fontFamily='DM Sans, sans serif;'
+          
+        >
+          Contact us
+        </Button>
+      </Grid>
+    </Container>
+  );
+};
+
+export default Cta;
