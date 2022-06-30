@@ -19,12 +19,12 @@ const Cta = () => {
           flexDirection: 'column',
           justifyContent: 'center',
           alignItems: 'center',
-          padding: '3.5rem 0',
-          gap: '1.3rem',
+          padding: '2.5rem 0',
+          gap: '.5rem',
         }}
       >
         <Typography
-          fontSize='2rem'
+          fontSize='1.8rem'
           color='#ffffff'
           fontWeight='700'
           fontFamily='DM Sans, sans serif;'
@@ -33,7 +33,7 @@ const Cta = () => {
           Ready to partner?
         </Typography>
         <Typography
-          fontSize='1.3rem'
+          fontSize='1.2rem'
           color='#ffffff'
           fontWeight='400'
           lineHeight='30px'
@@ -47,19 +47,19 @@ const Cta = () => {
           sx={{
             color: '#ffffff',
             border: '2px solid #ffffff',
-            borderRadius: '.2em',
+            borderRadius: '.35em',
             fontSize: '1rem',
             lineHeight: '23px',
-            padding:'.5rem 1rem',
-            marginTop: '.8rem',
-            '&:hover':{
-                backgroundColor:'#fff',
-                color: '#004581',
-                transition:  'all .2s'
-            }
+            padding: '.5rem 1.5rem',
+            marginTop: '.9rem',
+            textTransform: 'capitalize',
+            '&:hover': {
+              backgroundColor: '#fff',
+              color: '#004581',
+              transition: 'all .2s',
+            },
           }}
           fontFamily='DM Sans, sans serif;'
-          
         >
           Contact us
         </Button>
