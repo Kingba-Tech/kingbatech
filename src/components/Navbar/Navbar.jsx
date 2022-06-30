@@ -10,7 +10,6 @@ import {
   List,
   ListItem,
   ListItemButton,
- 
   Button,
   Typography,
   Toolbar,
@@ -69,6 +68,7 @@ const Navbar = () => {
                 },
                 cursor: 'pointer',
               }}
+              href='/src/sections/Hero.jsx'
             >
               Home
             </Typography>
@@ -86,6 +86,7 @@ const Navbar = () => {
                 },
                 cursor: 'pointer',
               }}
+              href='/src/sections/Projects.jsx'
             >
               Projects
             </Typography>
@@ -103,6 +104,7 @@ const Navbar = () => {
                 },
                 cursor: 'pointer',
               }}
+              href='/src/sections/Solutions.jsx'
             >
               Services
             </Typography>
@@ -271,6 +273,7 @@ const Navbar = () => {
                       color: '#2297FF',
                     },
                   }}
+                  href='/src/sections/Hero.jsx'
                 >
                   Home
                 </Button>
@@ -287,6 +290,7 @@ const Navbar = () => {
                       color: '#2297FF',
                     },
                   }}
+                  href='/src/sections/Hero.jsx'
                 >
                   Projects
                 </Button>

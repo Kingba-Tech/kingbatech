@@ -2,6 +2,7 @@ import { Container, Box, Grid, Typography } from '@mui/material';
 import Image from 'next/image';
 import Link from 'next/link';
 import banner from '../assets/kingba.png';
+import styles from './Home.module.css';
 
 const Hero = () => {
   return (
@@ -93,12 +94,7 @@ const Hero = () => {
               }}
             >
               See our projects
-              <hr
-                height='5px'
-                width='125px'
-                padding='15px 0px'
-                color='#2997FF '
-              />
+              <hr color='#2297FF' />
             </Typography>
           </Box>
         </Grid>
