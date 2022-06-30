@@ -40,7 +40,7 @@ const Cta = () => {
           fontFamily='DM Sans, sans serif;'
           textAlign='center'
         >
-          We'd love to to collaborate & create a magic together
+          We would love to to collaborate & create a magic together
         </Typography>
         <Button
           outlined
