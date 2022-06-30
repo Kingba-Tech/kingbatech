@@ -16,7 +16,7 @@ const Footer = () => {
     <Container
       maxWidth
       sx={{
-        minHeight: '500px',
+        minHeight: '400px',
         background: '#000000',
         padding: '1.5rem 1rem',
         display: 'flex',
