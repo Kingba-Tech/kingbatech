@@ -36,10 +36,29 @@ const Hero = () => {
             flexDirection: 'column',
           }}
         >
-          <Box sx={{ marginTop: { xs: '-20px', md: '0', xl: '2rem' } }}>
+          <Box
+            sx={{
+              display: { xs: 'none', xl: 'none', md: 'block' },
+              marginTop: { xs: '-20px', md: '0', xl: '2rem' },
+            }}
+          >
             <Image
               src={banner}
               height={460}
+              width={700}
+              layout='intrinsic'
+              alt='hero_banner'
+            ></Image>
+          </Box>
+          <Box
+            sx={{
+              display: { xs: 'block', xl: 'block', md: 'none' },
+              marginTop: { xs: '-20px', md: '0', xl: '2rem' },
+            }}
+          >
+            <Image
+              src={banner}
+              height={500}
               width={700}
               layout='intrinsic'
               alt='hero_banner'
@@ -61,7 +80,7 @@ const Hero = () => {
               fontSize={{ xs: '1.5rem', md: '2rem', xl: '2.8rem' }}
               fontWeight='500'
               color='#f5f5f7'
-              marginBottom={{ xs: '1.5rem' , md: '1rem', xl: '1.5rem'}}
+              marginBottom={{ xs: '1.5rem', md: '1rem', xl: '1.5rem' }}
               lineHeight={{ xs: '2rem', xl: '3.5rem' }}
               sx={{ alignSelf: 'flex-start' }}
             >
