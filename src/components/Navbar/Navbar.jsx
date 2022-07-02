@@ -195,7 +195,7 @@ const Navbar = () => {
         <AppBar
           width='100%'
           component='nav'
-          sx={{ background: '#000000', opacity: '0.9', maxHeight: '7vh' }}
+          sx={{ background: '#000000', opacity: '0.9', maxHeight: '44px' }}
         >
           <Toolbar
             sx={{
