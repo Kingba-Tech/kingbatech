@@ -1,38 +1,40 @@
 import * as React from 'react';
-import Card from '@mui/material/Card';
-import CardActions from '@mui/material/CardActions';
-import CardActionArea from '@mui/material/CardActionArea';
-import CardContent from '@mui/material/CardContent';
-import CardMedia from '@mui/material/CardMedia';
-import Button from '@mui/material/Button';
-import { Avatar, CardHeader, IconButton } from '@mui/material';
-import Typography from '@mui/material/Typography';
-import { Grid } from '@mui/material';
-import MoreVertIcon from '@mui/icons-material/MoreVert';
-import Image from 'next/image';
-import img from '../../assets/1.jpg';
+import {
+  Card,
+  CardActions,
+  CardContent,
+  CardMedia,
+  Button,
+  Typography,
+  Grid,
+} from '@mui/material';
+
 import Link from 'next/link';
 
 const webcontent = [
   {
+    id: 1,
     img: 'https://i.imgur.com/a0T9e32.jpg',
     title: 'LapCart',
     description:
       'TED BD is a online based mango store in Bangladesh. Which provides seasonal and pure foods.',
   },
   {
+    id: 2,
     img: 'https://i.imgur.com/clDL4C4.png',
     title: 'TED BD',
     description:
       'TED BD is a online based mango store in Bangladesh. Which provides seasonal and pure foods.',
   },
   {
+    id: 3,
     img: 'https://i.imgur.com/wV1kaUW.png',
     title: 'Management Hub',
     description:
       'TED BD is a online based mango store in Bangladesh. Which provides seasonal and pure foods.',
   },
   {
+    id: 4,
     img: 'https://i.imgur.com/ZX2WvdT.png',
     title: 'MangoCart',
     description:
@@ -41,24 +43,28 @@ const webcontent = [
 ];
 const digitalcontent = [
   {
+    id: 5,
     img: 'https://i.imgur.com/AeKImO4.png',
     title: 'LapCart',
     description:
       'TED BD is a online based mango store in Bangladesh. Which provides seasonal and pure foods.',
   },
   {
+    id: 6,
     img: 'https://i.imgur.com/6uz4niQ.jpg',
     title: 'TED BD',
     description:
       'TED BD is a online based mango store in Bangladesh. Which provides seasonal and pure foods.',
   },
   {
+    id: 7,
     img: 'https://i.imgur.com/h4vKkDS.jpg',
     title: 'Management Hub',
     description:
       'TED BD is a online based mango store in Bangladesh. Which provides seasonal and pure foods.',
   },
   {
+    id: 8,
     img: 'https://i.imgur.com/10aMHVS.jpg',
     title: 'MangoCart',
     description:
@@ -67,24 +73,28 @@ const digitalcontent = [
 ];
 const designcontent = [
   {
+    id: 9,
     img: 'https://i.imgur.com/6jl9R8k.jpg',
     title: 'LapCart',
     description:
       'TED BD is a online based mango store in Bangladesh. Which provides seasonal and pure foods.',
   },
   {
+    id: 10,
     img: 'https://i.imgur.com/4E4QBii.png',
     title: 'TED BD',
     description:
       'TED BD is a online based mango store in Bangladesh. Which provides seasonal and pure foods.',
   },
   {
+    id: 11,
     img: 'https://i.imgur.com/C2v26JL.png',
     title: 'Management Hub',
     description:
       'TED BD is a online based mango store in Bangladesh. Which provides seasonal and pure foods.',
   },
   {
+    id: 12,
     img: 'https://i.imgur.com/OSa49QI.png',
     title: 'MangoCart',
     description:
@@ -156,20 +166,22 @@ export const WebCards = () => {
               </Typography>
             </CardContent>
             <CardActions>
-              <Button
-                variant='outlined'
-                color='btnColor'
-                sx={{
-                  fontSize: { xs: '.9rem', md: '1rem' },
-                  fontWeight: 500,
-                  marginTop: { xs: '-.8rem', md: 'none' },
-                  marginBottom: { xs: '.5rem' },
-                  marginLeft: { xs: '.5rem' },
-                }}
-                size='small'
-              >
-                Read More
-              </Button>
+              <Link href={'/projects/' + web.id}>
+                <Button
+                  variant='outlined'
+                  color='btnColor'
+                  sx={{
+                    fontSize: { xs: '.9rem', md: '1rem' },
+                    fontWeight: 500,
+                    marginTop: { xs: '-.8rem', md: 'none' },
+                    marginBottom: { xs: '.5rem' },
+                    marginLeft: { xs: '.5rem' },
+                  }}
+                  size='small'
+                >
+                  Read More
+                </Button>
+              </Link>
             </CardActions>
           </Card>
         ))}
@@ -346,39 +358,4 @@ export const DesignCards = () => {
       </Grid>
     </Grid>
   );
-};
-
-export const SingleCard = () => {
-  <Card sx={{ maxWidth: 345 }}>
-    <CardHeader
-      avatar={<Avatar src={img} />}
-      action={
-        <IconButton>
-          <MoreVertIcon />
-        </IconButton>
-      }
-      title='Shrimp and Chorizo Paella'
-      subheader='September 14, 2016'
-    />
-    <CardMedia
-      component='img'
-      width='340'
-      objectFit='cover'
-      height='194'
-      image={img}
-      alt='Paella dish'
-    />
-    <CardContent>
-      <Typography variant='h6' color='#141414'>
-        This impressive paella is a perfect party dish and a fun meal to cook
-        together with your guests. Add 1 cup of frozen peas along with the
-        mussels, if you like.
-      </Typography>
-    </CardContent>
-    <CardActions>
-      <Button color='#141414' outlined>
-        Visit Site
-      </Button>
-    </CardActions>
-  </Card>;
 };

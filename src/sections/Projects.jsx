@@ -166,11 +166,13 @@ const Projects = () => {
             fontWeight={{ xs: 400, md: 500 }}
             textAlign='center'
             color='primary'
+            href='/projects/'
             sx={{
               border: '2px solid #004581',
               padding: { xs: '.3rem 1.75rem', md: '.6rem 3.5rem' },
               marginTop: { xs: '1.5rem', md: '4rem' },
               borderRadius: '.3rem',
+              cursor: 'pointer',
               '&:hover': {
                 color: '#F5F5F7',
                 backgroundColor: '#004581',

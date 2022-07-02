@@ -16,7 +16,9 @@ import {
 } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
 import Image from 'next/image';
+import Link from 'next/link';
 import logo from '../../assets/kingba_small.png';
+
 import Dropdown from './Dropdown';
 
 const drawerWidth = '100%';
@@ -55,41 +57,42 @@ const Navbar = () => {
               fontFamily: 'DM Sans, sans serif;',
             }}
           >
-            <Typography
-              color='#f5f5f7'
-              variant='h6'
-              fontWeight='400'
-              fontSize='1.1rem'
-              fontFamily='DM Sans, sans serif;'
-              component='a'
-              sx={{
-                '&:hover': {
-                  color: '#2997ff',
-                },
-                cursor: 'pointer',
-              }}
-              href='/src/sections/Hero.jsx'
-            >
-              Home
-            </Typography>
-            <Typography
-              mt={2}
-              color='#f5f5f7'
-              variant='h6'
-              fontWeight='400'
-              fontSize='1.1rem'
-              fontFamily='DM Sans, sans serif;'
-              component='a'
-              sx={{
-                '&:hover': {
-                  color: '#2997ff',
-                },
-                cursor: 'pointer',
-              }}
-              href='/src/sections/Projects.jsx'
-            >
-              Projects
-            </Typography>
+            <Link href='/'>
+              <Typography
+                color='#f5f5f7'
+                variant='h6'
+                fontWeight='400'
+                fontSize='1.1rem'
+                fontFamily='DM Sans, sans serif;'
+                component='a'
+                sx={{
+                  '&:hover': {
+                    color: '#2997ff',
+                  },
+                  cursor: 'pointer',
+                }}
+              >
+                Home
+              </Typography>
+            </Link>
+            <Link href='/projects/'>
+              <Typography
+                color='#f5f5f7'
+                variant='h6'
+                fontWeight='400'
+                fontSize='1.1rem'
+                fontFamily='DM Sans, sans serif;'
+                component='a'
+                sx={{
+                  '&:hover': {
+                    color: '#2997ff',
+                  },
+                  cursor: 'pointer',
+                }}
+              >
+                Projects
+              </Typography>
+            </Link>
             <Typography
               mt={2}
               color='#f5f5f7'
@@ -192,7 +195,7 @@ const Navbar = () => {
         <AppBar
           width='100%'
           component='nav'
-          sx={{ background: '#000000', opacity: '0.9', maxHeight: '44px' }}
+          sx={{ background: '#000000', opacity: '0.9', maxHeight: '7vh' }}
         >
           <Toolbar
             sx={{
@@ -216,6 +219,7 @@ const Navbar = () => {
               textAlign='center'
               variant='h6'
               component='a'
+              href='/'
               sx={{
                 flex: '2',
                 display: { sm: 'block', md: 'none' },
@@ -241,6 +245,7 @@ const Navbar = () => {
                 mr={2}
                 variant='h6'
                 component='a'
+                href='/'
                 sx={{
                   display: { xs: 'none', md: 'block' },
                   cursor: 'pointer',

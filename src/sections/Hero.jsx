@@ -3,13 +3,13 @@ import Image from 'next/image';
 import Link from 'next/link';
 import banner from '../assets/kingba.png';
 
-
 const Hero = () => {
   return (
     <Container
       maxWidth
       sx={{
-        minHeight: { md: '100vh' },
+        mt:'7vh',
+        height: { md: '93vh', xs: '100%' },
         background: 'linear-gradient(rgb(2, 13, 31) 16%, black 35%)',
         display: 'flex',
         justifyContent: 'center',
@@ -17,7 +17,7 @@ const Hero = () => {
       }}
     >
       <Grid
-        py={{ md: 4, xs: 1 }}
+        py={{ md: 0, xl: 4, xs: 1 }}
         sx={{
           display: 'flex',
           justifyContent: 'center',
@@ -40,7 +40,7 @@ const Hero = () => {
           <Box sx={{ marginTop: { xs: '-20px', md: '2rem' } }}>
             <Image
               src={banner}
-              height={500}
+              height={250}
               width={700}
               layout='intrinsic'
               alt='hero_banner'
@@ -87,6 +87,7 @@ const Hero = () => {
               fontWeight='500'
               color='#2997FF '
               component='a'
+              href='/projects/'
               sx={{
                 fontFamily: 'DM Sans, sans-serif;',
                 cursor: 'pointer',
