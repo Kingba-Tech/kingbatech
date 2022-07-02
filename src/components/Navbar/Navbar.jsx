@@ -215,25 +215,27 @@ const Navbar = () => {
             >
               <MenuIcon />
             </IconButton>
+
             <Typography
               textAlign='center'
               variant='h6'
-              component='a'
-              href='/'
               sx={{
                 flex: '2',
                 display: { sm: 'block', md: 'none' },
                 marginLeft: '-9px',
               }}
             >
-              <Image
-                height={25}
-                width={120}
-                src={logo}
-                alt='Site Logo'
-                layout='intrinsic'
-              />
+              <Link href='/'>
+                <Image
+                  height={25}
+                  width={120}
+                  src={logo}
+                  alt='Site Logo'
+                  layout='intrinsic'
+                />
+              </Link>
             </Typography>
+
             <Grid
               sx={{
                 display: 'flex',
@@ -253,52 +255,57 @@ const Navbar = () => {
                   padding: { md: '0 .5rem', xl: '0 1.5rem' },
                 }}
               >
-                <Image
-                  height={25}
-                  width={120}
-                  src={logo}
-                  alt='Site Logo'
-                  layout='intrinsic'
-                />
+                <Link href='/'>
+                  <Image
+                    height={25}
+                    width={120}
+                    src={logo}
+                    alt='Site Logo'
+                    layout='intrinsic'
+                  />
+                </Link>
               </Typography>
               <Box
                 sx={{
                   display: { xs: 'none', md: 'block', marginTop: '-1.3rem' },
                 }}
               >
-                <Button
-                  sx={{
-                    fontWeight: '300',
-                    color: '#f5f5f7',
-                    fontSize: '.9rem',
-                    textTransform: 'capitalize',
-                    padding: { md: '0 1rem', xl: '0 2.5rem' },
-                    fontFamily: 'DM Sans, sans-serif;',
-                    '&:hover': {
-                      color: '#2297FF',
-                    },
-                  }}
-                  href='/src/sections/Hero.jsx'
-                >
-                  Home
-                </Button>
-                <Button
-                  sx={{
-                    fontWeight: '300',
-                    color: '#f5f5f7',
-                    fontSize: '.9rem',
+                <Link href='/'>
+                  <Button
+                    sx={{
+                      fontWeight: '300',
+                      color: '#f5f5f7',
+                      fontSize: '.9rem',
+                      textTransform: 'capitalize',
+                      padding: { md: '0 1rem', xl: '0 2.5rem' },
+                      fontFamily: 'DM Sans, sans-serif;',
+                      '&:hover': {
+                        color: '#2297FF',
+                      },
+                    }}
+                  >
+                    Home
+                  </Button>
+                </Link>
+                <Link href='/projects/'>
+                  <Button
+                    sx={{
+                      fontWeight: '300',
+                      color: '#f5f5f7',
+                      fontSize: '.9rem',
 
-                    textTransform: 'capitalize',
-                    padding: { md: '0 1rem', xl: '0 2.5rem' },
-                    fontFamily: 'DM Sans, sans-serif;',
-                    '&:hover': {
-                      color: '#2297FF',
-                    },
-                  }}
-                  href='/src/sections/Hero.jsx'
-                >
-                  Projects
-                </Button>
+                      textTransform: 'capitalize',
+                      padding: { md: '0 1rem', xl: '0 2.5rem' },
+                      fontFamily: 'DM Sans, sans-serif;',
+                      '&:hover': {
+                        color: '#2297FF',
+                      },
+                    }}
+                    href='/src/sections/Hero.jsx'
+                  >
+                    Projects
+                  </Button>
+                </Link>
                 <Button
                   component='div'
                   sx={{
