@@ -8,8 +8,7 @@ const Hero = () => {
     <Container
       maxWidth
       sx={{
-        mt:'7vh',
-        height: { md: '93vh', xs: '100%' },
+        minHeight: { md: '100vh', xs: '100%' },
         background: 'linear-gradient(rgb(2, 13, 31) 16%, black 35%)',
         display: 'flex',
         justifyContent: 'center',
@@ -29,7 +28,7 @@ const Hero = () => {
       >
         <Grid
           width='100%'
-          mt={6}
+          mt={{ xs: 6, md: 1, xl: 6 }}
           sx={{
             display: 'flex',
             justifyContent: 'center',
@@ -37,17 +36,17 @@ const Hero = () => {
             flexDirection: 'column',
           }}
         >
-          <Box sx={{ marginTop: { xs: '-20px', md: '2rem' } }}>
+          <Box sx={{ marginTop: { xs: '-20px', md: '0', xl: '2rem' } }}>
             <Image
               src={banner}
-              height={250}
+              height={460}
               width={700}
               layout='intrinsic'
               alt='hero_banner'
             ></Image>
           </Box>
           <Box
-            my={{ xs: 'none', md: '1rem' }}
+            my={{ xs: 'none', xl: '1rem' }}
             sx={{
               display: 'flex',
               justifyContent: 'center',
@@ -59,11 +58,11 @@ const Hero = () => {
             <Typography
               variant='h2'
               fontFamily='DM Sans, sans serif;'
-              fontSize={{ xs: '1.5rem', md: '2.8rem' }}
+              fontSize={{ xs: '1.5rem', md: '2rem', xl: '2.8rem' }}
               fontWeight='500'
               color='#f5f5f7'
-              marginBottom='1.5rem'
-              lineHeight={{ xs: '2rem', md: '3.5rem' }}
+              marginBottom={{ xs: '1.5rem' , md: '1rem', xl: '1.5rem'}}
+              lineHeight={{ xs: '2rem', xl: '3.5rem' }}
               sx={{ alignSelf: 'flex-start' }}
             >
               Stay ahead of the curve with strategic, creative solutions
