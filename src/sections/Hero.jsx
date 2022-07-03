@@ -38,7 +38,7 @@ const Hero = () => {
         >
           <Box
             sx={{
-              display: { xs: 'none', xl: 'none',lg: 'none', md: 'block' },
+              display: { xs: 'none', xl: 'none', lg: 'block', md: 'block' },
               marginTop: { xs: '-20px', md: '0', xl: '2rem' },
             }}
           >
@@ -52,7 +52,7 @@ const Hero = () => {
           </Box>
           <Box
             sx={{
-              display: { xs: 'block', xl: 'block', md: 'none', lg: 'block' },
+              display: { xs: 'block', xl: 'block', md: 'none', lg: 'none' },
               marginTop: { xs: '-20px', md: '0', xl: '2rem' },
             }}
           >

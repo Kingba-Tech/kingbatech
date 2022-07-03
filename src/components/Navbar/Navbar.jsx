@@ -77,6 +77,7 @@ const Navbar = () => {
             </Link>
             <Link href='/projects/'>
               <Typography
+                mt={2}
                 color='#f5f5f7'
                 variant='h6'
                 fontWeight='400'
@@ -93,92 +94,101 @@ const Navbar = () => {
                 Projects
               </Typography>
             </Link>
-            <Typography
-              mt={2}
-              color='#f5f5f7'
-              variant='h6'
-              fontWeight='400'
-              fontSize='1.1rem'
-              fontFamily='DM Sans, sans serif;'
-              component='a'
-              sx={{
-                '&:hover': {
-                  color: '#2997ff',
-                },
-                cursor: 'pointer',
-              }}
-              href='/src/sections/Solutions.jsx'
-            >
-              Services
-            </Typography>
-            <Typography
-              mt={2}
-              color='#f5f5f7'
-              variant='h6'
-              fontWeight='400'
-              fontSize='1.1rem'
-              fontFamily='DM Sans, sans serif;'
-              component='a'
-              sx={{
-                '&:hover': {
-                  color: '#2997ff',
-                },
-                cursor: 'pointer',
-              }}
-            >
-              Career
-            </Typography>
-            <Typography
-              mt={2}
-              color='#f5f5f7'
-              variant='h6'
-              fontWeight='400'
-              fontSize='1.1rem'
-              fontFamily='DM Sans, sans serif;'
-              component='a'
-              sx={{
-                '&:hover': {
-                  color: '#2997ff',
-                },
-                cursor: 'pointer',
-              }}
-            >
-              Blog
-            </Typography>
-            <Typography
-              mt={2}
-              color='#f5f5f7'
-              variant='h6'
-              fontWeight='400'
-              fontSize='1.1rem'
-              fontFamily='DM Sans, sans serif;'
-              component='a'
-              sx={{
-                '&:hover': {
-                  color: '#2997ff',
-                },
-                cursor: 'pointer',
-              }}
-            >
-              About Us
-            </Typography>
-            <Typography
-              mt={2}
-              color='#f5f5f7'
-              variant='h6'
-              fontWeight='400'
-              fontSize='1.1rem'
-              fontFamily='DM Sans, sans serif;'
-              component='a'
-              sx={{
-                '&:hover': {
-                  color: '#2997ff',
-                },
-                cursor: 'pointer',
-              }}
-            >
-              Contact Us
-            </Typography>
+            <Link href='#'>
+              <Typography
+                mt={2}
+                color='#f5f5f7'
+                variant='h6'
+                fontWeight='400'
+                fontSize='1.1rem'
+                fontFamily='DM Sans, sans serif;'
+                component='a'
+                sx={{
+                  '&:hover': {
+                    color: '#2997ff',
+                  },
+                  cursor: 'pointer',
+                }}
+              >
+                Services
+              </Typography>
+            </Link>
+            <Link href='#'>
+              <Typography
+                mt={2}
+                color='#f5f5f7'
+                variant='h6'
+                fontWeight='400'
+                fontSize='1.1rem'
+                fontFamily='DM Sans, sans serif;'
+                component='a'
+                sx={{
+                  '&:hover': {
+                    color: '#2997ff',
+                  },
+                  cursor: 'pointer',
+                }}
+              >
+                Career
+              </Typography>
+            </Link>
+            <Link href='#'>
+              <Typography
+                mt={2}
+                color='#f5f5f7'
+                variant='h6'
+                fontWeight='400'
+                fontSize='1.1rem'
+                fontFamily='DM Sans, sans serif;'
+                component='a'
+                sx={{
+                  '&:hover': {
+                    color: '#2997ff',
+                  },
+                  cursor: 'pointer',
+                }}
+              >
+                Blog
+              </Typography>
+            </Link>
+            <Link href='/about'>
+              <Typography
+                mt={2}
+                color='#f5f5f7'
+                variant='h6'
+                fontWeight='400'
+                fontSize='1.1rem'
+                fontFamily='DM Sans, sans serif;'
+                component='a'
+                sx={{
+                  '&:hover': {
+                    color: '#2997ff',
+                  },
+                  cursor: 'pointer',
+                }}
+              >
+                About Us
+              </Typography>
+            </Link>
+            <Link href='/contact'>
+              <Typography
+                mt={2}
+                color='#f5f5f7'
+                variant='h6'
+                fontWeight='400'
+                fontSize='1.1rem'
+                fontFamily='DM Sans, sans serif;'
+                component='a'
+                sx={{
+                  '&:hover': {
+                    color: '#2997ff',
+                  },
+                  cursor: 'pointer',
+                }}
+              >
+                Contact Us
+              </Typography>
+            </Link>
           </ListItemButton>
         </ListItem>
       </List>
