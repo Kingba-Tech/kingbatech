@@ -82,7 +82,6 @@ const Contact = () => {
               <Typography
                 fontFamily='DM Sans, sans serif;'
                 fontSize={{ xs: '2rem', md: '2.5rem' }}
-                gutterBottom
                 variant='h5'
                 component='div'
                 fontWeight='600'
@@ -117,7 +116,7 @@ const Contact = () => {
                     '& .MuiOutlinedInput-notchedOutline': {
                       borderRadius: '.5em',
                     },
-                    marginTop: '3rem',
+                    marginTop: { xs: '1.5rem', md: '3rem' },
                   }}
                 />
                 <TextField
@@ -135,7 +134,7 @@ const Contact = () => {
                     '& .MuiOutlinedInput-notchedOutline': {
                       borderRadius: '.5em',
                     },
-                    marginTop: '3rem',
+                    marginTop: { xs: '2rem', md: '3rem' },
                   }}
                 />
                 <TextField
@@ -152,7 +151,7 @@ const Contact = () => {
                     '& .MuiOutlinedInput-notchedOutline': {
                       borderRadius: '.5em',
                     },
-                    marginTop: '3rem',
+                    marginTop: { xs: '2rem', md: '3rem' },
                   }}
                 />
                 <TextField
@@ -173,7 +172,7 @@ const Contact = () => {
                       borderRadius: '.5em',
                       height: 200,
                     },
-                    marginTop: '3rem',
+                    marginTop: { xs: '2rem', md: '3rem' },
                   }}
                 />
 
@@ -182,8 +181,8 @@ const Contact = () => {
                   variant='contained'
                   sx={{
                     padding: '.8rem 2rem',
-                    alignSelf: { xs: 'none', md: 'flex-start' },
-                    marginTop: '2rem',
+                    alignSelf: 'flex-start',
+                    marginTop: { xs: '1.5rem', md: '2rem' },
                   }}
                 >
                   Submit
@@ -191,7 +190,7 @@ const Contact = () => {
               </Box>
             </Grid>
             <Grid
-            mt={{xs: 5, md: 0}}
+              mt={{ xs: 5, md: 0 }}
               item
               xs={12}
               md={6}
@@ -266,7 +265,7 @@ const Contact = () => {
                       alignSelf: { xs: 'center', md: 'flex-start' },
                     }}
                   >
-                    hello@kingbatech.com
+                    +8801790441196
                   </Typography>
                 </Stack>
                 <Stack direction='column' spacing>
@@ -290,7 +289,7 @@ const Contact = () => {
                       alignSelf: { xs: 'center', md: 'flex-start' },
                     }}
                   >
-                    hello@kingbatech.com
+                    524/Kazihata, Rajshahi-6000, Bangladesh
                   </Typography>
                 </Stack>
               </Box>
