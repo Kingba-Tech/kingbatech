@@ -210,10 +210,10 @@ const Contact = () => {
                   display: 'flex',
                   flexDirection: 'column',
                   justifyContent: 'center',
-                  gap: '3rem',
+                  gap: '2rem',
                 }}
               >
-                <Stack direction='column' spacing>
+                <Stack direction='column'>
                   <Typography
                     color='#181818'
                     variant='h2'
@@ -227,19 +227,18 @@ const Contact = () => {
                   <Typography
                     component='a'
                     href='mailto: hello@kingbatech.com '
-                    color='#181818'
+                    color='#004581'
                     variant='h6'
                     fontWeight={{ xs: '300', md: '400' }}
                     fontSize={{ xs: '1.2rem', md: '1.4rem' }}
                     sx={{
-                      marginTop: '-1rem',
                       alignSelf: { xs: 'center', md: 'flex-start' },
                     }}
                   >
                     hello@kingbatech.com
                   </Typography>
                 </Stack>
-                <Stack direction='column' spacing>
+                <Stack direction='column'>
                   <Typography
                     color='#181818'
                     variant='h2'
@@ -253,19 +252,32 @@ const Contact = () => {
                   <Typography
                     component='a'
                     href='tel:+8801790441196'
+                    color='#141414'
+                    variant='h6'
+                    fontWeight={{ xs: '300', md: '400' }}
+                    fontSize={{ xs: '1.2rem', md: '1.4rem' }}
+                    sx={{
+                      alignSelf: { xs: 'center', md: 'flex-start' },
+                    }}
+                  >
+                    Bangladesh: <span style={{color: '#004581'}}>+8801790441196</span>
+                  </Typography>
+                  <Typography
+                    component='a'
+                    href='tel:+1(236)777-5365'
                     color='#181818'
                     variant='h6'
                     fontWeight={{ xs: '300', md: '400' }}
                     fontSize={{ xs: '1.2rem', md: '1.4rem' }}
                     sx={{
-                      marginTop: '-1rem',
                       alignSelf: { xs: 'center', md: 'flex-start' },
                     }}
                   >
-                    +8801790441196
+                    Canada:{' '}
+                    <span style={{ color: '#004581' }}>+1(236)777-5365</span>
                   </Typography>
                 </Stack>
-                <Stack direction='column' spacing>
+                <Stack direction='column'>
                   <Typography
                     color='#181818'
                     variant='h2'
@@ -274,7 +286,45 @@ const Contact = () => {
                     mb={1}
                     sx={{ alignSelf: { xs: 'center', md: 'flex-start' } }}
                   >
-                    Address
+                    Bangladesh (Mailing Address)
+                  </Typography>
+
+                  <Typography
+                    color='#181818'
+                    variant='h6'
+                    fontWeight={{ xs: '300', md: '400' }}
+                    fontSize={{ xs: '1.2rem', md: '1.4rem' }}
+                    sx={{
+                      alignSelf: { xs: 'center', md: 'flex-start' },
+                    }}
+                    textAlign={{ xs: 'center', md: 'start' }}
+                  >
+                    524/Kazihata, Rajshahi-6000, Bangladesh
+                  </Typography>
+                  <Typography
+                    mt='.5rem'
+                    component='a'
+                    href='https://www.google.com/maps/dir/24.3605,88.6049/kingba+tech/@24.3664866,88.5746575,14z/data=!3m1!4b1!4m9!4m8!1m1!4e1!1m5!1m1!1s0x39fbef0cbdc9c525:0xfc345c04b4c97f96!2m2!1d88.5792459!2d24.3714658'
+                    color='#004581'
+                    variant='h2'
+                    fontWeight='500'
+                    fontSize={{ xs: '1.3rem', md: '1.5rem' }}
+                    mb={1}
+                    sx={{ alignSelf: { xs: 'center', md: 'flex-start' } }}
+                  >
+                    View in Google Maps
+                  </Typography>
+                </Stack>
+                <Stack direction='column'>
+                  <Typography
+                    color='#181818'
+                    variant='h2'
+                    fontWeight='500'
+                    fontSize={{ xs: '1.3rem', md: '1.5rem' }}
+                    mb={1}
+                    sx={{ alignSelf: { xs: 'center', md: 'flex-start' } }}
+                  >
+                    Canada (Mailing Address)
                   </Typography>
                   <Typography
                     color='#181818'
@@ -282,12 +332,11 @@ const Contact = () => {
                     fontWeight={{ xs: '300', md: '400' }}
                     fontSize={{ xs: '1.2rem', md: '1.4rem' }}
                     sx={{
-                      marginTop: '-1rem',
                       alignSelf: { xs: 'center', md: 'flex-start' },
                     }}
                     textAlign={{ xs: 'center', md: 'start' }}
                   >
-                    524/Kazihata, Rajshahi-6000, Bangladesh
+                    18097 57A Ave, Surrey, Canada
                   </Typography>
                 </Stack>
               </Box>
