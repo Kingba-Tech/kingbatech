@@ -1,20 +1,42 @@
 import React from 'react';
+import { Container, Grid, Typography, AppBar, Tabs, Tab } from '@mui/material';
+
+import SwipeableViews from 'react-swipeable-views';
+import { useTheme } from '@mui/material/styles';
 import {
-  Card,
-  CardActions,
-  CardContent,
-  CardMedia,
-  Button,
-  Typography,
-  Grid,
-  Container,
-} from '@mui/material';
-import { projects } from '../api/projects';
+  DesignCards,
+  DigitalCards,
+  WebCards,
+} from '../../src/components/Cards/Cards';
 import Link from 'next/link';
 
 import styles from '../../styles/Home.module.css';
 
+function TabPanel(props) {
+  const { children, value, index } = props;
+
+  return (
+    <div role='tabpanel' hidden={value !== index}>
+      {value === index && (
+        <Grid>
+          <Grid spacing={{ xs: 2 }}>{children}</Grid>
+        </Grid>
+      )}
+    </div>
+  );
+}
+
 const ProjectsHome = () => {
+   const theme = useTheme();
+   const [value, setValue] = React.useState(0);
+
+   const handleChange = (event, newValue) => {
+     setValue(newValue);
+   };
+
+   const handleChangeIndex = (index) => {
+     setValue(index);
+   };
   return (
     <>
       <Container
@@ -38,90 +60,115 @@ const ProjectsHome = () => {
           textAlign='center'
           fontFamily='DM Sans, sans serif;'
         >
-          Some of our hand-picked work
-          <hr className={styles.projectshr} color='#2297FF' />
+          Our Work
+          <hr width='100px' className={styles.projectshr} color='#2297FF' />
         </Typography>
-        <Grid sx={{ width: '100%', maxWidth: 1080, mt: 4 }}>
+        <Grid
+          sx={{ width: '100%', maxWidth: 1080 }}
+          py={2}
+          
+        >
+
           <Grid
-            container
+            mt={{ xs: 2, md: 3 }}
             sx={{
               display: 'flex',
-              flexDirection: { xs: 'column', md: 'row' },
-              justifyContent: 'space-between',
               alignItems: 'center',
-              gap: { xs: '.5rem', md: '2rem' },
+              justifyContent: 'center',
+              flexDirection: 'column',
+              width: '100%',
             }}
           >
-            {projects.map((project, index) => (
-              <Card
-                md={6}
-                xs={12}
-                key={index}
-                item
+            <Grid>
+              <AppBar
+                position='static'
                 sx={{
-                  maxWidth: 510,
-                  maxHeight: 560,
-                  margin: '1rem 0',
-                  borderRadius: '.5rem',
+                  boxShadow: 'none',
                 }}
               >
-                <CardMedia
-                  component='img'
-                  image={project.img}
-                  alt={project.slug}
+                <Tabs
                   sx={{
-                    borderRadius: '.8rem',
-                    transform: 'scale(.98)',
-                    '&:hover': {
-                      transform: 'scale(1)',
-                      transition: 'all .5s',
-                      borderRadius: '.8rem',
+                    backgroundColor: '#F3F3F4',
+                    opacity: '1',
+                    '& .MuiTabs-indicator': {
+                      backgroundColor: '#004581',
                     },
-                    height: { xs: 250, md: 360 },
                   }}
-                />
-                <CardContent>
-                  <Typography
-                    fontFamily='DM Sans, sans serif;'
-                    fontSize={{ xs: '1.3rem', md: '1.5rem' }}
-                    gutterBottom
-                    variant='h5'
-                    component='div'
-                    fontWeight={{ xs: '500', md: '600' }}
-                  >
-                    {project.title}
-                  </Typography>
-                  <Typography
-                    fontFamily='DM Sans, sans serif;'
-                    variant='h6'
-                    fontSize='1.1rem'
-                    color='#000000'
-                    fontWeight={{ xs: '400', md: '500' }}
-                    sx={{ display: { xs: 'none', md: 'block' } }}
-                  >
-                    {project.description}
-                  </Typography>
-                </CardContent>
-                <CardActions>
-                  <Link href={'/projects/' + project.slug}>
-                    <Button
-                      variant='outlined'
-                      color='btnColor'
-                      sx={{
-                        fontSize: { xs: '.9rem', md: '1rem' },
-                        fontWeight: 500,
-                        marginTop: { xs: '-.8rem', md: 'none' },
-                        marginBottom: { xs: '.5rem' },
-                        marginLeft: { xs: '.5rem' },
-                      }}
-                      size='small'
-                    >
-                      Read More
-                    </Button>
-                  </Link>
-                </CardActions>
-              </Card>
-            ))}
+                  value={value}
+                  onChange={handleChange}
+                  textColor='primary'
+                  variant='fullWidth'
+                  aria-label='full width tabs example'
+                >
+                  <Tab
+                    sx={{
+                      fontSize: { xs: '.8rem', md: '1.2rem' },
+                      lineHeight: { xs: 1.4, md: 1 },
+                      fontWeight: { xs: 500, md: '600' },
+                      fontFamily: 'DM Sans, sans serif;',
+                      color: '#000000',
+                      '&:active, &:focus': {
+                        color: '#004581',
+                      },
+                      opacity: '1',
+                    }}
+                    label='Web Development'
+                  />
+                  <Tab
+                    sx={{
+                      fontSize: { xs: '.8rem', md: '1.2rem' },
+                      lineHeight: { xs: 1.4, md: 1 },
+                      fontWeight: { xs: 500, md: 600 },
+                      fontFamily: 'DM Sans, sans serif;',
+                      color: '#000000',
+                      opacity: '1',
+                      '&:active, &:focus': {
+                        color: '#004581',
+                      },
+                    }}
+                    label='Digital Marketing'
+                  />
+                  <Tab
+                    sx={{
+                      fontSize: { xs: '.8rem', md: '1.2rem' },
+                      lineHeight: { xs: 1.4, md: 1 },
+                      fontWeight: { xs: 500, md: '600' },
+                      fontFamily: 'DM Sans, sans serif;',
+                      color: '#000000',
+                      opacity: '1',
+                      '&:active, &:focus': {
+                        color: '#004581',
+                      },
+                    }}
+                    label='Design & Editing'
+                  />
+                </Tabs>
+              </AppBar>
+              <Grid mt={3}>
+                <SwipeableViews
+                  axis={theme.direction === 'rtl' ? 'x-reverse' : 'x'}
+                  index={value}
+                  onChangeIndex={handleChangeIndex}
+                >
+                  <Grid item>
+                    <TabPanel value={value} index={0} dir={theme.direction}>
+                      <WebCards />
+                    </TabPanel>
+                  </Grid>
+                  <Grid item>
+                    <TabPanel value={value} index={1} dir={theme.direction}>
+                      <DigitalCards />
+                    </TabPanel>
+                  </Grid>
+                  <Grid item>
+                    <TabPanel value={value} index={2} dir={theme.direction}>
+                      <DesignCards />
+                    </TabPanel>
+                  </Grid>
+                </SwipeableViews>
+              </Grid>
+            </Grid>
+            
           </Grid>
         </Grid>
       </Container>

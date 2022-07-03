@@ -310,8 +310,10 @@ const Navbar = () => {
                       '&:hover': {
                         color: '#2297FF',
                       },
+                      '&:active,&:focus': {
+                        color: '#2297FF',
+                      },
                     }}
-                    href='/src/sections/Hero.jsx'
                   >
                     Projects
                   </Button>
@@ -330,69 +332,94 @@ const Navbar = () => {
                 >
                   <Dropdown />
                 </Button>
+                <Link href='/career'>
+                  <Button
+                    sx={{
+                      fontWeight: '300',
+                      color: '#f5f5f7',
+                      fontSize: '.9rem',
 
-                <Button
-                  sx={{
-                    fontWeight: '300',
-                    color: '#f5f5f7',
-                    fontSize: '.9rem',
+                      textTransform: 'capitalize',
+                      padding: { md: '0 1rem', xl: '0 2.5rem' },
+                      fontFamily: 'DM Sans, sans-serif;',
+                      '&:hover': {
+                        color: '#2297FF',
+                      },
+                      '&:hover': {
+                        color: '#2297FF',
+                      },
+                      '&:active,&:focus': {
+                        color: '#2297FF',
+                      },
+                    }}
+                  >
+                    Career
+                  </Button>
+                </Link>
+                <Link href='/blog'>
+                  <Button
+                    sx={{
+                      fontWeight: '300',
+                      color: '#f5f5f7',
+                      fontSize: '.9rem',
 
-                    textTransform: 'capitalize',
-                    padding: { md: '0 1rem', xl: '0 2.5rem' },
-                    fontFamily: 'DM Sans, sans-serif;',
-                    '&:hover': {
-                      color: '#2297FF',
-                    },
-                  }}
-                >
-                  Career
-                </Button>
-                <Button
-                  sx={{
-                    fontWeight: '300',
-                    color: '#f5f5f7',
-                    fontSize: '.9rem',
-
-                    textTransform: 'capitalize',
-                    padding: { md: '0 1rem', xl: '0 2.5rem' },
-                    fontFamily: 'DM Sans, sans-serif;',
-                    '&:hover': {
-                      color: '#2297FF',
-                    },
-                  }}
-                >
-                  Blog
-                </Button>
-                <Button
-                  sx={{
-                    fontWeight: '300',
-                    color: '#f5f5f7',
-                    fontSize: '.9rem',
-                    textTransform: 'capitalize',
-                    padding: { md: '0 1rem', xl: '0 2.5rem' },
-                    fontFamily: 'DM Sans, sans-serif;',
-                    '&:hover': {
-                      color: '#2297FF',
-                    },
-                  }}
-                >
-                  About Us
-                </Button>
-                <Button
-                  sx={{
-                    fontWeight: '500',
-                    color: 'secondary',
-                    fontSize: '.9rem',
-                    textTransform: 'capitalize',
-                    marginLeft: '1.8rem',
-                    padding: { md: '0 1rem', xl: '0 2.5rem' },
-                    fontFamily: 'DM Sans, sans-serif;',
-                    border: '1px solid #2997FF',
-                    color: '#2997FF',
-                  }}
-                >
-                  Contact Us
-                </Button>
+                      textTransform: 'capitalize',
+                      padding: { md: '0 1rem', xl: '0 2.5rem' },
+                      fontFamily: 'DM Sans, sans-serif;',
+                      '&:hover': {
+                        color: '#2297FF',
+                      },
+                      '&:hover': {
+                        color: '#2297FF',
+                      },
+                      '&:active,&:focus': {
+                        color: '#2297FF',
+                      },
+                    }}
+                  >
+                    Blog
+                  </Button>
+                </Link>
+                <Link href='/about'>
+                  <Button
+                    sx={{
+                      fontWeight: '300',
+                      color: '#f5f5f7',
+                      fontSize: '.9rem',
+                      textTransform: 'capitalize',
+                      padding: { md: '0 1rem', xl: '0 2.5rem' },
+                      fontFamily: 'DM Sans, sans-serif;',
+                      '&:hover': {
+                        color: '#2297FF',
+                      },
+                      '&:hover': {
+                        color: '#2297FF',
+                      },
+                      '&:active,&:focus': {
+                        color: '#2297FF',
+                      },
+                    }}
+                  >
+                    About Us
+                  </Button>
+                </Link>
+                <Link href='/contact'>
+                  <Button
+                    sx={{
+                      fontWeight: '500',
+                      color: 'secondary',
+                      fontSize: '.9rem',
+                      textTransform: 'capitalize',
+                      marginLeft: '1.8rem',
+                      padding: { md: '0 1rem', xl: '0 2.5rem' },
+                      fontFamily: 'DM Sans, sans-serif;',
+                      border: '1px solid #2997FF',
+                      color: '#2997FF',
+                    }}
+                  >
+                    Contact Us
+                  </Button>
+                </Link>
               </Box>
             </Grid>
           </Toolbar>

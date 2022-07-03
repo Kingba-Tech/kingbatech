@@ -36,6 +36,12 @@ const Dropdown = () => {
           '&:hover': {
             color: '#2297FF',
           },
+          '&:hover': {
+            color: '#2297FF',
+          },
+          '&:active,&:focus': {
+            color: '#2297FF',
+          },
         }}
         aria-describedby={id}
         onClick={handleClick}
