@@ -1,4 +1,6 @@
-import { useState } from 'react';
+import React, { useRef, useState } from 'react';
+import emailjs from '@emailjs/browser';
+
 import {
   Grid,
   Box,
@@ -8,20 +10,25 @@ import {
   Button,
   Stack,
 } from '@mui/material';
-import SendIcon from '@mui/icons-material/Send';
+import Slider from '../src/components/Slider/Slider';
 
 import styles from '../styles/Home.module.css';
 
 const Contact = () => {
-  const [contactData, setContactData] = useState({
-    name: '',
-    email: '',
-    company: '',
-    message: '',
-  });
+  const form = useRef();
 
-  const handleSubmit = (e) => {
+  const sendEmail = (e) => {
     e.preventDefault();
+    emailjs
+      .sendForm('gmail', 'gmail_template', form.current, 'qtMIGvplhmcLS4I1M')
+      .then(
+        (result) => {
+          console.log(result.text);
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
   };
   return (
     <Container
@@ -99,18 +106,16 @@ const Contact = () => {
                   flexDirection: 'column',
                   justifyContent: 'center',
                 }}
-                onSubmit={handleSubmit}
+                ref={form}
+                onSubmit={sendEmail}
               >
                 <TextField
+                  name='name'
                   required
                   id='name'
                   label='Name'
                   type='text'
                   variant='outlined'
-                  value={contactData.name}
-                  onChange={(e) =>
-                    setContactData({ ...contactData, name: e.target.value })
-                  }
                   sx={{
                     width: { xs: '100%', md: 'calc(100% - 100px)' },
                     '& .MuiOutlinedInput-notchedOutline': {
@@ -120,15 +125,12 @@ const Contact = () => {
                   }}
                 />
                 <TextField
+                  name='email'
                   required
                   id='email'
                   label='Email'
                   type='email'
                   variant='outlined'
-                  value={contactData.email}
-                  onChange={(e) =>
-                    setContactData({ ...contactData, email: e.target.value })
-                  }
                   sx={{
                     width: { xs: '100%', md: 'calc(100% - 100px)' },
                     '& .MuiOutlinedInput-notchedOutline': {
@@ -139,13 +141,10 @@ const Contact = () => {
                 />
                 <TextField
                   type='text'
+                  name='company'
                   id='company'
                   label='Company (Optional)'
                   variant='outlined'
-                  value={contactData.company}
-                  onChange={(e) =>
-                    setContactData({ ...contactData, company: e.target.value })
-                  }
                   sx={{
                     width: { xs: '100%', md: 'calc(100% - 100px)' },
                     '& .MuiOutlinedInput-notchedOutline': {
@@ -156,14 +155,11 @@ const Contact = () => {
                 />
                 <TextField
                   type='text'
+                  name='message'
                   required
                   id='message'
                   label='Message'
                   variant='outlined'
-                  value={contactData.message}
-                  onChange={(e) =>
-                    setContactData({ ...contactData, message: e.target.value })
-                  }
                   sx={{
                     width: { xs: '100%', md: 'calc(100% - 100px)' },
                     height: 205,
@@ -179,6 +175,7 @@ const Contact = () => {
                 <Button
                   type='submit'
                   variant='contained'
+                  value='Send'
                   sx={{
                     padding: '.8rem 2rem',
                     alignSelf: 'flex-start',
@@ -255,7 +252,7 @@ const Contact = () => {
                   </Typography>
                   <Typography
                     component='a'
-                    href='tel: +8801771113548 '
+                    href='tel:+8801790441196'
                     color='#181818'
                     variant='h6'
                     fontWeight={{ xs: '300', md: '400' }}
@@ -288,6 +285,7 @@ const Contact = () => {
                       marginTop: '-1rem',
                       alignSelf: { xs: 'center', md: 'flex-start' },
                     }}
+                    textAlign={{ xs: 'center', md: 'start' }}
                   >
                     524/Kazihata, Rajshahi-6000, Bangladesh
                   </Typography>
@@ -295,6 +293,18 @@ const Contact = () => {
               </Box>
             </Grid>
           </Grid>
+        </Grid>
+        <Grid
+          mt={6}
+          mb={{ xs: 3, md: 0 }}
+          width='100%'
+          sx={{
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+          }}
+        >
+          <Slider />
         </Grid>
       </Grid>
     </Container>
