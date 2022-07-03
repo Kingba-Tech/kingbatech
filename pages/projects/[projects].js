@@ -12,6 +12,7 @@ const Project = () => {
         <div key={index}>
           <h1>{project.name}</h1>
           <h6>{project.description}</h6>
+          <img src={project.img} alt="project image" />
         </div>
       ))}
     </div>

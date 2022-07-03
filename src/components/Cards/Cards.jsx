@@ -13,28 +13,28 @@ import Link from 'next/link';
 
 const webcontent = [
   {
-    id: 1,
-    img: 'https://i.imgur.com/o6UgHPZ.jpg',
+    slug: 'lapcart-bd',
+    img: 'https://i.imgur.com/a0T9e32.jpg',
     title: 'LapCart',
     description:
       'TED BD is a online based mango store in Bangladesh. Which provides seasonal and pure foods.',
   },
   {
-    id: 2,
+    slug: 'ted-bd',
     img: 'https://i.imgur.com/clDL4C4.png',
     title: 'TED BD',
     description:
       'TED BD is a online based mango store in Bangladesh. Which provides seasonal and pure foods.',
   },
   {
-    id: 3,
+    slug: 'mango-cart',
     img: 'https://i.imgur.com/wV1kaUW.png',
     title: 'Management Hub',
     description:
       'TED BD is a online based mango store in Bangladesh. Which provides seasonal and pure foods.',
   },
   {
-    id: 4,
+    slug: 'management-hub',
     img: 'https://i.imgur.com/ZX2WvdT.png',
     title: 'MangoCart',
     description:
@@ -43,28 +43,28 @@ const webcontent = [
 ];
 const digitalcontent = [
   {
-    id: 5,
+    slug: 'lapcartbd',
     img: 'https://i.imgur.com/AeKImO4.png',
     title: 'LapCart',
     description:
       'TED BD is a online based mango store in Bangladesh. Which provides seasonal and pure foods.',
   },
   {
-    id: 6,
+    slug: 'tedbd',
     img: 'https://i.imgur.com/6uz4niQ.jpg',
     title: 'TED BD',
     description:
       'TED BD is a online based mango store in Bangladesh. Which provides seasonal and pure foods.',
   },
   {
-    id: 7,
+    slug: 'hello-bd',
     img: 'https://i.imgur.com/h4vKkDS.jpg',
     title: 'Management Hub',
     description:
       'TED BD is a online based mango store in Bangladesh. Which provides seasonal and pure foods.',
   },
   {
-    id: 8,
+    slug: 'oscarbd',
     img: 'https://i.imgur.com/10aMHVS.jpg',
     title: 'MangoCart',
     description:
@@ -73,28 +73,28 @@ const digitalcontent = [
 ];
 const designcontent = [
   {
-    id: 9,
+    slug: 'aliens',
     img: 'https://i.imgur.com/6jl9R8k.jpg',
     title: 'LapCart',
     description:
       'TED BD is a online based mango store in Bangladesh. Which provides seasonal and pure foods.',
   },
   {
-    id: 10,
+    slug: '21st',
     img: 'https://i.imgur.com/4E4QBii.png',
     title: 'TED BD',
     description:
       'TED BD is a online based mango store in Bangladesh. Which provides seasonal and pure foods.',
   },
   {
-    id: 11,
+    slug: 'facebook',
     img: 'https://i.imgur.com/C2v26JL.png',
     title: 'Management Hub',
     description:
       'TED BD is a online based mango store in Bangladesh. Which provides seasonal and pure foods.',
   },
   {
-    id: 12,
+    slug: 'amazon',
     img: 'https://i.imgur.com/OSa49QI.png',
     title: 'MangoCart',
     description:
@@ -166,7 +166,7 @@ export const WebCards = () => {
               </Typography>
             </CardContent>
             <CardActions>
-              <Link href={'/projects/' + web.id}>
+              <Link href={'/projects/' + web.slug}>
                 <Button
                   variant='outlined'
                   color='btnColor'

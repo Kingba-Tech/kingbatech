@@ -11,15 +11,12 @@ import {
 } from '@mui/material';
 import { projects } from '../api/projects';
 import Link from 'next/link';
-import Navbar from '../../src/components/Navbar/Navbar';
-import Footer from '../../src/components/Footer/Footer';
 
 import styles from '../../styles/Home.module.css';
 
 const ProjectsHome = () => {
   return (
     <>
-      <Navbar />
       <Container
         maxWidth
         sx={{
@@ -128,8 +125,6 @@ const ProjectsHome = () => {
           </Grid>
         </Grid>
       </Container>
-
-      <Footer />
     </>
   );
 };

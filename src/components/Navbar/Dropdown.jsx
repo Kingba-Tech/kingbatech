@@ -1,7 +1,5 @@
 import * as React from 'react';
-import { styled, alpha } from '@mui/material/styles';
-import Menu from '@mui/material/Menu';
-
+import Popover from '@mui/material/Popover';
 import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import { Button, Container, Grid, Typography, Avatar } from '@mui/material';
@@ -10,103 +8,53 @@ import CodeIcon from '@mui/icons-material/Code';
 import CampaignIcon from '@mui/icons-material/Campaign';
 import BrushIcon from '@mui/icons-material/Brush';
 
-const designing = [
-  'UI/UX',
-  'Graphics Design',
-  'Video Editing',
-  'Content Creation',
-];
-
-const StyledMenu = styled((props) => (
-  <Menu
-    sx={{ backgroundColor: '#00000' }}
-    elevation={0}
-    anchorOrigin={{
-      vertical: 'bottom',
-      horizontal: 'center',
-    }}
-    transformOrigin={{
-      vertical: 'top',
-      horizontal: 'center',
-    }}
-    {...props}
-  />
-))(({ theme }) => ({
-  '& .MuiPaper-root': {
-    borderRadius: 6,
-    marginTop: theme.spacing(1),
-    minWidth: 950,
-    minHeight: 450,
-    backgroundColor: '#000000',
-
-    boxShadow:
-      'rgb(255, 255, 255) 0px 0px 0px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px, rgba(0, 0, 0, 0.6) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px',
-    '& .MuiMenu-list': {
-      padding: '4px 0',
-    },
-    '& .MuiMenuItem-root': {
-      '& .MuiSvgIcon-root': {
-        fontSize: '1rem',
-        fontWeight: '400',
-        color: theme.palette.secondary,
-      },
-      '&:active': {
-        backgroundColor: alpha(
-          theme.palette.primary.main,
-          theme.palette.action.selectedOpacity
-        ),
-      },
-    },
-  },
-}));
-
 const Dropdown = () => {
   const [anchorEl, setAnchorEl] = React.useState(null);
-  const open = Boolean(anchorEl);
-  const handleClick = (e) => {
-    e.stopPropagation();
-    setAnchorEl(e.currentTarget);
+
+  const handleClick = (event) => {
+    setAnchorEl(event.currentTarget);
   };
+
   const handleClose = () => {
     setAnchorEl(null);
   };
 
+  const open = Boolean(anchorEl);
+  const id = open ? 'simple-popover' : undefined;
+
   return (
     <div>
       <Button
-        id='demo-customized-button'
-        aria-controls={open ? 'demo-customized-menu' : undefined}
-        aria-haspopup='true'
-        aria-expanded={open ? 'true' : undefined}
-        disableElevation
         sx={{
           textTransform: 'capitalize',
           fontWeight: '300',
           color: '#f5f5f7',
           fontSize: '.9rem',
           padding: '0 1rem',
-          textTransform: 'capitalize',
+
           fontFamily: 'DM Sans, sans-serif;',
           '&:hover': {
             color: '#2297FF',
           },
         }}
+        aria-describedby={id}
         onClick={handleClick}
         endIcon={open ? <KeyboardArrowUpIcon /> : <KeyboardArrowDownIcon />}
       >
         Services
       </Button>
-      <StyledMenu
-        id='demo-customized-menu'
-        MenuListProps={{
-          'aria-labelledby': 'demo-customized-button',
-        }}
-        anchorEl={anchorEl}
+      <Popover
+        sx={{ top: '10px', left: '-410px' }}
+        id={id}
         open={open}
+        anchorEl={anchorEl}
         onClose={handleClose}
+        anchorOrigin={{
+          vertical: 'bottom',
+          horizontal: 'left',
+        }}
       >
         <Container
-          onClick={handleClick}
           sx={{
             width: 950,
             height: 450,
@@ -393,9 +341,8 @@ const Dropdown = () => {
             </Grid>
           </Grid>
         </Container>
-      </StyledMenu>
+      </Popover>
     </div>
   );
 };
-
 export default Dropdown;

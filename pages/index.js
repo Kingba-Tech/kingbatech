@@ -9,7 +9,7 @@ import Cta from '../src/components/Cta';
 
 export default function Home() {
   return (
-    <Layout>
+    <>
       <Head>
         <title>Kingba Tech</title>
         <meta
@@ -23,6 +23,6 @@ export default function Home() {
       <Solutions />
       <Testimonials />
       <Cta />
-    </Layout>
+    </>
   );
 }
