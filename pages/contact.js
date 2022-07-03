@@ -178,7 +178,7 @@ const Contact = () => {
                   value='Send'
                   sx={{
                     padding: '.8rem 2rem',
-                    alignSelf: 'flex-start',
+                    alignSelf: { xs: 'center', md: 'flex-start' },
                     marginTop: { xs: '1.5rem', md: '2rem' },
                   }}
                 >
@@ -260,7 +260,8 @@ const Contact = () => {
                       alignSelf: { xs: 'center', md: 'flex-start' },
                     }}
                   >
-                    Bangladesh: <span style={{color: '#004581'}}>+8801790441196</span>
+                    Bangladesh:{' '}
+                    <span style={{ color: '#004581' }}>+8801790441196</span>
                   </Typography>
                   <Typography
                     component='a'
@@ -273,7 +274,7 @@ const Contact = () => {
                       alignSelf: { xs: 'center', md: 'flex-start' },
                     }}
                   >
-                    Canada:{' '}
+                    Canada:
                     <span style={{ color: '#004581' }}>+1(236)777-5365</span>
                   </Typography>
                 </Stack>

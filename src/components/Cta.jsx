@@ -1,16 +1,15 @@
 import React from 'react';
 import { Container, Grid, Typography, Button } from '@mui/material';
+import Link from 'next/link';
 
 const Cta = () => {
   return (
     <Container
-     
       maxWidth
       sx={{
         minHeight: '250px',
         backgroundColor: '#004581',
         display: { sm: 'flex', md: 'none' },
-        
       }}
     >
       <Grid
@@ -44,27 +43,29 @@ const Cta = () => {
         >
           We would love to to collaborate & create a magic together
         </Typography>
-        <Button
-          outlined
-          sx={{
-            color: '#ffffff',
-            border: '2px solid #ffffff',
-            borderRadius: '.35em',
-            fontSize: '1rem',
-            lineHeight: '23px',
-            padding: '.5rem 1.5rem',
-            marginTop: '.9rem',
-            textTransform: 'capitalize',
-            '&:hover': {
-              backgroundColor: '#fff',
-              color: '#004581',
-              transition: 'all .2s',
-            },
-          }}
-          fontFamily='DM Sans, sans serif;'
-        >
-          Contact us
-        </Button>
+        <Link href='/contact/'>
+          <Button
+            outlined
+            sx={{
+              color: '#ffffff',
+              border: '2px solid #ffffff',
+              borderRadius: '.35em',
+              fontSize: '1rem',
+              lineHeight: '23px',
+              padding: '.5rem 1.5rem',
+              marginTop: '.9rem',
+              textTransform: 'capitalize',
+              '&:hover': {
+                backgroundColor: '#fff',
+                color: '#004581',
+                transition: 'all .2s',
+              },
+            }}
+            fontFamily='DM Sans, sans serif;'
+          >
+            Contact us
+          </Button>
+        </Link>
       </Grid>
     </Container>
   );
