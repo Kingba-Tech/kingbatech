@@ -15,20 +15,20 @@ import Slider from '../src/components/Slider/Slider';
 import styles from '../styles/Home.module.css';
 
 const Contact = () => {
+  const [status, setStatus] = useState(undefined);
+
   const form = useRef();
 
   const sendEmail = (e) => {
     e.preventDefault();
     emailjs
       .sendForm('gmail', 'gmail_template', form.current, 'qtMIGvplhmcLS4I1M')
-      .then(
-        (result) => {
-          console.log(result.text);
-        },
-        (error) => {
-          console.log(error.text);
-        }
-      );
+      .then(() => {
+        setStatus({ type: 'success' });
+      })
+      .catch((error) => {
+        setStatus({ type: 'error', error });
+      });
   };
   return (
     <Container
@@ -184,6 +184,33 @@ const Contact = () => {
                 >
                   Submit
                 </Button>
+
+                {status?.type === 'success' && (
+                  <Typography
+                    color='green'
+                    variant='h6'
+                    fontWeight={{ xs: '300', md: '400' }}
+                    fontSize={{ xs: '1.2rem', md: '1.4rem' }}
+                    sx={{
+                      alignSelf: { xs: 'center', md: 'flex-start' },
+                    }}
+                  >
+                    Your message has been sent.
+                  </Typography>
+                )}
+                {status?.type === 'error' && (
+                  <Typography
+                    color='red'
+                    variant='h6'
+                    fontWeight={{ xs: '300', md: '400' }}
+                    fontSize={{ xs: '1.2rem', md: '1.4rem' }}
+                    sx={{
+                      alignSelf: { xs: 'center', md: 'flex-start' },
+                    }}
+                  >
+                    Sorry there is an error while sending the message.
+                  </Typography>
+                )}
               </Box>
             </Grid>
             <Grid
@@ -346,7 +373,7 @@ const Contact = () => {
         </Grid>
         <Grid
           mt={6}
-          mb={{ xs: 3, md: 0 }}
+          
           width='100%'
           sx={{
             display: 'flex',
