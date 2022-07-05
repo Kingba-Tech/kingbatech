@@ -1,5 +1,5 @@
 import { Grid, Container, Typography, Box, Button } from '@mui/material';
-import styles from '../styles/Home.module.css';
+import styles from '../../styles/Home.module.css';
 import Link from 'next/link';
 
 const About = () => {
@@ -37,7 +37,7 @@ const About = () => {
         marginTop='.5rem'
         textAlign={{ xs: 'center' }}
       >
-        We believe in building a family of nurturing members, connected by{' '}
+        We believe in building a family of nurturing members, connected by
         <br /> the love for creativity and fun. Join our team today!
       </Typography>
       <Grid sx={{ width: '100%', maxWidth: 1080, mt: 4 }}>
@@ -54,8 +54,11 @@ const About = () => {
           <Box
             mt={4}
             sx={{
-              width: 540,
-              height: 405,
+              maxWidth: 540,
+              width: '100%',
+
+              maxHeight: 405,
+              height: '100%',
               backgroundColor: '#F3F3F3',
               borderRadius: '.7em',
               display: 'flex',
@@ -63,6 +66,7 @@ const About = () => {
               alignItems: 'center',
               justifyContent: 'center',
               gap: '1rem',
+              padding: { xs: '3.5rem .5rem' , md: '4.5rem .5rem'},
             }}
           >
             <Typography

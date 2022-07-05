@@ -43,7 +43,9 @@ const Navbar = () => {
       }}
     >
       <Typography mt={2} component='a' variant='h6' sx={{ my: 2 }}>
-        <Image src={logo} alt='Site Logo' layout='intrinsic' />
+        <Link href='/'>
+          <Image src={logo} alt='Site Logo' layout='intrinsic' />
+        </Link>
       </Typography>
       <Divider />
       <List>
@@ -94,7 +96,7 @@ const Navbar = () => {
                 Projects
               </Typography>
             </Link>
-            <Link href='#'>
+            <Link href='/services/'>
               <Typography
                 mt={2}
                 color='#f5f5f7'
@@ -113,7 +115,7 @@ const Navbar = () => {
                 Services
               </Typography>
             </Link>
-            <Link href='#'>
+            <Link href='/careers/'>
               <Typography
                 mt={2}
                 color='#f5f5f7'
@@ -132,7 +134,7 @@ const Navbar = () => {
                 Career
               </Typography>
             </Link>
-            <Link href='#'>
+            <Link href='/blog/'>
               <Typography
                 mt={2}
                 color='#f5f5f7'
@@ -196,7 +198,7 @@ const Navbar = () => {
   );
 
   return (
-    <Container maxWidth>
+    <Container maxWidth='xl'>
       <Grid
         position='sticky'
         sx={{ display: 'flex', width: '100%', maxWidth: '1080px' }}
@@ -332,7 +334,7 @@ const Navbar = () => {
                 >
                   <Dropdown />
                 </Button>
-                <Link href='/career'>
+                <Link href='/careers/'>
                   <Button
                     sx={{
                       fontWeight: '300',
@@ -356,7 +358,7 @@ const Navbar = () => {
                     Career
                   </Button>
                 </Link>
-                <Link href='/blog'>
+                <Link href='/blog/'>
                   <Button
                     sx={{
                       fontWeight: '300',

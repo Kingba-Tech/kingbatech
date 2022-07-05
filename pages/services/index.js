@@ -6,7 +6,7 @@ import CampaignIcon from '@mui/icons-material/Campaign';
 import BrushIcon from '@mui/icons-material/Brush';
 import ChevronRightIcon from '@mui/icons-material/ChevronRight';
 
-const Solutions = () => {
+const Index = () => {
   return (
     <Container
       maxWidth
@@ -270,4 +270,4 @@ const Solutions = () => {
   );
 };
 
-export default Solutions;
+export default Index;

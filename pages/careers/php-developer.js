@@ -1,15 +1,6 @@
-import {
-  Grid,
-  Container,
-  Typography,
-  Box,
-  ListItemIcon,
-  List,
-  ListItem,
-  ListItemText,
-} from '@mui/material';
+import { Grid, Container, Typography, Box, Button } from '@mui/material';
 import styles from '../../styles/Home.module.css';
-import CircleIcon from '@mui/icons-material/Circle';
+import Link from 'next/link';
 
 const requirements = [
   'Ability to customize and develop wordpress themes and plugins',
@@ -106,31 +97,79 @@ const PHPDev = () => {
                   >
                     Job Responsibilities
                   </Typography>
-                  <List
-                    sx={{marginLeft: '2rem'}}
-                  >
+
+                  <ul style={{ marginLeft: '1.5rem' }}>
                     {requirements.map((requirement, index) => (
-                      <ListItem key={index} >
-                        <ListItemIcon>
-                          <CircleIcon
-                            sx={{ fontSize: '.8rem', color: '#004581' }}
-                          />
-                        </ListItemIcon>
+                      <li
+                        key={index}
+                        style={{
+                          fontSize: '1.8rem',
+                          color: '#004581',
+                          padding: '1rem 0',
+                        }}
+                      >
                         <Typography
                           sx={{
-                            marginLeft: '-2rem',
-                            fontFamily: 'DM Sans, sans serif;',
-                            fontSize: { xs: '1.2rem', md: '1.5rem' },
-                            fontWeight: '400',
-                           lineHeight: '2.5rem',
                             color: '#141414',
+                            fontSize: { xs: '1.3rem', md: '1.6rem' },
                           }}
                         >
                           {requirement}
                         </Typography>
-                      </ListItem>
+                      </li>
                     ))}
-                  </List>
+                  </ul>
+                  <Typography
+                    fontFamily='DM Sans, sans serif;'
+                    fontSize={{ xs: '2rem', md: '2.5rem' }}
+                    variant='h5'
+                    component='div'
+                    fontWeight='600'
+                    color='#141414'
+                  >
+                    Application Deadline
+                  </Typography>
+                  <ul style={{ marginLeft: '1.5rem', marginBottom: '1.5rem' }}>
+                    <li
+                      style={{
+                        fontSize: '1.8rem',
+                        color: '#004581',
+                        padding: '1rem 0',
+                      }}
+                    >
+                      <Typography
+                        sx={{
+                          color: '#141414',
+                          fontSize: { xs: '1.3rem', md: '1.6rem' },
+                        }}
+                      >
+                        Deadline: Aug 30, 2022
+                      </Typography>
+                    </li>
+                  </ul>
+                  <Typography
+                    fontFamily='DM Sans, sans serif;'
+                    variant='p'
+                    fontWeight='400'
+                    sx={{
+                      color: '#141414',
+                      fontSize: { xs: '1.3rem', md: '1.6rem' },
+                    }}
+                  >
+                    If you are interested, please mail us at
+                    <Link href='mailto:hello@kingbatech.com'>
+                      <span
+                        style={{
+                          color: '#004581',
+                          borderBottom: '2px solid',
+                          cursor: 'pointer',
+                          marginLeft: '.3rem'
+                        }}
+                      >
+                        hello@kingbatech.com
+                      </span>
+                    </Link>
+                  </Typography>
                 </Grid>
               </Grid>
             </Box>

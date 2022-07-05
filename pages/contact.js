@@ -1,5 +1,6 @@
 import React, { useRef, useState } from 'react';
 import emailjs from '@emailjs/browser';
+import { useForm } from 'react-hook-form';
 
 import {
   Grid,
@@ -15,6 +16,12 @@ import Slider from '../src/components/Slider/Slider';
 import styles from '../styles/Home.module.css';
 
 const Contact = () => {
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm();
+  console.log(errors);
   const [status, setStatus] = useState(undefined);
 
   const form = useRef();
@@ -107,11 +114,11 @@ const Contact = () => {
                   justifyContent: 'center',
                 }}
                 ref={form}
-                onSubmit={sendEmail}
+                onSubmit={handleSubmit(sendEmail)}
               >
                 <TextField
                   name='name'
-                  required
+                  {...register('name', { required: true })}
                   id='name'
                   label='Name'
                   type='text'
@@ -124,9 +131,18 @@ const Contact = () => {
                     marginTop: { xs: '1.5rem', md: '3rem' },
                   }}
                 />
+                {errors?.name && (
+                  <span style={{ color: 'red' }}>Name is required</span>
+                )}
                 <TextField
                   name='email'
-                  required
+                  {...register('email', {
+                    required: true,
+                    pattern: {
+                      value: /^([A-Za-z]|[0-9])+$/,
+                      message: 'Please enter a valid email',
+                    },
+                  })}
                   id='email'
                   label='Email'
                   type='email'
@@ -139,6 +155,12 @@ const Contact = () => {
                     marginTop: { xs: '2rem', md: '3rem' },
                   }}
                 />
+                {errors?.email && (
+                  <span style={{ color: 'red' }}>Email is required</span>
+                )}
+                {errors.email ? (
+                  <span style={{ color: 'red' }}>{errors.email.message}</span>
+                ) : null}
                 <TextField
                   type='text'
                   name='company'
@@ -156,7 +178,7 @@ const Contact = () => {
                 <TextField
                   type='text'
                   name='message'
-                  required
+                  {...register('message', { required: true })}
                   id='message'
                   label='Message'
                   variant='outlined'
@@ -171,7 +193,9 @@ const Contact = () => {
                     marginTop: { xs: '2rem', md: '3rem' },
                   }}
                 />
-
+                {errors?.message && (
+                  <span style={{ color: 'red' }}>Message is required</span>
+                )}
                 <Button
                   type='submit'
                   variant='contained'
@@ -373,7 +397,6 @@ const Contact = () => {
         </Grid>
         <Grid
           mt={6}
-          
           width='100%'
           sx={{
             display: 'flex',
