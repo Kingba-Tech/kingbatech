@@ -16,18 +16,24 @@ import Slider from '../src/components/Slider/Slider';
 import styles from '../styles/Home.module.css';
 
 const Contact = () => {
+  const [name, setName] = useState('');
+  const [message, setMessage] = useState('');
+  const [email, setEmail] = useState('');
+  const [company, setCompany] = useState('');
+
   const {
     register,
     handleSubmit,
     formState: { errors },
   } = useForm();
-  console.log(errors);
+ 
   const [status, setStatus] = useState(undefined);
 
   const form = useRef();
 
   const sendEmail = (e) => {
-    e.preventDefault();
+    e.preventDefault;
+
     emailjs
       .sendForm('gmail', 'gmail_template', form.current, 'qtMIGvplhmcLS4I1M')
       .then(() => {
@@ -36,6 +42,11 @@ const Contact = () => {
       .catch((error) => {
         setStatus({ type: 'error', error });
       });
+
+    setName('');
+    setMessage('');
+    setEmail('');
+    setCompany('');
   };
   return (
     <Container
@@ -123,6 +134,8 @@ const Contact = () => {
                   label='Name'
                   type='text'
                   variant='outlined'
+                  onChange={(event) => setName(event.target.value)}
+                  value={name}
                   sx={{
                     width: { xs: '100%', md: 'calc(100% - 100px)' },
                     '& .MuiOutlinedInput-notchedOutline': {
@@ -138,15 +151,13 @@ const Contact = () => {
                   name='email'
                   {...register('email', {
                     required: true,
-                    pattern: {
-                      value: /^([A-Za-z]|[0-9])+$/,
-                      message: 'Please enter a valid email',
-                    },
                   })}
                   id='email'
                   label='Email'
                   type='email'
                   variant='outlined'
+                  onChange={(event) => setEmail(event.target.value)}
+                  value={email}
                   sx={{
                     width: { xs: '100%', md: 'calc(100% - 100px)' },
                     '& .MuiOutlinedInput-notchedOutline': {
@@ -158,13 +169,15 @@ const Contact = () => {
                 {errors?.email && (
                   <span style={{ color: 'red' }}>Email is required</span>
                 )}
-               
+
                 <TextField
                   type='text'
                   name='company'
                   id='company'
                   label='Company (Optional)'
                   variant='outlined'
+                  onChange={(event) => setCompany(event.target.value)}
+                  value={company}
                   sx={{
                     width: { xs: '100%', md: 'calc(100% - 100px)' },
                     '& .MuiOutlinedInput-notchedOutline': {
@@ -180,6 +193,8 @@ const Contact = () => {
                   id='message'
                   label='Message'
                   variant='outlined'
+                  onChange={(event) => setMessage(event.target.value)}
+                  value={message}
                   sx={{
                     width: { xs: '100%', md: 'calc(100% - 100px)' },
                     height: 205,

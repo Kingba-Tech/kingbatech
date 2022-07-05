@@ -49,7 +49,7 @@ const Dropdown = () => {
         Services
       </Button>
       <Popover
-        sx={{ top: '10px', left: '-410px' }}
+        sx={{ top: '10px', left: { xl: '-410px', lg: '-100px' }}}
         id={id}
         open={open}
         anchorEl={anchorEl}
