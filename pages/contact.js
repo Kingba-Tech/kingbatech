@@ -158,9 +158,7 @@ const Contact = () => {
                 {errors?.email && (
                   <span style={{ color: 'red' }}>Email is required</span>
                 )}
-                {errors.email ? (
-                  <span style={{ color: 'red' }}>{errors.email.message}</span>
-                ) : null}
+               
                 <TextField
                   type='text'
                   name='company'
