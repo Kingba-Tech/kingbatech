@@ -8,9 +8,6 @@ import {
   Button,
 } from '@mui/material';
 
-const buttons = [];
-
-import Link from 'next/link';
 
 const Branding = () => {
   return (
@@ -34,7 +31,7 @@ const Branding = () => {
         fontSize={{ xs: '1.5rem', md: '3.2rem' }}
         textAlign='center'
         fontFamily='DM Sans, sans serif;'
-        lineHeight='4.5rem'
+        lineHeight={{xs:'2rem', md:'4.5rem'}}
       >
         Branding: Do I really need to <br /> hire an agency?
       </Typography>
@@ -160,7 +157,7 @@ const Branding = () => {
             color='#141414'
             textAlign={{ xs: 'center', md: 'start' }}
             alignSelf='flex-start'
-            mt={3}
+            mt={{ xs: 1, md: 3 }}
           >
             Naming
           </Typography>
@@ -189,7 +186,7 @@ const Branding = () => {
             color='#141414'
             textAlign={{ xs: 'center', md: 'start' }}
             alignSelf='flex-start'
-            mt={3}
+            mt={{ xs: 1, md: 3 }}
           >
             Pronounceability
           </Typography>
@@ -213,9 +210,8 @@ const Branding = () => {
             component='div'
             fontWeight='600'
             color='#141414'
-            textAlign={{ xs: 'center', md: 'start' }}
             alignSelf='flex-start'
-            mt={3}
+            mt={{ xs: 1, md: 3 }}
           >
             Using common/ overused words
           </Typography>
@@ -237,9 +233,8 @@ const Branding = () => {
             component='div'
             fontWeight='600'
             color='#141414'
-            textAlign={{ xs: 'center', md: 'start' }}
             alignSelf='flex-start'
-            mt={3}
+            mt={{ xs: 1, md: 3 }}
           >
             Using confusing acronyms or spellings
           </Typography>
@@ -283,7 +278,7 @@ const Branding = () => {
             color='#141414'
             textAlign={{ xs: 'center', md: 'start' }}
             alignSelf='flex-start'
-            mt={3}
+            mt={{ xs: 1, md: 3 }}
           >
             Logo
           </Typography>
@@ -319,7 +314,7 @@ const Branding = () => {
             color='#141414'
             textAlign={{ xs: 'center', md: 'start' }}
             alignSelf='flex-start'
-            mt={3}
+            mt={{ xs: 1, md: 3 }}
           >
             Typography
           </Typography>
@@ -358,7 +353,7 @@ const Branding = () => {
             color='#141414'
             textAlign={{ xs: 'center', md: 'start' }}
             alignSelf='flex-start'
-            mt={3}
+            mt={{ xs: 1, md: 3 }}
           >
             Color palette
           </Typography>
@@ -397,7 +392,7 @@ const Branding = () => {
             color='#141414'
             textAlign={{ xs: 'center', md: 'start' }}
             alignSelf='flex-start'
-            mt={3}
+            mt={{ xs: 1, md: 3 }}
           >
             Iconography
           </Typography>
@@ -427,7 +422,7 @@ const Branding = () => {
             color='#141414'
             textAlign={{ xs: 'center', md: 'start' }}
             alignSelf='flex-start'
-            mt={3}
+            mt={{ xs: 1, md: 3 }}
           >
             Brand strategy
           </Typography>
@@ -454,9 +449,9 @@ const Branding = () => {
             component='div'
             fontWeight='600'
             color='#141414'
-            textAlign={{ xs: 'center', md: 'start' }}
+           
             alignSelf='flex-start'
-            mt={3}
+            mt={{ xs: 1, md: 3 }}
           >
             Brand identifiers
           </Typography>
@@ -484,9 +479,9 @@ const Branding = () => {
             component='div'
             fontWeight='600'
             color='#141414'
-            textAlign={{ xs: 'center', md: 'start' }}
+            
             alignSelf='flex-start'
-            mt={3}
+            mt={{ xs: 1, md: 3 }}
           >
             Slogan/Tagline
           </Typography>
@@ -543,7 +538,7 @@ const Branding = () => {
           flexDirection='column'
           justifyContent='center'
           alignItems='center'
-      mb={{xs: 2, md: 10}}
+          mb={{ xs: 2, md: 10 }}
           padding={{ xs: '1rem 1.3rem', md: '1rem 3rem' }}
         >
           <hr width='100%' style={{ color: '#f3f3f3', margin: '3rem 0' }} />

@@ -33,7 +33,8 @@ const AppDevelopment = () => {
         fontFamily='DM Sans, sans serif;'
         textAlign='center'
       >
-        Mobile App <br />Development
+        Mobile App <br />
+        Development
         <hr width='80px' className={styles.projectshr} color='#2297FF' />
       </Typography>
       <Typography
@@ -198,7 +199,12 @@ const AppDevelopment = () => {
                 />
               </ul>
             </Grid>
-            <Grid display='flex' flexDirection='column' alignItems='flex-start'>
+            <Grid
+              display='flex'
+              flexDirection='column'
+              alignItems='flex-start'
+              mt={{ xs: '-1.5rem', md: 0 }}
+            >
               <ul style={{ listStyle: 'none', width: '100%' }}>
                 <li>
                   <Typography

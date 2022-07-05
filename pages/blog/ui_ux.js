@@ -34,7 +34,7 @@ const UiUx = () => {
         fontSize={{ xs: '1.5rem', md: '3.2rem' }}
         textAlign='center'
         fontFamily='DM Sans, sans serif;'
-        lineHeight='4.5rem'
+        lineHeight={{ xs: '2.5rem', md: '4.5rem' }}
       >
         Importance of website <br /> design to give your business <br /> its
         unique voice
@@ -146,9 +146,8 @@ const UiUx = () => {
             component='div'
             fontWeight='600'
             color='#141414'
-            textAlign={{ xs: 'center', md: 'start' }}
             alignSelf='flex-start'
-            mt={3}
+            mt={{ xs: 1, md: 3 }}
           >
             Just cannot afford trust-issues
           </Typography>
@@ -185,9 +184,8 @@ const UiUx = () => {
             component='div'
             fontWeight='600'
             color='#141414'
-            textAlign={{ xs: 'center', md: 'start' }}
             alignSelf='flex-start'
-            mt={3}
+            mt={{ xs: 1, md: 3 }}
           >
             That one shot at branding
           </Typography>
@@ -239,9 +237,8 @@ const UiUx = () => {
             component='div'
             fontWeight='600'
             color='#141414'
-            textAlign={{ xs: 'center', md: 'start' }}
             alignSelf='flex-start'
-            mt={3}
+            mt={{ xs: 1, md: 3 }}
           >
             Make your visitors feel at home
           </Typography>
@@ -286,9 +283,8 @@ const UiUx = () => {
             component='div'
             fontWeight='600'
             color='#141414'
-            textAlign={{ xs: 'center', md: 'start' }}
             alignSelf='flex-start'
-            mt={3}
+            mt={{ xs: 1, md: 3 }}
           >
             All about your business in 4 seconds
           </Typography>
@@ -341,7 +337,7 @@ const UiUx = () => {
             color='#141414'
             textAlign={{ xs: 'center', md: 'start' }}
             alignSelf='flex-start'
-            mt={3}
+            mt={{ xs: 1, md: 3 }}
           >
             Adapt to advance
           </Typography>

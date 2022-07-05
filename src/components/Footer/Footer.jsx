@@ -1,12 +1,5 @@
-import {
-  Container,
-  Stack,
-  Grid,
-  Typography,
-  Divider,
-  Menu,
-  MenuItem,
-} from '@mui/material';
+import { Container, Stack, Grid, Typography, Divider } from '@mui/material';
+import Link from 'next/link';
 
 import Image from 'next/image';
 import logo from '../../assets/kingba_small.png';
@@ -78,23 +71,25 @@ const Footer = () => {
                 marginLeft: { xs: '-2.8rem', md: '0' },
               }}
             >
-              <Typography
-                mx
-                color='#f5f5f7'
-                variant='h2'
-                fontWeight={{ xs: '300', md: '400' }}
-                fontSize={{ xs: '1rem', md: '1.1rem' }}
-                fontFamily='DM Sans, sans serif;'
-                component='a'
-                sx={{
-                  '&:hover': {
-                    color: '#2997ff',
-                  },
-                  cursor: 'pointer',
-                }}
-              >
-                Facebook
-              </Typography>
+              <Link href='https://www.facebook.com/kingbatech/'>
+                <Typography
+                  mx
+                  color='#f5f5f7'
+                  variant='h2'
+                  fontWeight={{ xs: '300', md: '400' }}
+                  fontSize={{ xs: '1rem', md: '1.1rem' }}
+                  fontFamily='DM Sans, sans serif;'
+                  component='a'
+                  sx={{
+                    '&:hover': {
+                      color: '#2997ff',
+                    },
+                    cursor: 'pointer',
+                  }}
+                >
+                  Facebook
+                </Typography>
+              </Link>
               <Typography
                 mx
                 color='#f5f5f7'
@@ -112,23 +107,25 @@ const Footer = () => {
               >
                 Behance
               </Typography>
-              <Typography
-                mx
-                color='#f5f5f7'
-                variant='h2'
-                fontWeight={{ xs: '300', md: '400' }}
-                fontSize={{ xs: '1rem', md: '1.1rem' }}
-                fontFamily='DM Sans, sans serif;'
-                component='a'
-                sx={{
-                  '&:hover': {
-                    color: '#2997ff',
-                  },
-                  cursor: 'pointer',
-                }}
-              >
-                LinkedIn
-              </Typography>
+              <Link href='https://www.linkedin.com/company/kingba-tech/'>
+                <Typography
+                  mx
+                  color='#f5f5f7'
+                  variant='h2'
+                  fontWeight={{ xs: '300', md: '400' }}
+                  fontSize={{ xs: '1rem', md: '1.1rem' }}
+                  fontFamily='DM Sans, sans serif;'
+                  component='a'
+                  sx={{
+                    '&:hover': {
+                      color: '#2997ff',
+                    },
+                    cursor: 'pointer',
+                  }}
+                >
+                  LinkedIn
+                </Typography>
+              </Link>
               <Typography
                 mx
                 color='#f5f5f7'

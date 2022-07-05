@@ -26,7 +26,7 @@ const Contact = () => {
     handleSubmit,
     formState: { errors },
   } = useForm();
- 
+
   const [status, setStatus] = useState(undefined);
 
   const form = useRef();
@@ -35,7 +35,7 @@ const Contact = () => {
     e.preventDefault;
 
     emailjs
-      .sendForm('gmail', 'gmail_template', form.current, 'qtMIGvplhmcLS4I1M')
+      .sendForm('kigbatech', 'kigbatech', form.current, 'Zng3r2XXkIatVP6bL')
       .then(() => {
         setStatus({ type: 'success' });
       })
@@ -195,19 +195,48 @@ const Contact = () => {
                   variant='outlined'
                   onChange={(event) => setMessage(event.target.value)}
                   value={message}
+                  multiline
+                  rows={6}
+                  maxRows={8}
                   sx={{
                     width: { xs: '100%', md: 'calc(100% - 100px)' },
-                    height: 205,
 
                     '& .MuiOutlinedInput-notchedOutline': {
                       borderRadius: '.5em',
-                      height: 200,
                     },
                     marginTop: { xs: '2rem', md: '3rem' },
                   }}
                 />
                 {errors?.message && (
                   <span style={{ color: 'red' }}>Message is required</span>
+                )}
+                {status?.type === 'success' && (
+                  <Typography
+                    mb={2}
+                    color='green'
+                    variant='h6'
+                    fontWeight={{ xs: '300', md: '400' }}
+                    fontSize={{ xs: '1.2rem', md: '1.4rem' }}
+                    sx={{
+                      alignSelf: { xs: 'center', md: 'flex-start' },
+                    }}
+                  >
+                    Your message has been sent. Thanks for contacting with us!
+                  </Typography>
+                )}
+                {status?.type === 'error' && (
+                  <Typography
+                    mb={2}
+                    color='red'
+                    variant='h6'
+                    fontWeight={{ xs: '300', md: '400' }}
+                    fontSize={{ xs: '1.2rem', md: '1.4rem' }}
+                    sx={{
+                      alignSelf: { xs: 'center', md: 'flex-start' },
+                    }}
+                  >
+                    Sorry there is an error while sending the message.
+                  </Typography>
                 )}
                 <Button
                   type='submit'
@@ -221,33 +250,6 @@ const Contact = () => {
                 >
                   Submit
                 </Button>
-
-                {status?.type === 'success' && (
-                  <Typography
-                    color='green'
-                    variant='h6'
-                    fontWeight={{ xs: '300', md: '400' }}
-                    fontSize={{ xs: '1.2rem', md: '1.4rem' }}
-                    sx={{
-                      alignSelf: { xs: 'center', md: 'flex-start' },
-                    }}
-                  >
-                    Your message has been sent.
-                  </Typography>
-                )}
-                {status?.type === 'error' && (
-                  <Typography
-                    color='red'
-                    variant='h6'
-                    fontWeight={{ xs: '300', md: '400' }}
-                    fontSize={{ xs: '1.2rem', md: '1.4rem' }}
-                    sx={{
-                      alignSelf: { xs: 'center', md: 'flex-start' },
-                    }}
-                  >
-                    Sorry there is an error while sending the message.
-                  </Typography>
-                )}
               </Box>
             </Grid>
             <Grid
@@ -324,7 +326,7 @@ const Contact = () => {
                       alignSelf: { xs: 'center', md: 'flex-start' },
                     }}
                   >
-                    Bangladesh:{' '}
+                    Bangladesh:
                     <span style={{ color: '#004581' }}>+8801790441196</span>
                   </Typography>
                   <Typography

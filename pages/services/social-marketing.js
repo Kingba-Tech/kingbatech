@@ -40,7 +40,7 @@ const SocialMarketing = () => {
         marginTop='.5rem'
         textAlign={{ xs: 'center' }}
       >
-        Custom design and development solutions for crafting the perfect <br />{' '}
+        Custom design and development solutions for crafting the perfect <br />
         website or app for your business.
       </Typography>
       <Grid sx={{ width: '100%', maxWidth: 1080, mt: 4 }}>
@@ -192,7 +192,12 @@ const SocialMarketing = () => {
                 />
               </ul>
             </Grid>
-            <Grid display='flex' flexDirection='column' alignItems='flex-start'>
+            <Grid
+              display='flex'
+              flexDirection='column'
+              alignItems='flex-start'
+              mt={{ xs: '-1.5rem', md: 0 }}
+            >
               <ul style={{ listStyle: 'none', width: '100%' }}>
                 <li>
                   <Typography

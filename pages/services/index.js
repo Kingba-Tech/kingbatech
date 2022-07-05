@@ -12,11 +12,12 @@ const Index = () => {
       maxWidth
       sx={{
         backgroundColor: '#FFFFFF',
-        minHeight: '700',
+        minHeight: 700,
         display: 'flex',
         flexDirection: 'column',
         justifyContent: 'center',
         alignItems: 'center',
+        marginTop: '2.5rem'
       }}
     >
       <Typography

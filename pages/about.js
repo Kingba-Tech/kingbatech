@@ -136,7 +136,7 @@ const About = () => {
                 component='div'
                 fontWeight='600'
                 color='#141414'
-                textAlign={{ xs: 'center', md: 'start' }}
+                
               >
                 Our People
               </Typography>
