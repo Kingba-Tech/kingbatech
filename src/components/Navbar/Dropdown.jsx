@@ -49,7 +49,7 @@ const Dropdown = () => {
         Services
       </Button>
       <Popover
-        sx={{ top: '10px', left: { xl: '-410px', lg: '-100px' }}}
+        sx={{ top: '10px', left: { xl: '-410px', md: '-100px' } }}
         id={id}
         open={open}
         anchorEl={anchorEl}
@@ -84,6 +84,7 @@ const Dropdown = () => {
                     alignItems: 'center',
                     cursor: 'pointer',
                   }}
+                  onClick={handleClose}
                 >
                   <Avatar
                     mr
@@ -131,6 +132,7 @@ const Dropdown = () => {
                       }}
                       fontSize='1rem'
                       component='a'
+                      onClick={handleClose}
                     >
                       Web Development
                     </Typography>
@@ -149,6 +151,7 @@ const Dropdown = () => {
                       fontSize='1rem'
                       component='a'
                       href='https://kawsaralam.netlify.app'
+                      onClick={handleClose}
                     >
                       E-Commerce
                     </Typography>
@@ -166,6 +169,7 @@ const Dropdown = () => {
                       }}
                       fontSize='1rem'
                       component='a'
+                      onClick={handleClose}
                     >
                       App Development
                     </Typography>
@@ -184,6 +188,7 @@ const Dropdown = () => {
                       }}
                       fontSize='1rem'
                       component='a'
+                      onClick={handleClose}
                     >
                       React / Node / React Native <br />/ Laravel / Wordpress
                     </Typography>
@@ -199,6 +204,7 @@ const Dropdown = () => {
                     alignItems: 'center',
                     cursor: 'pointer',
                   }}
+                  onClick={handleClose}
                 >
                   <Avatar
                     variant='rounded'
@@ -243,6 +249,7 @@ const Dropdown = () => {
                     }}
                     fontSize='1rem'
                     component='a'
+                    onClick={handleClose}
                   >
                     SEO
                   </Typography>
@@ -260,6 +267,7 @@ const Dropdown = () => {
                     }}
                     fontSize='1rem'
                     component='a'
+                    onClick={handleClose}
                   >
                     Social Media Marketing
                   </Typography>
@@ -274,6 +282,7 @@ const Dropdown = () => {
                     alignItems: 'center',
                     cursor: 'pointer',
                   }}
+                  onClick={handleClose}
                 >
                   <Avatar
                     variant='rounded'
@@ -319,6 +328,7 @@ const Dropdown = () => {
                     }}
                     fontSize='1rem'
                     component='a'
+                    onClick={handleClose}
                   >
                     UI/UX
                   </Typography>
@@ -336,6 +346,7 @@ const Dropdown = () => {
                     }}
                     fontSize='1rem'
                     component='a'
+                    onClick={handleClose}
                   >
                     Graphics Design
                   </Typography>
@@ -353,6 +364,7 @@ const Dropdown = () => {
                     }}
                     fontSize='1rem'
                     component='a'
+                    onClick={handleClose}
                   >
                     Video Editing
                   </Typography>
@@ -370,6 +382,7 @@ const Dropdown = () => {
                     }}
                     fontSize='1rem'
                     component='a'
+                    onClick={handleClose}
                   >
                     Content Creation
                   </Typography>
