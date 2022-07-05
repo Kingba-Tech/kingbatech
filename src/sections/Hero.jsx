@@ -42,13 +42,13 @@ const Hero = () => {
               marginTop: { xs: '-20px', md: '0', xl: '2rem' },
             }}
           >
-            <Image
+            <img
               src={banner}
-              height={460}
-              width={700}
-              layout='intrinsic'
+              height='460'
+              width='700'
               alt='hero_banner'
-            ></Image>
+              style={{ objectFit: 'cover' }}
+            />
           </Box>
           <Box
             sx={{

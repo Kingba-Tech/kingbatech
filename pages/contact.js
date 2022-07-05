@@ -35,12 +35,13 @@ const Contact = () => {
     e.preventDefault;
 
     emailjs
-      .sendForm('kigbatech', 'kigbatech', form.current, 'Zng3r2XXkIatVP6bL')
+      .sendForm('kingbatech', 'kingbatech', form.current, 'Zng3r2XXkIatVP6bL')
       .then(() => {
         setStatus({ type: 'success' });
       })
       .catch((error) => {
         setStatus({ type: 'error', error });
+        console.log(error);
       });
 
     setName('');
@@ -197,7 +198,6 @@ const Contact = () => {
                   value={message}
                   multiline
                   rows={6}
-                  maxRows={8}
                   sx={{
                     width: { xs: '100%', md: 'calc(100% - 100px)' },
 
