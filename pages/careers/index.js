@@ -1,9 +1,14 @@
 import { Grid, Container, Typography, Box, Button } from '@mui/material';
 import styles from '../../styles/Home.module.css';
 import Link from 'next/link';
+import Head from 'next/head'
 
-const About = () => {
+const Careers = () => {
   return (
+    <>
+    <Head>
+        <title>Kingba Tech - Careers</title>
+      </Head>
     <Container
       maxWidth
       sx={{
@@ -112,7 +117,8 @@ const About = () => {
         </Grid>
       </Grid>
     </Container>
+    </>
   );
 };
 
-export default About;
+export default Careers;

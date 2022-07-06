@@ -1,7 +1,4 @@
 import { Container, Box, Grid, Typography } from '@mui/material';
-import Image from 'next/image';
-import Link from 'next/link';
-import banner from '../assets/kingba.png';
 
 const Hero = () => {
   return (
@@ -43,26 +40,46 @@ const Hero = () => {
             }}
           >
             <img
-              src={banner}
-              height='460'
+              src='/kingba.png'
+              alt='banner'
+              height='500'
               width='700'
-              alt='hero_banner'
-              style={{ objectFit: 'cover' }}
+              style={{
+                objectFit: 'fill',
+              }}
             />
           </Box>
           <Box
             sx={{
-              display: { xs: 'block', xl: 'block', md: 'none', lg: 'none' },
+              display: { xs: 'none', xl: 'block', md: 'none', lg: 'none' },
               marginTop: { xs: '-20px', md: '0', xl: '2rem' },
             }}
           >
-            <Image
-              src={banner}
-              height={500}
-              width={700}
-              layout='intrinsic'
-              alt='hero_banner'
-            ></Image>
+            <img
+              src='/kingba.png'
+              alt='banner'
+              height='500'
+              width='700'
+              style={{
+                objectFit: 'cover',
+              }}
+            />
+          </Box>
+          <Box
+            sx={{
+              display: { xs: 'block', xl: 'none', md: 'none', lg: 'none' },
+              marginTop: { xs: '-20px', md: '0', xl: '2rem' },
+            }}
+          >
+            <img
+              src='/kingba.png'
+              alt='banner'
+              height='300'
+              width='400'
+              style={{
+                objectFit: 'cover',
+              }}
+            />
           </Box>
           <Box
             my={{ xs: 'none', xl: '1rem' }}

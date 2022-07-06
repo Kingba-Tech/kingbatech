@@ -1,6 +1,6 @@
 import React from 'react';
 import { Container, Grid, Typography, AppBar, Tabs, Tab } from '@mui/material';
-
+import Head from 'next/head'
 import SwipeableViews from 'react-swipeable-views';
 import { useTheme } from '@mui/material/styles';
 import {
@@ -39,6 +39,9 @@ const ProjectsHome = () => {
    };
   return (
     <>
+      <Head>
+        <title>Kingba Tech - Projects</title>
+      </Head>
       <Container
         maxWidth
         sx={{
@@ -63,12 +66,7 @@ const ProjectsHome = () => {
           Our Work
           <hr width='100px' className={styles.projectshr} color='#2297FF' />
         </Typography>
-        <Grid
-          sx={{ width: '100%', maxWidth: 1080 }}
-          py={2}
-          
-        >
-
+        <Grid sx={{ width: '100%', maxWidth: 1080 }} py={2}>
           <Grid
             mt={{ xs: 2, md: 3 }}
             sx={{
@@ -168,7 +166,6 @@ const ProjectsHome = () => {
                 </SwipeableViews>
               </Grid>
             </Grid>
-            
           </Grid>
         </Grid>
       </Container>

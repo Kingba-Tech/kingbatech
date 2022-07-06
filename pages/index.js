@@ -11,7 +11,7 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Kingba Tech</title>
+        <title>Kingba Tech - Best IT Service Provider in Bangladesh</title>
         <meta
           name='description'
           content='The best creative IT intuitive and services for the people from the youth of this tech era. '

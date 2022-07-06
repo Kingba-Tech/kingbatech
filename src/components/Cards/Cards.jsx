@@ -8,97 +8,108 @@ import {
   Typography,
   Grid,
 } from '@mui/material';
-
 import Link from 'next/link';
 
 const webcontent = [
   {
     slug: 'lapcart-bd',
-    img: 'https://i.imgur.com/a0T9e32.jpg',
+    img: 'https://i.imgur.com/o6UgHPZ.jpg',
     title: 'LapCart',
     description:
-      'TED BD is a online based mango store in Bangladesh. Which provides seasonal and pure foods.',
+      'LapCart is an e-commerce initiative where people can purchase original used laptop at affordable price.',
+    project: '/projects/lapcart',
   },
   {
-    slug: 'ted-bd',
-    img: 'https://i.imgur.com/clDL4C4.png',
-    title: 'TED BD',
+    slug: 'ted-web',
+    img: 'https://i.imgur.com/iFK2GQo.jpg',
+    title: 'Ted BD',
     description:
-      'TED BD is a online based mango store in Bangladesh. Which provides seasonal and pure foods.',
+      'Ted BD is an e-commerce platform in Bangladesh that aims to provide pure food and fashion items to its consumers.',
+    project: '/projects/ted_bd',
   },
   {
-    slug: 'mango-cart',
-    img: 'https://i.imgur.com/wV1kaUW.png',
+    slug: 'mng-hub',
+    img: 'https://i.imgur.com/5XrTy4w.jpg',
     title: 'Management Hub',
     description:
-      'TED BD is a online based mango store in Bangladesh. Which provides seasonal and pure foods.',
+      'ManagementHub is a professional association for organizational scholars to publish empirical research that tests, extends, or builds management theory and contributes to management practice.',
+    project: '/projects/management_hub',
   },
   {
-    slug: 'management-hub',
-    img: 'https://i.imgur.com/ZX2WvdT.png',
-    title: 'MangoCart',
+    slug: 'coming_soon',
+    img: 'https://i.imgur.com/sYMrhr2.jpg',
+    title: 'Coming Soon',
     description:
-      'TED BD is a online based mango store in Bangladesh. Which provides seasonal and pure foods.',
+      'Under construction :) Please hold on, we will be available real soon.',
+    project: '/projects/coming_soon',
   },
 ];
 const digitalcontent = [
   {
-    slug: 'lapcartbd',
-    img: 'https://i.imgur.com/AeKImO4.png',
-    title: 'LapCart',
+    slug: 'chapai_aam',
+    img: 'https://i.imgur.com/cJ2iE5u.jpg',
+    title: 'চাপাই আম বাগান',
     description:
-      'TED BD is a online based mango store in Bangladesh. Which provides seasonal and pure foods.',
+      'চাপাই আম বাগান is a fresh and hygienic Mango supplier all over Bangladesh.',
+    project: '/projects/chapai_aam',
   },
   {
-    slug: 'tedbd',
-    img: 'https://i.imgur.com/6uz4niQ.jpg',
-    title: 'TED BD',
+    slug: 'organic_foods',
+    img: 'https://i.imgur.com/0yhjdiV.jpg',
+    title: 'Organic Foods BD',
     description:
-      'TED BD is a online based mango store in Bangladesh. Which provides seasonal and pure foods.',
+      'Organic Foods BD is a fresh and hygienic food supplier all over Bangladesh.',
+    project: '/projects/organic_foods',
   },
   {
-    slug: 'hello-bd',
-    img: 'https://i.imgur.com/h4vKkDS.jpg',
-    title: 'Management Hub',
+    slug: 'outfitter_boutiques',
+    img: 'https://i.imgur.com/6tk5b5I.jpg',
+    title: 'Outfitter Boutiques',
     description:
-      'TED BD is a online based mango store in Bangladesh. Which provides seasonal and pure foods.',
+      'Outfitter Boutiques is a Bangladeshi clothing brand that sells custom-made ladies dresses such as sarees, kurtis, pajamas, couple sets, and western styles.',
+    project: '/projects/outfitter_digital',
   },
   {
-    slug: 'oscarbd',
-    img: 'https://i.imgur.com/10aMHVS.jpg',
-    title: 'MangoCart',
+    slug: 'ted_digital',
+    img: 'https://i.imgur.com/iFK2GQo.jpg',
+    title: 'Ted BD',
     description:
-      'TED BD is a online based mango store in Bangladesh. Which provides seasonal and pure foods.',
+      'Ted BD is an e-commerce platform in Bangladesh that aims to provide pure food and fashion items to its consumers.',
+    project: '/projects/ted_digital',
   },
 ];
 const designcontent = [
   {
-    slug: 'aliens',
-    img: 'https://i.imgur.com/6jl9R8k.jpg',
+    slug: 'magnocart_rajshahi',
+    img: 'https://i.imgur.com/j9sgIZ0.jpg',
+    title: 'MangoCart Rajshahi',
+    description:
+      'MangoCart Rajshahi is a startup for safe and pure foods in Bangladesh.',
+    project: '/projects/magnocart_rajshahi',
+  },
+  {
+    slug: 'ted_design',
+    img: 'https://i.imgur.com/iFK2GQo.jpg',
+    title: 'Ted BD',
+    description:
+      'Ted BD is an e-commerce platform in Bangladesh that aims to provide pure food and fashion items to its consumers.',
+    project: '/projects/ted_design',
+  },
+  {
+    slug: 'outfitter_design',
+    img: 'https://i.imgur.com/6tk5b5I.jpg',
+    title: 'Outfitter Boutiques',
+    description:
+      'TED BD is a online based mango store in Bangladesh. Which provides seasonal and pure foods.',
+    project: '/projects/outfitter_boutiques',
+  },
+  {
+    slug: 'lapcart_design',
+    img: 'https://i.imgur.com/o6UgHPZ.jpg',
     title: 'LapCart',
     description:
-      'TED BD is a online based mango store in Bangladesh. Which provides seasonal and pure foods.',
-  },
-  {
-    slug: '21st',
-    img: 'https://i.imgur.com/4E4QBii.png',
-    title: 'TED BD',
-    description:
-      'TED BD is a online based mango store in Bangladesh. Which provides seasonal and pure foods.',
-  },
-  {
-    slug: 'facebook',
-    img: 'https://i.imgur.com/C2v26JL.png',
-    title: 'Management Hub',
-    description:
-      'TED BD is a online based mango store in Bangladesh. Which provides seasonal and pure foods.',
-  },
-  {
-    slug: 'amazon',
-    img: 'https://i.imgur.com/OSa49QI.png',
-    title: 'MangoCart',
-    description:
-      'TED BD is a online based mango store in Bangladesh. Which provides seasonal and pure foods.',
+      'LapCart is an e-commerce initiative where people can purchase original used laptop at affordable price.',
+    project: '/projects/lapcart_design',
   },
 ];
 
@@ -123,7 +134,7 @@ export const WebCards = () => {
             item
             sx={{
               maxWidth: 510,
-              maxHeight: 560,
+              maxHeight: 660,
               margin: '1rem 0',
               borderRadius: '.5rem',
             }}
@@ -166,7 +177,7 @@ export const WebCards = () => {
               </Typography>
             </CardContent>
             <CardActions>
-              <Link href={'/projects/' + web.slug}>
+              <Link href={web.project}>
                 <Button
                   variant='outlined'
                   color='btnColor'
@@ -210,7 +221,7 @@ export const DigitalCards = () => {
             item
             sx={{
               maxWidth: 510,
-              maxHeight: 560,
+              maxHeight: 660,
               margin: '1rem 0',
               borderRadius: '.5rem',
             }}
@@ -253,20 +264,22 @@ export const DigitalCards = () => {
               </Typography>
             </CardContent>
             <CardActions>
-              <Button
-                variant='outlined'
-                color='btnColor'
-                sx={{
-                  fontSize: { xs: '.9rem', md: '1rem' },
-                  fontWeight: 500,
-                  marginTop: { xs: '-.8rem', md: 'none' },
-                  marginBottom: { xs: '.5rem' },
-                  marginLeft: { xs: '.5rem' },
-                }}
-                size='small'
-              >
-                Read More
-              </Button>
+              <Link href={content.project}>
+                <Button
+                  variant='outlined'
+                  color='btnColor'
+                  sx={{
+                    fontSize: { xs: '.9rem', md: '1rem' },
+                    fontWeight: 500,
+                    marginTop: { xs: '-.8rem', md: 'none' },
+                    marginBottom: { xs: '.5rem' },
+                    marginLeft: { xs: '.5rem' },
+                  }}
+                  size='small'
+                >
+                  Read More
+                </Button>
+              </Link>
             </CardActions>
           </Card>
         ))}
@@ -295,7 +308,7 @@ export const DesignCards = () => {
             item
             sx={{
               maxWidth: 510,
-              maxHeight: 560,
+              maxHeight: 660,
               margin: '1rem 0',
               borderRadius: '.8rem',
             }}
@@ -338,20 +351,22 @@ export const DesignCards = () => {
               </Typography>
             </CardContent>
             <CardActions>
-              <Button
-                variant='outlined'
-                color='btnColor'
-                sx={{
-                  fontSize: { xs: '.9rem', md: '1rem' },
-                  fontWeight: 500,
-                  marginTop: { xs: '-.8rem', md: 'none' },
-                  marginBottom: { xs: '.5rem' },
-                  marginLeft: { xs: '.5rem' },
-                }}
-                size='small'
-              >
-                Read More
-              </Button>
+              <Link href={design.project}>
+                <Button
+                  variant='outlined'
+                  color='btnColor'
+                  sx={{
+                    fontSize: { xs: '.9rem', md: '1rem' },
+                    fontWeight: 500,
+                    marginTop: { xs: '-.8rem', md: 'none' },
+                    marginBottom: { xs: '.5rem' },
+                    marginLeft: { xs: '.5rem' },
+                  }}
+                  size='small'
+                >
+                  Read More
+                </Button>
+              </Link>
             </CardActions>
           </Card>
         ))}

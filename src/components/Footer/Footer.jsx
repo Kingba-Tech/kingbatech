@@ -1,9 +1,6 @@
 import { Container, Stack, Grid, Typography, Divider } from '@mui/material';
 import Link from 'next/link';
 
-import Image from 'next/image';
-import logo from '../../assets/kingba_small.png';
-
 const Footer = () => {
   return (
     <Container
@@ -40,12 +37,12 @@ const Footer = () => {
             }}
           >
             <Grid item xs={12} md={6} mb={{ xs: '1.5rem', md: 'none' }}>
-              <Image
-                src={logo}
-                alt='logo'
-                layout='intrinsic'
-                width={160}
-                height={32}
+              <img
+                src='/kingba_small.png'
+                alt='Site Logo'
+                height='32'
+                width='160'
+                style={{ objectFit: 'cover' }}
               />
               <Typography
                 mt={3}
@@ -242,7 +239,7 @@ const Footer = () => {
                 sx={{
                   fontWeight: '400',
                   color: '#f5f5f7',
-                  fontSize: '1.1rem',
+                  fontSize: { xs: '1rem', md: '1.1rem' },
 
                   fontFamily: 'DM Sans, sans-serif;',
                 }}

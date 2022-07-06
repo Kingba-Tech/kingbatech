@@ -15,9 +15,8 @@ import {
   Toolbar,
 } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
-import Image from 'next/image';
+
 import Link from 'next/link';
-import logo from '../../assets/kingba_small.png';
 
 import Dropdown from './Dropdown';
 
@@ -44,7 +43,13 @@ const Navbar = () => {
     >
       <Typography mt={2} component='a' variant='h6' sx={{ my: 2 }}>
         <Link href='/'>
-          <Image src={logo} alt='Site Logo' layout='intrinsic' />
+          <img
+            src='/kingba_small.png'
+            alt='Site Logo'
+            height='25'
+            width='120'
+            style={{ objectFit: 'cover' }}
+          />
         </Link>
       </Typography>
       <Divider />
@@ -235,15 +240,16 @@ const Navbar = () => {
                 flex: '2',
                 display: { sm: 'block', md: 'none' },
                 marginLeft: '-9px',
+                cursor: 'pointer',
               }}
             >
               <Link href='/'>
-                <Image
-                  height={25}
-                  width={120}
-                  src={logo}
+                <img
+                  src='/kingba_small.png'
                   alt='Site Logo'
-                  layout='intrinsic'
+                  height='25'
+                  width='120'
+                  style={{ objectFit: 'fill' }}
                 />
               </Link>
             </Typography>
@@ -265,15 +271,16 @@ const Navbar = () => {
                   cursor: 'pointer',
                   marginTop: '-.8rem ',
                   padding: { md: '0 .5rem', xl: '0 1.5rem' },
+                  cursor: 'pointer',
                 }}
               >
                 <Link href='/'>
-                  <Image
-                    height={25}
-                    width={120}
-                    src={logo}
+                  <img
+                    src='/kingba_small.png'
                     alt='Site Logo'
-                    layout='intrinsic'
+                    height='25'
+                    width='120'
+                    style={{ objectFit: 'fill' }}
                   />
                 </Link>
               </Typography>

@@ -1,3 +1,5 @@
+
+import Head from 'next/head'
 import React, { useRef, useState } from 'react';
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -15,6 +17,9 @@ import Slider from '../src/components/Slider/Slider'
 const About = () => {
   return (
     <>
+      <Head>
+        <title>Kingba Tech - About</title>
+      </Head>
       <Container
         maxWidth
         sx={{
@@ -136,7 +141,6 @@ const About = () => {
                 component='div'
                 fontWeight='600'
                 color='#141414'
-                
               >
                 Our People
               </Typography>
